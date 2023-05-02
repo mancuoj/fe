@@ -1,9 +1,12 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  title: "Mancuoj",
+  title: "FE",
   description: "Records about my front-end learning",
   cleanUrls: true,
+  head: [
+    ['link', { rel: 'icon', href: '/rocket.svg' }]
+  ],
   markdown: {
     theme: {
       light: 'vitesse-light',
