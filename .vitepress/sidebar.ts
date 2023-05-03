@@ -1,7 +1,7 @@
 export const sidebar = [
   {
     items: [
-      { text: '开始', link: '/' },
+      { text: 'Get Started', link: '/' },
     ]
   },
 

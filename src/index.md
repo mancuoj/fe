@@ -1,7 +1,3 @@
----
-title: '开始'
----
+# Get Started
 
-# 开始
-
-Learn in public，去做有意义的事情！
+Learn in public, just do it and keep going 🐼
