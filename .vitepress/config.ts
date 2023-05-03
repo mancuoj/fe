@@ -15,21 +15,16 @@ export default defineConfig({
     }
   },
   themeConfig: {
-    nav: [
-      { text: '记录', link: '/' },
-      { text: 'ES6 入门', link: '/es6/1' },
-      { text: '红宝书', link: '/js/1/1' },
-    ],
     sidebar: {
       '/': [
         {
           items: [
             { text: '开始', link: '/' },
           ]
-        }
-      ],
-      '/es6/': [
+        },
         {
+          text: 'ES6 入门',
+          collapsed: true,
           items: [
             { text: '1. ECMAScript 6 简介', link: '/es6/1' },
             { text: '2. let 和 const 命令', link: '/es6/2' },
@@ -63,102 +58,106 @@ export default defineConfig({
             { text: '30. 最新提案', link: '/es6/30' },
             { text: '31. Decorator', link: '/es6/31' },
           ]
+        },
+        {
+          text: '红宝书',
+          collapsed: true,
+          items: [
+            {
+              text: '什么是 JavaScript',
+              collapsed: true,
+              items: [
+                { text: '1. 简短的历史回顾', link: '/js/1/1' },
+                { text: '2. JavaScript 实现', link: '/js/1/2' },
+                { text: '3. JavaScript 版本', link: '/js/1/3' },
+                { text: '4. 小结', link: '/js/1/4' },
+              ]
+            },
+            {
+              text: 'HTML 中的 JavaScript',
+              collapsed: true,
+              items: [
+                { text: '1. script 元素', link: '/js/2/1' },
+                { text: '2. 行内代码与外部文件', link: '/js/2/2' },
+                { text: '3. 文档模式', link: '/js/2/3' },
+                { text: '4. noscript 元素', link: '/js/2/4' },
+                { text: '5. 小结', link: '/js/2/5' },
+              ]
+            },
+            {
+              text: '语言基础',
+              collapsed: true,
+              items: [
+                { text: '1. 语法', link: '/js/3/1' },
+                { text: '2. 关键字与保留字', link: '/js/3/2' },
+                { text: '3. 变量', link: '/js/3/3' },
+                { text: '4. 数据类型', link: '/js/3/4' },
+                { text: '5. 操作符', link: '/js/3/5' },
+                { text: '6. 语句', link: '/js/3/6' },
+                { text: '7. 函数', link: '/js/3/7' },
+                { text: '8. 小结', link: '/js/3/8' },
+              ]
+            },
+            {
+              text: '变量、作用域与内存',
+              collapsed: true,
+              items: [
+                { text: '1. 原始值与引用值', link: '/js/4/1' },
+                { text: '2. 执行上下文与作用域', link: '/js/4/2' },
+                { text: '3. 垃圾回收', link: '/js/4/3' },
+                { text: '4. 小结', link: '/js/4/4' },
+              ]
+            },
+            {
+              text: '基本引用类型',
+              collapsed: true,
+              items: [
+                { text: '1. Date', link: '/js/5/1' },
+                { text: '2. RegExp', link: '/js/5/2' },
+                { text: '3. 原始值包装类型', link: '/js/5/3' },
+                { text: '4. 单例内置对象', link: '/js/5/4' },
+                { text: '5. 小结', link: '/js/5/5' },
+              ]
+            },
+            {
+              text: '集合引用类型',
+              collapsed: true,
+              items: [
+                { text: '1. Object', link: '/js/6/1' },
+                { text: '2. Array', link: '/js/6/2' },
+                { text: '3. 定型数组', link: '/js/6/3' },
+                { text: '4. Map', link: '/js/6/4' },
+                { text: '5. WeakMap', link: '/js/6/5' },
+                { text: '6. Set', link: '/js/6/6' },
+                { text: '7. WeakSet', link: '/js/6/7' },
+                { text: '8. 迭代与扩展操作', link: '/js/6/8' },
+                { text: '9. 小结', link: '/js/6/9' },
+              ]
+            },
+            {
+              text: '迭代器与生成器',
+              collapsed: true,
+              items: [
+                { text: '1. 理解迭代', link: '/js/7/1' },
+                { text: '2. 迭代器模式', link: '/js/7/2' },
+                { text: '3. 生成器', link: '/js/7/3' },
+                { text: '4. 小结', link: '/js/7/4' },
+              ]
+            },
+            {
+              text: '对象、类与面向对象编程',
+              collapsed: true,
+              items: [
+                { text: '1. 理解对象', link: '/js/8/1' },
+                { text: '2. 创建对象', link: '/js/8/2' },
+                { text: '3. 继承', link: '/js/8/3' },
+                { text: '4. 类', link: '/js/8/4' },
+                { text: '5. 小结', link: '/js/8/5' },
+              ]
+            },
+          ]
         }
       ],
-      '/js/': [
-        {
-          text: '什么是 JavaScript',
-          collapsed: true,
-          items: [
-            { text: '1. 简短的历史回顾', link: '/js/1/1' },
-            { text: '2. JavaScript 实现', link: '/js/1/2' },
-            { text: '3. JavaScript 版本', link: '/js/1/3' },
-            { text: '4. 小结', link: '/js/1/4' },
-          ]
-        },
-        {
-          text: 'HTML 中的 JavaScript',
-          collapsed: true,
-          items: [
-            { text: '1. script 元素', link: '/js/2/1' },
-            { text: '2. 行内代码与外部文件', link: '/js/2/2' },
-            { text: '3. 文档模式', link: '/js/2/3' },
-            { text: '4. noscript 元素', link: '/js/2/4' },
-            { text: '5. 小结', link: '/js/2/5' },
-          ]
-        },
-        {
-          text: '语言基础',
-          collapsed: true,
-          items: [
-            { text: '1. 语法', link: '/js/3/1' },
-            { text: '2. 关键字与保留字', link: '/js/3/2' },
-            { text: '3. 变量', link: '/js/3/3' },
-            { text: '4. 数据类型', link: '/js/3/4' },
-            { text: '5. 操作符', link: '/js/3/5' },
-            { text: '6. 语句', link: '/js/3/6' },
-            { text: '7. 函数', link: '/js/3/7' },
-            { text: '8. 小结', link: '/js/3/8' },
-          ]
-        },
-        {
-          text: '变量、作用域与内存',
-          collapsed: true,
-          items: [
-            { text: '1. 原始值与引用值', link: '/js/4/1' },
-            { text: '2. 执行上下文与作用域', link: '/js/4/2' },
-            { text: '3. 垃圾回收', link: '/js/4/3' },
-            { text: '4. 小结', link: '/js/4/4' },
-          ]
-        },
-        {
-          text: '基本引用类型',
-          collapsed: true,
-          items: [
-            { text: '1. Date', link: '/js/5/1' },
-            { text: '2. RegExp', link: '/js/5/2' },
-            { text: '3. 原始值包装类型', link: '/js/5/3' },
-            { text: '4. 单例内置对象', link: '/js/5/4' },
-            { text: '5. 小结', link: '/js/5/5' },
-          ]
-        },
-        {
-          text: '集合引用类型',
-          collapsed: true,
-          items: [
-            { text: '1. Object', link: '/js/6/1' },
-            { text: '2. Array', link: '/js/6/2' },
-            { text: '3. 定型数组', link: '/js/6/3' },
-            { text: '4. Map', link: '/js/6/4' },
-            { text: '5. WeakMap', link: '/js/6/5' },
-            { text: '6. Set', link: '/js/6/6' },
-            { text: '7. WeakSet', link: '/js/6/7' },
-            { text: '8. 迭代与扩展操作', link: '/js/6/8' },
-            { text: '9. 小结', link: '/js/6/9' },
-          ]
-        },
-        {
-          text: '迭代器与生成器',
-          collapsed: true,
-          items: [
-            { text: '1. 理解迭代', link: '/js/7/1' },
-            { text: '2. 迭代器模式', link: '/js/7/2' },
-            { text: '3. 生成器', link: '/js/7/3' },
-            { text: '4. 小结', link: '/js/7/4' },
-          ]
-        },
-        {
-          text: '对象、类与面向对象编程',
-          collapsed: true,
-          items: [
-            { text: '1. 理解对象', link: '/js/8/1' },
-            { text: '2. 创建对象', link: '/js/8/2' },
-            { text: '3. 继承', link: '/js/8/3' },
-            { text: '4. 类', link: '/js/8/4' },
-            { text: '5. 小结', link: '/js/8/5' },
-          ]
-        },
-      ]
     },
     search: {
       provider: 'local'
