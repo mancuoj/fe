@@ -30,6 +30,35 @@ export const sidebar = [
     ]
   },
 
+  {
+    text: '力扣算法',
+    collapsed: true,
+    items: [
+      { text: '一些链接', link: '/leetcode/' },
+      {
+        text: 'JS',
+        collapsed: true,
+        items: [
+          { text: '2620. 计数器', link: '/leetcode/js/2620' },
+          { text: '2621. 睡眠函数', link: '/leetcode/js/2621' },
+        ]
+      },
+      {
+        text: '二叉树',
+        collapsed: true,
+        items: [
+          { text: '104. 二叉树的最大深度', link: '/leetcode/binary-tree/104' },
+        ]
+      },
+      {
+        text: '链表',
+        collapsed: true,
+        items: [
+        ]
+      },
+    ]
+  },
+
 
   {
     text: '掘金小册',
