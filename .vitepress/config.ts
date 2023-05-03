@@ -4,8 +4,9 @@ export default defineConfig({
   title: "FE",
   description: "Records about my front-end learning",
   cleanUrls: true,
+  srcDir: 'src',
   head: [
-    ['link', { rel: 'icon', href: '/bear.svg' }]
+    ['link', { rel: 'icon', href: '/chick.svg' }]
   ],
   markdown: {
     theme: {
