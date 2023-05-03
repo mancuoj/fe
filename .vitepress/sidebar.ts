@@ -2,7 +2,6 @@ export const sidebar = [
   {
     items: [
       { text: '开始', link: '/' },
-      { text: 'Type Challenges', link: '/tsch' },
     ]
   },
 
@@ -31,10 +30,19 @@ export const sidebar = [
   },
 
   {
+    text: 'Type Challenges',
+    collapsed: true,
+    items: [
+      { text: 'Get Started', link: '/tsch/' },
+      { text: '13. Hello World', link: '/tsch/13' },
+    ]
+  },
+
+  {
     text: '力扣算法',
     collapsed: true,
     items: [
-      { text: '一些链接', link: '/leetcode/' },
+      { text: 'Get Started', link: '/leetcode/' },
       {
         text: 'JS',
         collapsed: true,
