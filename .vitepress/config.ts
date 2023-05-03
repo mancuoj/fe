@@ -23,6 +23,26 @@ export default defineConfig({
           ]
         },
         {
+          text: 'React',
+          collapsed: true,
+          items: [
+            {
+              text: 'Next.js',
+              collapsed: true,
+              items: [
+                { text: 'Learn', link: '/react/next/learn' },
+              ]
+            },
+          ]
+        },
+        {
+          text: 'Vue',
+          collapsed: true,
+          items: [
+            { text: 'Get Started', link: '/vue/' },
+          ]
+        },
+        {
           text: '红宝书',
           collapsed: true,
           items: [
