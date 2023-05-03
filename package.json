@@ -1,6 +1,6 @@
 {
   "devDependencies": {
-    "@fontsource/ia-writer-mono": "^4.5.3",
+    "@fontsource/jetbrains-mono": "^4.5.12",
     "vitepress": "1.0.0-alpha.75",
     "vue": "^3.2.47"
   },

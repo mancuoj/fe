@@ -1,9 +1,12 @@
 lockfileVersion: '6.0'
 
 devDependencies:
-  '@fontsource/ia-writer-mono':
-    specifier: ^4.5.3
-    version: 4.5.3
+  '@fontsource/ibm-plex-sans':
+    specifier: ^4.5.13
+    version: 4.5.13
+  '@fontsource/jetbrains-mono':
+    specifier: ^4.5.12
+    version: 4.5.12
   vitepress:
     specifier: 1.0.0-alpha.75
     version: 1.0.0-alpha.75(@algolia/client-search@4.17.0)
@@ -387,8 +390,12 @@ packages:
     dev: true
     optional: true
 
-  /@fontsource/ia-writer-mono@4.5.3:
-    resolution: {integrity: sha512-/k0n7sRaiehoFZKzvcKV4CdxwFVO8cMb3VHBDnYZVw9vzBfO9lSk+DER/c56cQ3z85Us0wfMSuP9woqvDwSLaw==}
+  /@fontsource/ibm-plex-sans@4.5.13:
+    resolution: {integrity: sha512-7oDAqvuIArnMJck/JBqCnQZwqL4za+5xG+1Gu4enYbGcGqmUPktiuOy1i0N3XrzrNO70ZvsSt1Rdkxr2oemE6Q==}
+    dev: true
+
+  /@fontsource/jetbrains-mono@4.5.12:
+    resolution: {integrity: sha512-LJF1ala1/u+wXZmESFqIk08FA9yGX4/uAAleCHmXUMgEjvNAYFHUQQ7eK5hQQoBOwh99cU5suTrqYqEkgzwzPA==}
     dev: true
 
   /@types/web-bluetooth@0.0.17:

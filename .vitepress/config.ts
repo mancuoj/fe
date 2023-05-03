@@ -5,7 +5,7 @@ export default defineConfig({
   description: "Records about my front-end learning",
   cleanUrls: true,
   head: [
-    ['link', { rel: 'icon', href: '/rocket.svg' }]
+    ['link', { rel: 'icon', href: '/bear.svg' }]
   ],
   markdown: {
     theme: {
