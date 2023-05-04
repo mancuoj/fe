@@ -29,20 +29,12 @@ export const sidebar = [
     ]
   },
 
-  {
-    text: 'Type Challenges',
-    collapsed: true,
-    items: [
-      { text: 'Get Started', link: '/tsch/' },
-      { text: '13. Hello World', link: '/tsch/13' },
-    ]
-  },
 
   {
     text: '算法',
     collapsed: true,
     items: [
-      { text: '总结', link: '/algo/' },
+      { text: 'Get Started', link: '/algo/' },
       {
         text: '剑指 Offer',
         collapsed: true,
@@ -155,6 +147,15 @@ export const sidebar = [
           { text: '33. ', link: '/juejin/ts/33' },
         ]
       },
+    ]
+  },
+
+  {
+    text: 'Type Challenges',
+    collapsed: true,
+    items: [
+      { text: 'Get Started', link: '/tsch/' },
+      { text: '13. Hello World', link: '/tsch/13' },
     ]
   },
 
