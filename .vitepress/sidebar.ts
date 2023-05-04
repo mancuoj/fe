@@ -48,8 +48,10 @@ export const sidebar = [
         collapsed: true,
         items: [
           { text: '挑战', link: '/algo/offer/' },
-          { text: '6. 从尾到头打印链表', link: '/algo/offer/6' },
-          { text: '18. 删除链表的节点', link: '/algo/offer/18' },
+          { text: '1. 整数除法', link: '/algo/offer/1' },
+          { text: '2. 二进制加法', link: '/algo/offer/2' },
+          { text: '3. ', link: '/algo/offer/3' },
+          { text: '4. ', link: '/algo/offer/4' },
         ]
       },
       {
