@@ -7,13 +7,13 @@
 
 > In Next.js, use CSR for specific components by `useEffect()` or a data fetching hook such as [useSWR](https://swr.vercel.app/zh-CN).
 
-- Server-side Rendering: The HTML of the page is generated on a server for each requests. The generated HTML, JSON data, and JavaScript instructions to make the page interactive such as attaching event handlers to a button. The process is called **hydration**.
+- Server-side Rendering: The HTML of the page is generated on a server for each requests. The generated HTML, JSON data, and JavaScript instructions to make the page interactive like attaching event handlers to a button. The process is called **hydration**.
 
 > In Next.js, use SSR by using [getSeverSideProps](https://nextjs.org/docs/basic-features/data-fetching/get-server-side-props).
 
 - Static Site Generation: The HTML is generated on the server but there is no server at runtime. Instead, content is generated once at build time and re-used for each request.
 
-> In Next.js, use SSG by using [getStaticProps](https://nextjs.org/docs/basic-features/data-fetching/get-static-props), use [Incremental Static Generation](https://nextjs.org/docs/basic-features/data-fetching/incremental-static-regeneration) to avoid rebuilding the entire site if your data changes.
+> In Next.js, use SSG by using [getStaticProps](https://nextjs.org/docs/basic-features/data-fetching/get-static-props), or you can opt to use [Incremental Static Generation](https://nextjs.org/docs/basic-features/data-fetching/incremental-static-regeneration) to avoid rebuilding the entire site when your data changes.
 
 ## create-next-app
 
@@ -57,9 +57,15 @@ import Link from 'next/link'
 </h1>
 ```
 
-The `Link` component enables **client-side navigation** between two pages in Next.js, it means that page transition happens using JavaScript, which is faster than the default navigation done by the browser.
+The `Link` component enables **client-side navigation** between two pages in Next.js, it means that page transition happens using JavaScript instead of making a new request to the server for a new page, which is faster than the default navigation done by the browser.
 
-## Code Splitting and Prefetching
+> Client-side navigation is often implemented using browser APIs such as the HTML5 History API, which allows JavaScript to manipulate the browser history and change the URL of the current page without triggering a full page refresh.
+
+## Code Splitting 
+
+
+
+## Prefetching
 
 
 
