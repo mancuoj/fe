@@ -63,9 +63,15 @@ The `Link` component enables **client-side navigation** between two pages in Nex
 
 ## Code Splitting 
 
+Next.js does code splitting automatically, that means when the homepage is renderer, the code for other pages is not served initially, it ensures that the homepage loads quickly even if you have hundreds of pages.
 
+Only loading the code for the page you request also means that the page becomes **isolated**. If a certain page throws an error, the rest of the application would still work. 
 
 ## Prefetching
+
+In production build of Next.js, whenever the `Link` components appear in the browser's viewport, Next.js automatically prefetches the code for the linked page in the background.
+
+## Static assets
 
 
 
