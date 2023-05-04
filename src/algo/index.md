@@ -1,4 +1,4 @@
-# 力扣算法
+# 算法，无脑刷他妈的
 
 - [JavaScript](https://leetcode.cn/problemset/javascript/?sorting=W3sic29ydE9yZGVyIjoiQVNDRU5ESU5HIiwib3JkZXJCeSI6IkRJRkZJQ1VMVFkifV0%3D)
 - [链表刷题](https://labuladong.github.io/algo/di-yi-zhan-da78c/shou-ba-sh-8f30d/shuang-zhi-0f7cc/)

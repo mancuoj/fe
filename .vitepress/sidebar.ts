@@ -1,7 +1,7 @@
 export const sidebar = [
   {
     items: [
-      { text: 'Get Started', link: '/' },
+      { text: '23/5/2', link: '/' },
     ]
   },
 
@@ -39,23 +39,32 @@ export const sidebar = [
   },
 
   {
-    text: '力扣算法',
+    text: '算法',
     collapsed: true,
     items: [
-      { text: 'Get Started', link: '/leetcode/' },
+      { text: '总结', link: '/algo/' },
+      {
+        text: '剑指 Offer',
+        collapsed: true,
+        items: [
+          { text: '挑战', link: '/algo/offer/' },
+          { text: '6. 从尾到头打印链表', link: '/algo/offer/6' },
+          { text: '18. 删除链表的节点', link: '/algo/offer/18' },
+        ]
+      },
       {
         text: 'JS',
         collapsed: true,
         items: [
-          { text: '2620. 计数器', link: '/leetcode/js/2620' },
-          { text: '2621. 睡眠函数', link: '/leetcode/js/2621' },
+          { text: '2620. 计数器', link: '/algo/js/2620' },
+          { text: '2621. 睡眠函数', link: '/algo/js/2621' },
         ]
       },
       {
         text: '二叉树',
         collapsed: true,
         items: [
-          { text: '104. 二叉树的最大深度', link: '/leetcode/binary-tree/104' },
+          { text: '104. 二叉树的最大深度', link: '/algo/binary-tree/104' },
         ]
       },
       {
