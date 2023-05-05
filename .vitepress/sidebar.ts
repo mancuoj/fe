@@ -7,7 +7,7 @@ export const sidebar = [
 
   {
     text: 'React',
-    collapsed: true,
+    collapsed: false,
     items: [
       { text: 'Overview', link: '/react/' },
     ]
@@ -15,7 +15,7 @@ export const sidebar = [
 
   {
     text: 'Next',
-    collapsed: true,
+    collapsed: false,
     items: [
       { text: 'Overview', link: '/next/' },
       { text: 'Learn', link: '/next/learn' },
@@ -24,7 +24,7 @@ export const sidebar = [
 
   {
     text: 'Vue',
-    collapsed: true,
+    collapsed: false,
     items: [
       { text: 'Overview', link: '/vue/' },
       { text: '速搭一个 VitePress 文档', link: '/vue/vitepress' },

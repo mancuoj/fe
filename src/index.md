@@ -23,3 +23,4 @@ Learn in public, just do it and keep going 🐼
 | [ES6 入门](/es6/1)                                  | <Badge type="info" text="todo" /> |
 | 刷完 [JS 算法题](/algo/js/)                         | <Badge type="info" text="todo" /> |
 | 刷完 [二叉树](/algo/binary-tree/)                   | <Badge type="info" text="todo" /> |
+| [红宝书](/hbs/1/) 英汉对照苦力活                    | <Badge type="info" text="todo" /> |
