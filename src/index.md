@@ -12,9 +12,13 @@ Learn in public, just do it and keep going 🐼
 
 ## 23/5/2
 
-| 任务                           | 完成情况 |
-| ------------------------------ | -------- |
-| 学 Next.js，然后复刻一些小项目 |          |
-| 刷完剑指 Offer                 |          |
-| 掘金小册 TS 类型体操           |          |
-| 看书：ES6 入门 + 红宝书        |          |
+学习就是不断地重复，再重复
+
+| 任务                                                | 完成情况                          |
+| --------------------------------------------------- | --------------------------------- |
+| 学 Next.js 官方文档                                 | <Badge type="info" text="todo" /> |
+| 复刻 [cybertype](https://cybertype.app/)            | <Badge type="info" text="todo" /> |
+| 复刻 [taxonomy](https://github.com/shadcn/taxonomy) | <Badge type="info" text="todo" /> |
+| 刷完剑指 Offer                                      | <Badge type="info" text="todo" /> |
+| 掘金小册 TS 类型体操                                | <Badge type="info" text="todo" /> |
+| ES6 入门                                            | <Badge type="info" text="todo" /> |
