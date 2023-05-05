@@ -18,20 +18,21 @@ export const navbar = [
 
   {
     text: '阅读',
-    activeMatch: '^/(hbs|es6|juejin|patterns)/',
+    activeMatch: '^/(hbs|es6|xns|juejin|patterns)/',
     items: [
       {
         text: '常看常新',
         items: [
-          { text: '红宝书', link: '/hbs/1/1', activeMatch: '/hbs/' },
+          { text: '红宝书', link: '/hbs/1/', activeMatch: '/hbs/' },
+          { text: '犀牛书', link: '/xns/1/', activeMatch: '/xns/' },
           { text: 'ES6 入门', link: '/es6/1', activeMatch: '/es6/' },
         ],
       },
       {
         text: '掘金小册',
         items: [
-          { text: 'TS 类型体操通关秘籍', link: '/juejin/tsch/1', activeMatch: '/juejin/tsch' },
-          { text: 'TS 全面进阶指南', link: '/juejin/ts/1', activeMatch: '/juejin/ts/' },
+          { text: 'TS 类型体操通关秘籍', link: '/juejin/tsch/', activeMatch: '/juejin/tsch' },
+          { text: 'TS 全面进阶指南', link: '/juejin/ts/', activeMatch: '/juejin/ts/' },
         ],
       },
       {
