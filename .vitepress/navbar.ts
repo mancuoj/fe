@@ -3,7 +3,6 @@ export const navbar = [
     text: '前端',
     activeMatch: '^/($|vue|react|next|algo|tsch)',
     items: [
-      { text: '前端', link: '/' },
       { text: 'React', link: '/react/', activeMatch: '/react/'  },
       { text: 'Next', link: '/next/', activeMatch: '/next/'  },
       { text: 'Vue', link: '/vue/', activeMatch: '/vue/'  },

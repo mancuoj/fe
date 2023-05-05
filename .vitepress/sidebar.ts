@@ -27,6 +27,7 @@ export const sidebar = [
     collapsed: true,
     items: [
       { text: 'Overview', link: '/vue/' },
+      { text: '速搭一个 VitePress 文档', link: '/vue/vitepress' },
     ]
   },
 ]
@@ -74,95 +75,95 @@ export const tschSidebar = [
 
 export const hbsSidebar = [
   {
-    text: '什么是 JavaScript',
+    text: '第 1 章：什么是 JavaScript',
     collapsed: true,
     items: [
-      { text: '1. 简短的历史回顾', link: '/hbs/1/1' },
-      { text: '2. JavaScript 实现', link: '/hbs/1/2' },
-      { text: '3. JavaScript 版本', link: '/hbs/1/3' },
-      { text: '4. 小结', link: '/hbs/1/4' },
+      { text: '1.1 简短的历史回顾', link: '/hbs/1/1' },
+      { text: '1.2 JavaScript 实现', link: '/hbs/1/2' },
+      { text: '1.3 JavaScript 版本', link: '/hbs/1/3' },
+      { text: '1.4 小结', link: '/hbs/1/4' },
     ]
   },
   {
-    text: 'HTML 中的 JavaScript',
+    text: '第 2 章：HTML 中的 JavaScript',
     collapsed: true,
     items: [
-      { text: '1. script 元素', link: '/hbs/2/1' },
-      { text: '2. 行内代码与外部文件', link: '/hbs/2/2' },
-      { text: '3. 文档模式', link: '/hbs/2/3' },
-      { text: '4. noscript 元素', link: '/hbs/2/4' },
-      { text: '5. 小结', link: '/hbs/2/5' },
+      { text: '2.1 script 元素', link: '/hbs/2/1' },
+      { text: '2.2 行内代码与外部文件', link: '/hbs/2/2' },
+      { text: '2.3 文档模式', link: '/hbs/2/3' },
+      { text: '2.4 noscript 元素', link: '/hbs/2/4' },
+      { text: '2.5 小结', link: '/hbs/2/5' },
     ]
   },
   {
-    text: '语言基础',
+    text: '第 3 章：语言基础',
     collapsed: true,
     items: [
-      { text: '1. 语法', link: '/hbs/3/1' },
-      { text: '2. 关键字与保留字', link: '/hbs/3/2' },
-      { text: '3. 变量', link: '/hbs/3/3' },
-      { text: '4. 数据类型', link: '/hbs/3/4' },
-      { text: '5. 操作符', link: '/hbs/3/5' },
-      { text: '6. 语句', link: '/hbs/3/6' },
-      { text: '7. 函数', link: '/hbs/3/7' },
-      { text: '8. 小结', link: '/hbs/3/8' },
+      { text: '3.1 语法', link: '/hbs/3/1' },
+      { text: '3.2 关键字与保留字', link: '/hbs/3/2' },
+      { text: '3.3 变量', link: '/hbs/3/3' },
+      { text: '3.4 数据类型', link: '/hbs/3/4' },
+      { text: '3.5 操作符', link: '/hbs/3/5' },
+      { text: '3.6 语句', link: '/hbs/3/6' },
+      { text: '3.7 函数', link: '/hbs/3/7' },
+      { text: '3.8 小结', link: '/hbs/3/8' },
     ]
   },
   {
-    text: '变量、作用域与内存',
+    text: '第 4 章：变量、作用域与内存',
     collapsed: true,
     items: [
-      { text: '1. 原始值与引用值', link: '/hbs/4/1' },
-      { text: '2. 执行上下文与作用域', link: '/hbs/4/2' },
-      { text: '3. 垃圾回收', link: '/hbs/4/3' },
-      { text: '4. 小结', link: '/hbs/4/4' },
+      { text: '4.1 原始值与引用值', link: '/hbs/4/1' },
+      { text: '4.2 执行上下文与作用域', link: '/hbs/4/2' },
+      { text: '4.3 垃圾回收', link: '/hbs/4/3' },
+      { text: '4.4 小结', link: '/hbs/4/4' },
     ]
   },
   {
-    text: '基本引用类型',
+    text: '第 5 章：基本引用类型',
     collapsed: true,
     items: [
-      { text: '1. Date', link: '/hbs/5/1' },
-      { text: '2. RegExp', link: '/hbs/5/2' },
-      { text: '3. 原始值包装类型', link: '/hbs/5/3' },
-      { text: '4. 单例内置对象', link: '/hbs/5/4' },
-      { text: '5. 小结', link: '/hbs/5/5' },
+      { text: '5.1 Date', link: '/hbs/5/1' },
+      { text: '5.2 RegExp', link: '/hbs/5/2' },
+      { text: '5.3 原始值包装类型', link: '/hbs/5/3' },
+      { text: '5.4 单例内置对象', link: '/hbs/5/4' },
+      { text: '5.5 小结', link: '/hbs/5/5' },
     ]
   },
   {
-    text: '集合引用类型',
+    text: '第 6 章：集合引用类型',
     collapsed: true,
     items: [
-      { text: '1. Object', link: '/hbs/6/1' },
-      { text: '2. Array', link: '/hbs/6/2' },
-      { text: '3. 定型数组', link: '/hbs/6/3' },
-      { text: '4. Map', link: '/hbs/6/4' },
-      { text: '5. WeakMap', link: '/hbs/6/5' },
-      { text: '6. Set', link: '/hbs/6/6' },
-      { text: '7. WeakSet', link: '/hbs/6/7' },
-      { text: '8. 迭代与扩展操作', link: '/hbs/6/8' },
-      { text: '9. 小结', link: '/hbs/6/9' },
+      { text: '6.1 Object', link: '/hbs/6/1' },
+      { text: '6.2 Array', link: '/hbs/6/2' },
+      { text: '6.3 定型数组', link: '/hbs/6/3' },
+      { text: '6.4 Map', link: '/hbs/6/4' },
+      { text: '6.5 WeakMap', link: '/hbs/6/5' },
+      { text: '6.6 Set', link: '/hbs/6/6' },
+      { text: '6.7 WeakSet', link: '/hbs/6/7' },
+      { text: '6.8 迭代与扩展操作', link: '/hbs/6/8' },
+      { text: '6.9 小结', link: '/hbs/6/9' },
     ]
   },
   {
-    text: '迭代器与生成器',
+    text: '第 7 章：迭代器与生成器',
     collapsed: true,
     items: [
-      { text: '1. 理解迭代', link: '/hbs/7/1' },
-      { text: '2. 迭代器模式', link: '/hbs/7/2' },
-      { text: '3. 生成器', link: '/hbs/7/3' },
-      { text: '4. 小结', link: '/hbs/7/4' },
+      { text: '7.1 理解迭代', link: '/hbs/7/1' },
+      { text: '7.2 迭代器模式', link: '/hbs/7/2' },
+      { text: '7.3 生成器', link: '/hbs/7/3' },
+      { text: '7.4 小结', link: '/hbs/7/4' },
     ]
   },
   {
-    text: '对象、类与面向对象编程',
+    text: '第 8 章：对象、类与面向对象编程',
     collapsed: true,
     items: [
-      { text: '1. 理解对象', link: '/hbs/8/1' },
-      { text: '2. 创建对象', link: '/hbs/8/2' },
-      { text: '3. 继承', link: '/hbs/8/3' },
-      { text: '4. 类', link: '/hbs/8/4' },
-      { text: '5. 小结', link: '/hbs/8/5' },
+      { text: '8.1 理解对象', link: '/hbs/8/1' },
+      { text: '8.2 创建对象', link: '/hbs/8/2' },
+      { text: '8.3 继承', link: '/hbs/8/3' },
+      { text: '8.4 类', link: '/hbs/8/4' },
+      { text: '8.5 小结', link: '/hbs/8/5' },
     ]
   },
 ]
