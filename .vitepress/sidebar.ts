@@ -100,12 +100,12 @@ export const sidebar = [
           { text: '19. ', link: '/juejin/tsch/19' },
           { text: '20. ', link: '/juejin/tsch/20' },
           { text: '21. ', link: '/juejin/tsch/21' },
-          { text: '22. ', link: '/juejin/tsch/22' },
+          { text: '22. 小册总结', link: '/juejin/tsch/22' },
           { text: '23. ', link: '/juejin/tsch/23' },
           { text: '24. ', link: '/juejin/tsch/24' },
           { text: '25. ', link: '/juejin/tsch/25' },
           { text: '26. ', link: '/juejin/tsch/26' },
-          { text: '27. ', link: '/juejin/tsch/27' },
+          { text: '27. TypeScript 新语法 satisfies：用声明 or 用推导？', link: '/juejin/tsch/27' },
         ]
       },
       {
