@@ -35,20 +35,10 @@ export const sidebar = [
 export const algoSidebar = [
   { text: 'Overview', link: '/algo/' },
   {
-    text: '剑指 Offer',
-    collapsed: true,
-    items: [
-      { text: '挑战', link: '/algo/offer/' },
-      { text: '1. 整数除法', link: '/algo/offer/1' },
-      { text: '2. 二进制加法', link: '/algo/offer/2' },
-      { text: '3. ', link: '/algo/offer/3' },
-      { text: '4. ', link: '/algo/offer/4' },
-    ]
-  },
-  {
     text: 'JS',
     collapsed: true,
     items: [
+      { text: 'Overview', link: '/algo/js/' },
       { text: '2620. 计数器', link: '/algo/js/2620' },
       { text: '2621. 睡眠函数', link: '/algo/js/2621' },
     ]
@@ -57,6 +47,7 @@ export const algoSidebar = [
     text: '二叉树',
     collapsed: true,
     items: [
+      { text: 'Overview', link: '/algo/binary-tree/' },
       { text: '104. 二叉树的最大深度', link: '/algo/binary-tree/104' },
     ]
   },
@@ -64,6 +55,13 @@ export const algoSidebar = [
     text: '链表',
     collapsed: true,
     items: [
+    ]
+  },
+  {
+    text: '剑指 Offer',
+    collapsed: true,
+    items: [
+      { text: 'Overview', link: '/algo/offer/' },
     ]
   },
 ]
