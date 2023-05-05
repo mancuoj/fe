@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress'
-import { sidebar } from './sidebar'
+import { algoSidebar, es6Sidebar, hbsSidebar, juejinTsSidebar, juejinTschSidebar, patternsSidebar, sidebar, tschSidebar } from './sidebar'
+import { navbar } from './navbar'
 
 export default defineConfig({
   title: "FE",
@@ -16,8 +17,16 @@ export default defineConfig({
     }
   },
   themeConfig: {
+    nav: navbar,
     sidebar: {
-      '/': sidebar
+      '/': sidebar,
+      '/algo/': algoSidebar,
+      '/tsch/': tschSidebar,
+      '/hbs/': hbsSidebar,
+      '/es6/': es6Sidebar,
+      '/juejin/tsch/': juejinTschSidebar,
+      '/juejin/ts/': juejinTsSidebar,
+      '/patterns/': patternsSidebar,
     },
     search: {
       provider: 'local'
