@@ -1,23 +1,24 @@
 export const sidebar = [
   {
     items: [
-      { text: '前端学习', link: '/' },
+      { text: '前端', link: '/' },
     ]
   },
-
 
   {
     text: 'React',
     collapsed: true,
     items: [
       { text: 'Overview', link: '/react/' },
-      {
-        text: 'Next.js',
-        collapsed: true,
-        items: [
-          { text: 'Learn', link: '/react/next/learn' },
-        ]
-      },
+    ]
+  },
+
+  {
+    text: 'Next',
+    collapsed: true,
+    items: [
+      { text: 'Overview', link: '/next/' },
+      { text: 'Learn', link: '/next/learn' },
     ]
   },
 

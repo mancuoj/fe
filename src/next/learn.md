@@ -1,6 +1,5 @@
 # Learn Next.js
 
-
 ## Rendering methods
 
 - Client-side Rendering: The browser receives an empty HTML shell from the server along with the JavaScript instructions to construct the UI. So the initial rendering work happens on the user's side.
