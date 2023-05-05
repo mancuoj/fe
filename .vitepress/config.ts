@@ -8,7 +8,7 @@ export default defineConfig({
   cleanUrls: true,
   srcDir: 'src',
   head: [
-    ['link', { rel: 'icon', href: '/ts.svg' }]
+    ['link', { rel: 'icon', href: '/bear.svg' }]
   ],
   markdown: {
     theme: {
