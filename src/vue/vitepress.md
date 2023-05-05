@@ -2,14 +2,14 @@
 
 ## Install
 
-创建一个新文件夹，输入
+创建一个新文件夹，输入：
 
 ```sh
 pnpm add -D vitepress
 pnpm exec vitepress init
 ```
 
-交互式 cli，填写后选择 Default Theme
+交互式 cli，填写后选择 Default Theme。
 
 ## Config
 
@@ -67,9 +67,9 @@ auto-install-peers=true
 
 ## Styles
 
-照抄 [UnoCSS](https://github.com/unocss/unocss/tree/main/docs/.vitepress/theme) 即可
+照抄 [UnoCSS](https://github.com/unocss/unocss/tree/main/docs/.vitepress/theme) 即可。
 
 
 ## Docs
 
-其他直接看 [官方文档](https://vitepress.dev/reference/site-config)
+其他直接看 [官方文档](https://vitepress.dev/reference/site-config) 🐶
