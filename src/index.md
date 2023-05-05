@@ -4,10 +4,10 @@
 
 Learn in public, just do it and keep going 🐼
 
-<Badge type="info" text="Todo" />
-<Badge type="tip" text="Done" />
-<Badge type="warning" text="On-hold" />
-<Badge type="danger" text="Undone" />
+<Badge type="info" text="todo" />
+<Badge type="tip" text="done" />
+<Badge type="warning" text="on-hold" />
+<Badge type="danger" text="undone" />
 
 
 ## 23/5/2
