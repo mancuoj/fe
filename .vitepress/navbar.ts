@@ -1,11 +1,13 @@
 export const navbar = [
   {
     text: '前端',
-    activeMatch: '^/($|vue|react|next|algo|tsch)',
+    activeMatch: '^/($|vue|nuxt|angular|react|next|algo|tsch)',
     items: [
       { text: 'React', link: '/react/', activeMatch: '/react/'  },
       { text: 'Next', link: '/next/', activeMatch: '/next/'  },
       { text: 'Vue', link: '/vue/', activeMatch: '/vue/'  },
+      { text: 'Nuxt', link: '/nuxt/', activeMatch: '/nuxt/'  },
+      { text: 'Angular', link: '/angular/', activeMatch: '/angular/'  },
       {
         text: '小镇做题家',
         items: [

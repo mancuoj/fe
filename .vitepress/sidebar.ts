@@ -24,10 +24,26 @@ export const sidebar = [
 
   {
     text: 'Vue',
-    collapsed: false,
+    collapsed: true,
     items: [
       { text: 'Overview', link: '/vue/' },
       { text: '速搭一个 VitePress 文档', link: '/vue/vitepress' },
+    ]
+  },
+
+  {
+    text: 'Nuxt',
+    collapsed: true,
+    items: [
+      { text: 'Overview', link: '/nuxt/' },
+    ]
+  },
+
+  {
+    text: 'Angular',
+    collapsed: true,
+    items: [
+      { text: 'Overview', link: '/angular/' },
     ]
   },
 ]
