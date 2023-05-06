@@ -1,3 +1,2 @@
-# 本章内容
-
+# Variables, Scope, and Memory
 

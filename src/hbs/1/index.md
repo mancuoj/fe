@@ -1,4 +1,4 @@
-# Overview
+# What is JavaScript
 
 :::info
 - Review of JavaScript history
