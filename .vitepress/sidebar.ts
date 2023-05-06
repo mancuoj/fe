@@ -64,7 +64,8 @@ export const algoSidebar = [
     collapsed: false,
     items: [
       { text: 'Overview', link: '/algo/binary-tree/' },
-      { text: '104. 二叉树的最大深度', link: '/algo/binary-tree/104' },
+      { text: '104. Maximum Depth of Binary Tree', link: '/algo/binary-tree/104' },
+      { text: '144. Binary Tree Preorder Traversal', link: '/algo/binary-tree/144' },
     ]
   },
   {
