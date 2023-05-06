@@ -23,7 +23,7 @@ export const navbar = [
       {
         text: '常看常新',
         items: [
-          { text: '红宝书', link: '/hbs/1/', activeMatch: '/hbs/' },
+          { text: '红宝书', link: '/hbs/5/', activeMatch: '/hbs/' },
           { text: '犀牛书', link: '/xns/1/', activeMatch: '/xns/' },
           { text: 'ES6 入门', link: '/es6/1', activeMatch: '/es6/' },
         ],
