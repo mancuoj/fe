@@ -62,12 +62,53 @@ void traverse(ListNode head) {
 
 ## Inorder, Preorder, Postorder
 
-- 前序位置的代码会在刚进入一个二叉树节点时执行
-- 后序位置的代码会在将要离开一个二叉树节点时执行
-- 中序位置的代码会在一个二叉树左子树都遍历完，即将开始遍历右子树时执行
+![](/algo/order.jpeg)
+
+- 前序位置的代码会在刚进入一个二叉树节点时执行，1 234 567
+- 中序位置的代码会在一个二叉树左子树都遍历完，即将开始遍历右子树时执行，324 1 765，主要用在 BTS 中
+- 后序位置的代码会在将要离开一个二叉树节点时执行（遍历完左右子树），342 765 1
+
 
 
 ## Solution
 
 - 遍历一遍二叉树得到答案
 - 分解问题，通过递归子树推导得到答案
+
+一个例子，返回前序遍历结果的两种方法
+
+```java
+ist<Integer> res = new LinkedList<>();
+
+// 使用遍历框架，返回前序遍历结果
+List<Integer> preorderTraverse(TreeNode root) {
+    traverse(root);
+    return res;
+}
+
+void traverse(TreeNode root) {
+    if (root == null) {
+        return;
+    }
+    // 前序位置
+    res.add(root.val);
+    traverse(root.left);
+    traverse(root.right);
+}
+```
+
+使用分解问题的思路：前序遍历结果 = 根节点 + 左子树前序遍历结果 + 右子树前序遍历结果
+
+```java
+List<Integer> preorderTraverse(TreeNode root) {
+    List<Integer> res = new LinkedList<>();
+    if (root == null) {
+        return res;
+    }
+
+    res.add(root.val);
+    res.addAll(preorderTraverse(root.left));
+    res.addAll(preorderTraverse(root.right));
+    return res;
+}
+```
