@@ -36,7 +36,7 @@ export const algoSidebar = [
   { text: 'Overview', link: '/algo/' },
   {
     text: 'JS',
-    collapsed: true,
+    collapsed: false,
     items: [
       { text: 'Overview', link: '/algo/js/' },
       { text: '2620. 计数器', link: '/algo/js/2620' },
@@ -45,7 +45,7 @@ export const algoSidebar = [
   },
   {
     text: '二叉树',
-    collapsed: true,
+    collapsed: false,
     items: [
       { text: 'Overview', link: '/algo/binary-tree/' },
       { text: '104. 二叉树的最大深度', link: '/algo/binary-tree/104' },
@@ -406,7 +406,7 @@ export const juejinTsSidebar = [
 export const patternsSidebar = [
   {
     text: '设计模式',
-    collapsed: true,
+    collapsed: false,
     items: [
       { text: 'Overview', link: '/patterns/design/' },
       { text: 'Singleton Pattern', link: '/patterns/design/singleton' },
@@ -416,7 +416,7 @@ export const patternsSidebar = [
 
   {
     text: '渲染模式',
-    collapsed: true,
+    collapsed: false,
     items: [
       { text: 'Overview', link: '/patterns/rendering/' },
       { text: 'Overview of React.js', link: '/patterns/rendering/react' },
