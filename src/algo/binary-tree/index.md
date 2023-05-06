@@ -82,18 +82,18 @@ ist<Integer> res = new LinkedList<>();
 
 // 使用遍历框架，返回前序遍历结果
 List<Integer> preorderTraverse(TreeNode root) {
-    traverse(root);
-    return res;
+  traverse(root);
+  return res;
 }
 
 void traverse(TreeNode root) {
-    if (root == null) {
-        return;
-    }
-    // 前序位置
-    res.add(root.val);
-    traverse(root.left);
-    traverse(root.right);
+  if (root == null) {
+      return;
+  }
+  // 前序位置
+  res.add(root.val);
+  traverse(root.left);
+  traverse(root.right);
 }
 ```
 
@@ -101,14 +101,14 @@ void traverse(TreeNode root) {
 
 ```java
 List<Integer> preorderTraverse(TreeNode root) {
-    List<Integer> res = new LinkedList<>();
-    if (root == null) {
-        return res;
-    }
+  List<Integer> res = new LinkedList<>();
+  if (root == null) {
+      return res;
+  }
 
-    res.add(root.val);
-    res.addAll(preorderTraverse(root.left));
-    res.addAll(preorderTraverse(root.right));
-    return res;
+  res.add(root.val);
+  res.addAll(preorderTraverse(root.left));
+  res.addAll(preorderTraverse(root.right));
+  return res;
 }
 ```
