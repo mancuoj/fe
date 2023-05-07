@@ -52,21 +52,21 @@ export const sidebar = [
 export const algoSidebar = [
   { text: 'Overview', link: '/algo/' },
   {
-    text: 'JS',
-    collapsed: false,
-    items: [
-      { text: 'Overview', link: '/algo/js/' },
-      { text: '2620. 计数器', link: '/algo/js/2620' },
-      { text: '2621. 睡眠函数', link: '/algo/js/2621' },
-    ]
-  },
-  {
     text: '二叉树',
     collapsed: false,
     items: [
       { text: 'Overview', link: '/algo/binary-tree/' },
       { text: '104. 二叉树的最大深度', link: '/algo/binary-tree/104' },
       { text: '144. 二叉树的前序遍历', link: '/algo/binary-tree/144' },
+    ]
+  },
+  {
+    text: 'JS',
+    collapsed: false,
+    items: [
+      { text: 'Overview', link: '/algo/js/' },
+      { text: '2620. 计数器', link: '/algo/js/2620' },
+      { text: '2621. 睡眠函数', link: '/algo/js/2621' },
     ]
   },
   {
