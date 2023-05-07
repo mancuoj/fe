@@ -60,17 +60,66 @@ The `Link` component enables **client-side navigation** between two pages in Nex
 
 > Client-side navigation is often implemented using browser APIs such as the HTML5 History API, which allows JavaScript to manipulate the browser history and change the URL of the current page without triggering a full page refresh.
 
+
 ## Code Splitting 
 
 Next.js does code splitting automatically, that means when the homepage is renderer, the code for other pages is not served initially, it ensures that the homepage loads quickly even if you have hundreds of pages.
 
 Only loading the code for the page you request also means that the page becomes **isolated**. If a certain page throws an error, the rest of the application would still work. 
 
+
 ## Prefetching
 
 In production build of Next.js, whenever the `Link` components appear in the browser's viewport, Next.js automatically prefetches the code for the linked page in the background.
 
+
 ## Static assets
 
+Next.js can server static assets under the top-level `public` directory, like `pages`, files inside `public` can referenced from the root.
 
+You can use Image Component to optimize image automatically:
+
+- Allows for resizing, optimizing and serving images in modern formats like WebP when the browser supports it, and it can works with any image source
+- Lazy load, only loading images when they enter the viewport
+- Optimizes images on-demand, not at build time, so the build time aren't increased whether shipping 10 or 10 million images
+
+```js
+import Image from 'next/image'
+
+<Image
+  src="/images/profile.jpg" // Route of the image file
+  height={144} // Desired size with correct aspect ratio
+  width={144} // Desired size with correct aspect ratio
+  alt="Your Name"
+/>
+```
+
+
+## Metadata
+
+```js
+import Head from 'next/head'
+import Script from 'next/script'
+
+<Head>
+  <title>Create Next App</title>
+  <link rel="icon" href="/favicon.ico" />
+</Head>
+
+// load third-party scripts
+<Script
+  src="https://connect.facebook.net/en_US/sdk.js"
+  strategy="lazyOnload"
+  onLoad={() =>
+    console.log(`script loaded correctly, window.FB has been populated`)
+  }
+/>
+```
+
+## CSS
+
+- CSS Modules
+- Sass
+- PostCSS: Tailwind CSS
+- CSS in JS: styled-jsx, styled-components, emotion
 
