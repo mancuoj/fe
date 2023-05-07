@@ -123,3 +123,10 @@ import Script from 'next/script'
 - PostCSS: Tailwind CSS
 - CSS in JS: styled-jsx, styled-components, emotion
 
+Create `pages/_app.js` to wrap all the pages in your app, you can use it to keep state between pages and add global styles.
+
+```js
+export default function App({ Component, pageProps }) {
+  return <Component {...pageProps} />
+}
+```

@@ -4,6 +4,12 @@
 
 Learn in public, just do it and keep going 🐼
 
+- 做正确的事情
+- 放弃熬夜，做清晨的霸主，22:30 - 6:30
+- 闹钟一响不要思考，直接站起来去洗漱
+- 起床后，写下最焦虑的三到五件事，然后 Focus 解决它们
+- 让其他紧急但不重要的事情过去吧，明天还在那里
+
 <Badge type="info" text="todo" />
 <Badge type="tip" text="done" />
 <Badge type="warning" text="on-hold" />
