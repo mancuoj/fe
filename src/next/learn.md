@@ -130,3 +130,21 @@ export default function App({ Component, pageProps }) {
   return <Component {...pageProps} />
 }
 ```
+
+## Pre-rendering
+
+Next.js pre-renders every page by default, it generates HTML for each page in advance instead having it all done by client-side JavaScript.
+
+- Better performance and SEO
+- Each generated HTML with minimal JavasScript code necessary for that page
+- Hydration: when a page loaded by the browser, its JavaScript code runs and make the page fully interactive.
+- See the app is rendered without JavaScript
+- Choose which pre-rendering form to use for each page
+  - use SSR when the data needs to be up-to-date with every request
+
+![](/next/pre-rendering.png =555x)
+
+![](/next/server-side-rendering.png =555x)
+
+![](/next/static-generation.png =555x)
+
