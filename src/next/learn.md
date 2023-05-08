@@ -1,4 +1,4 @@
-# Learn Next.js
+# [Learn Next.js](https://nextjs.org/learn)
 
 ## Rendering methods
 
@@ -147,4 +147,28 @@ Next.js pre-renders every page by default, it generates HTML for each page in ad
 ![](/next/server-side-rendering.png =555x)
 
 ![](/next/static-generation.png =555x)
+
+## SSG with data
+
+When the app do not require fetching external data to be created, it will be automatically be statically generated.
+
+However, sometimes, you need to access the file system, fetch external API, or query your database at **build time**, then you can use `getStaticProps` to fetch data at build time. And it can only be exported from a page component, only server-side.
+
+
+```js
+export default function Home(props) { ... }
+
+export async function getStaticProps() {
+  // Get external data from the file system, API, DB, etc
+  // fetch data from an API
+  const res = await fetch('..');
+  return res.json();
+
+  // The value of the `props` key will be
+  //  passed to the `Home` component
+  return {
+    props: ...
+  }
+}
+```
 
