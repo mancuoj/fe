@@ -195,5 +195,65 @@ export async function getServerSideProps(context) {
 
 ## Dynamic routes
 
+Next.js allows to statically generate **pages with paths** that depend on external data by using `getStaticPaths` 
 
+- use `getStaticProps` covered the case where **page content** depends on external data
+- pages that begin with `[` and end with `]` are dynamic routes
+- 
 
+```js
+// pages/posts/[id].js
+export default function Post() {
+  ...
+}
+
+export async function getStaticPaths() {
+  // Return a list of possible value for id
+}
+
+export async function getStaticProps({ params }) {
+  // Fetch necessary data for the blog post using params.id
+}
+``` 
+
+## Example
+
+```js
+export async function getStaticPaths() {
+  const paths = getAllPostsId()
+  return {
+    paths,
+    fallback: false
+  }
+}
+
+export async function getStaticProps({ params }) {
+  const postData = getPostData(params.id)
+  return {
+    props: {
+      postData
+    }
+  }
+}
+
+// lib
+export function getAllPostsId() {
+  const filenames = fs.readdirSync(postsDirectory)
+  return filenames.map(filename => {
+    return {
+      params: { id: filename.replace(/\.md$/, '') }
+    }
+  })
+}
+
+export function getPostData(id) {
+  const fullPath = path.join(postsDirectory, `${id}.md`)
+  const fileContents = fs.readFileSync(fullPath, 'utf-8')
+  const matterResult = matter(fileContents)
+
+  return {
+    id,
+    ...matterResult.data,
+  }
+}
+```
