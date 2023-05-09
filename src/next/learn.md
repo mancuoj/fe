@@ -199,7 +199,6 @@ Next.js allows to statically generate **pages with paths** that depend on extern
 
 - use `getStaticProps` covered the case where **page content** depends on external data
 - pages that begin with `[` and end with `]` are dynamic routes
-- 
 
 ```js
 // pages/posts/[id].js
@@ -219,6 +218,10 @@ export async function getStaticProps({ params }) {
 ## Example
 
 ```js
+export default function Post({ postData }) {
+  ...
+}
+
 export async function getStaticPaths() {
   const paths = getAllPostsId()
   return {
@@ -255,5 +258,16 @@ export function getPostData(id) {
     id,
     ...matterResult.data,
   }
+}
+```
+
+## API routes
+
+Next.js allows you to create API endpoints inside the `pages/api` directory. Each file inside `pages/api` is mapped to `/api/*` and can be deployed as Serverless Functions (aka Lambdas). Do not fetch an API route from `getStaticProps` or `getStaticPaths`!
+
+```js
+// req = HTTP incoming message, res = HTTP server response
+export default function handler(req, res) {
+  res.status(200).json({ text: 'Hello' });
 }
 ```
