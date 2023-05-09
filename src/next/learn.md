@@ -4,7 +4,7 @@
 
 - Client-side Rendering: The browser receives an empty HTML shell from the server along with the JavaScript instructions to construct the UI. So the initial rendering work happens on the user's side.
 
-> In Next.js, use CSR for specific components by `useEffect()` or a data fetching hook such as [useSWR](https://swr.vercel.app/zh-CN).
+> In Next.js, use CSR for specific components by `useEffect()` or a data fetching hook such as [useSWR()](https://swr.vercel.app/zh-CN).
 
 - Server-side Rendering: The HTML of the page is generated on a server for each requests. The generated HTML, JSON data, and JavaScript instructions to make the page interactive like attaching event handlers to a button. The process is called **hydration**.
 
@@ -159,8 +159,7 @@ However, sometimes, you need to access the file system, fetch external API, or q
 export default function Home(props) { ... }
 
 export async function getStaticProps() {
-  // Get external data from the file system, API, DB, etc
-  // fetch data from an API
+  // such as fetch data from an API
   const res = await fetch('..');
   return res.json();
 
@@ -171,4 +170,30 @@ export async function getStaticProps() {
   }
 }
 ```
+
+## Fetch data at request time
+
+- The parameter `context` contains request specific parameters
+- Use it only if you need to pre-render a page whose data must be fetched at request time
+
+
+```js
+export async function getServerSideProps(context) {
+  return {
+    props: {
+      // props for your component
+    },
+  };
+}
+```
+
+- If you don't need pre-render the data, you should use **client-side rendering**
+  - Statically generate parts of the page that do not require external data
+  - Fetch external data from the client using JavaScript and populate the remaining parts when page loads
+  - Only private, user-specific pages where SEO is not relevant
+  - `useEffect()` or `useSWR()`
+
+## Dynamic routes
+
+
 
