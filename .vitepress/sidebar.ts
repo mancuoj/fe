@@ -8,7 +8,7 @@ export const sidebar = [
 
   {
     text: 'React',
-    collapsed: false,
+    collapsed: true,
     items: [
       { text: 'Overview', link: '/react/' },
     ]
@@ -42,9 +42,11 @@ export const sidebar = [
 
   {
     text: 'Angular',
-    collapsed: true,
+    collapsed: false,
     items: [
       { text: 'Overview', link: '/angular/' },
+      { text: 'First App', link: '/angular/first-app' },
+      { text: 'Tour of Heroes', link: '/angular/tour-of-heroes' },
     ]
   },
 ]
