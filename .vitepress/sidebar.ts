@@ -357,16 +357,16 @@ export const xnsSidebar = [
 
 export const juejinTschSidebar = [
   { text: '0. Overview', link: '/juejin/tsch/' },
-  { text: '1. 如何阅读本小册', link: '/juejin/tsch/1' },
-  { text: '2. 为什么说 TypeScript 的火爆是必然？', link: '/juejin/tsch/2' },
-  { text: '3. TypeScript 类型编程为什么被叫做类型体操？', link: '/juejin/tsch/3' },
-  { text: '4. TypeScript 类型系统支持哪些类型和类型运算？', link: '/juejin/tsch/4' },
-  { text: '5. 套路一：模式匹配做提取', link: '/juejin/tsch/5' },
-  { text: '6. 套路二：重新构造做变换', link: '/juejin/tsch/6' },
-  { text: '7. 套路三：递归复用做循环', link: '/juejin/tsch/7' },
-  { text: '8. 套路四：数组长度做计数', link: '/juejin/tsch/8' },
-  { text: '9. 套路五：联合分散可简化', link: '/juejin/tsch/9' },
-  { text: '10. 套路六：特殊特性要记清', link: '/juejin/tsch/10' },
+  { text: '1. 如何阅读', link: '/juejin/tsch/1' },
+  { text: '2. TypeScript', link: '/juejin/tsch/2' },
+  { text: '3. 类型体操', link: '/juejin/tsch/3' },
+  { text: '4. 类型和类型运算', link: '/juejin/tsch/4' },
+  { text: '5. 模式匹配做提取', link: '/juejin/tsch/5' },
+  { text: '6. 重新构造做变换', link: '/juejin/tsch/6' },
+  { text: '7. 递归复用做循环', link: '/juejin/tsch/7' },
+  { text: '8. 数组长度做计数', link: '/juejin/tsch/8' },
+  { text: '9. 联合分散可简化', link: '/juejin/tsch/9' },
+  { text: '10. 特殊特性要记清', link: '/juejin/tsch/10' },
   { text: '11. 类型体操顺口溜', link: '/juejin/tsch/11' },
   { text: '12. ', link: '/juejin/tsch/12' },
   { text: '13. ', link: '/juejin/tsch/13' },
@@ -383,7 +383,7 @@ export const juejinTschSidebar = [
   { text: '24. ', link: '/juejin/tsch/24' },
   { text: '25. ', link: '/juejin/tsch/25' },
   { text: '26. ', link: '/juejin/tsch/26' },
-  { text: '27. TypeScript 新语法 satisfies：用声明 or 用推导？', link: '/juejin/tsch/27' },
+  { text: '27. 新语法 satisfies', link: '/juejin/tsch/27' },
 ]
 
 export const juejinTsSidebar = [
