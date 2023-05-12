@@ -16,7 +16,10 @@ ng serve
 
 ng --help
 ng new --help
+ng generate c my-component
 ```
+
+- [Angular - ng generate](https://angular.io/cli/generate#component) 查看更多参数
 
 ## Component
 
