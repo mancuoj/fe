@@ -18,7 +18,7 @@ ng --help
 ng new --help
 ```
 
-## A Minimal Component
+## Component
 
 ::: code-group
 
@@ -166,3 +166,8 @@ export class HelloWorldDependencyInjectionComponent  {
 | [Angular PWA](https://angular.io/guide/service-worker-intro) | Tools for building Progressive Web Applications (PWA) including a service worker and Web application manifest                                 |
 | [Angular Schematics](https://angular.io/guide/schematics)    | Automated scaffolding, refactoring, and update tools that simplify development at large scale                                                 |
 
+## Try it
+
+- [mancuoj/angular-try-it](https://github.com/mancuoj/angular-try-it)
+- [mancuoj/angular-first-app](https://github.com/mancuoj/angular-first-app)
+- [mancuoj/angular-tour-of-heroes](https://github.com/mancuoj/angular-tour-of-heroes)
