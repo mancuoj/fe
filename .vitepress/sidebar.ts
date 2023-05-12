@@ -356,7 +356,7 @@ export const xnsSidebar = [
 ]
 
 export const juejinTschSidebar = [
-  { text: '0. Overview', link: '/juejin/tsch/' },
+  { text: '0. 个人总结', link: '/juejin/tsch/' },
   { text: '1. 如何阅读', link: '/juejin/tsch/1' },
   { text: '2. TypeScript', link: '/juejin/tsch/2' },
   { text: '3. 类型体操', link: '/juejin/tsch/3' },
