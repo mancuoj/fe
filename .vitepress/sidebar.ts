@@ -367,7 +367,7 @@ export const juejinTschSidebar = [
   { text: '8. 套路四：数组长度做计数', link: '/juejin/tsch/8' },
   { text: '9. 套路五：联合分散可简化', link: '/juejin/tsch/9' },
   { text: '10. 套路六：特殊特性要记清', link: '/juejin/tsch/10' },
-  { text: '11. ', link: '/juejin/tsch/11' },
+  { text: '11. 类型体操顺口溜', link: '/juejin/tsch/11' },
   { text: '12. ', link: '/juejin/tsch/12' },
   { text: '13. ', link: '/juejin/tsch/13' },
   { text: '14. ', link: '/juejin/tsch/14' },
