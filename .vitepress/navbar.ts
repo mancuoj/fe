@@ -1,22 +1,15 @@
 export const navbar = [
-  {
-    text: '前端',
-    activeMatch: '^/($|vue|nuxt|angular|react|next|algo|tsch)',
-    items: [
-      { text: 'React', link: '/react/', activeMatch: '/react/'  },
-      { text: 'Next', link: '/next/', activeMatch: '/next/'  },
-      { text: 'Vue', link: '/vue/', activeMatch: '/vue/'  },
-      { text: 'Nuxt', link: '/nuxt/', activeMatch: '/nuxt/'  },
-      { text: 'Angular', link: '/angular/', activeMatch: '/angular/'  },
-      {
-        text: '小镇做题家',
-        items: [
-          { text: '算法', link: '/algo/', activeMatch: '/algo/' },
-          { text: 'TS 类型体操', link: '/tsch/', activeMatch: '/tsch/' },
-        ]
-      },
-    ]
-  },
+  // {
+  //   text: '前端',
+  //   activeMatch: '^/($|vue|nuxt|react|next|angular)',
+  //   items: [
+  //     { text: 'React', link: '/react/', activeMatch: '/react/'  },
+  //     { text: 'Next', link: '/next/', activeMatch: '/next/'  },
+  //     { text: 'Vue', link: '/vue/', activeMatch: '/vue/'  },
+  //     { text: 'Nuxt', link: '/nuxt/', activeMatch: '/nuxt/'  },
+  //     { text: 'Angular', link: '/angular/', activeMatch: '/angular/'  },
+  //   ]
+  // },
 
   {
     text: '阅读',
@@ -44,6 +37,15 @@ export const navbar = [
           { text: '渲染模式', link: '/patterns/rendering/', activeMatch: '/patterns/rendering/', },
         ],
       }
+    ]
+  },
+
+  {
+    text: '小镇做题家',
+    activeMatch: '^/(algo|tsch)/',
+    items: [
+      { text: '算法', link: '/algo/', activeMatch: '/algo/' },
+      { text: 'Type Challenges', link: '/tsch/', activeMatch: '/tsch/' },
     ]
   },
 ]
