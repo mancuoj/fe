@@ -1,4 +1,4 @@
-# 前端！
+# Recent days
 
 ![Netlify Status](https://api.netlify.com/api/v1/badges/0e06d4c8-e0a8-44fa-909f-94f6bf7a3266/deploy-status)
 
@@ -20,14 +20,12 @@ Learn in public, just do it and keep going 🐼
 
 学习就是不断地重复，再重复
 
-| 任务                                                | 完成情况                          |
-| --------------------------------------------------- | --------------------------------- |
-| [Next.js 官方文档](https://nextjs.org/learn)        | <Badge type="info" text="todo" /> |
-| [掘金小册 TS 类型体操](/juejin/tsch/)               | <Badge type="info" text="todo" /> |
-| [ES6 入门](/es6/1)                                  | <Badge type="info" text="todo" /> |
-| 复刻 [cybertype](https://cybertype.app/)            | <Badge type="info" text="todo" /> |
-| Next.js App Router                                  | <Badge type="info" text="todo" /> |
-| 复刻 [taxonomy](https://github.com/shadcn/taxonomy) | <Badge type="info" text="todo" /> |
-| 刷完 [二叉树](/algo/binary-tree/)                   | <Badge type="info" text="todo" /> |
-| [红宝书](/hbs/1/) 英汉对照苦力活                    | <Badge type="info" text="todo" /> |
-| 刷完 [JS 算法题](/algo/js/)                         | <Badge type="info" text="todo" /> |
+
+## 23/5/10
+
+React sucks, Next.js sucks
+
+
+## 23/5/13
+
+希望 angular 学习能有一个好结果

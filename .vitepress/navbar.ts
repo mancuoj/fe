@@ -12,7 +12,7 @@ export const navbar = [
         text: '小镇做题家',
         items: [
           { text: '算法', link: '/algo/', activeMatch: '/algo/' },
-          { text: '类型体操', link: '/tsch/', activeMatch: '/tsch/' },
+          { text: 'TS 类型体操', link: '/tsch/', activeMatch: '/tsch/' },
         ]
       },
     ]

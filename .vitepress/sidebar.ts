@@ -1,8 +1,7 @@
 export const sidebar = [
   {
     items: [
-      { text: '前端', link: '/' },
-      { text: '算法', link: '/algo/' },
+      { text: 'Recent', link: '/' },
     ]
   },
 
