@@ -49,7 +49,7 @@ const routeConfig: Routes = [
 <router-outlet></router-outlet>
 ```
 
-```html [template]
+```html [routerLink]
 <a [routerLink]="['/']"> ... </a>
 <a [routerLink]="['/details', housingLocation.id]"> ... </a>
 ```
@@ -59,7 +59,7 @@ const routeConfig: Routes = [
 
 :::code-group
 
-```ts
+```ts [component]
 applyForm = new FormGroup({
   firstName: new FormControl(''),
   lastName: new FormControl(''),
