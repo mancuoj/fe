@@ -8,7 +8,6 @@ export const sidebar = [
 
   {
     text: 'React',
-    collapsed: true,
     items: [
       { text: 'Overview', link: '/react/' },
     ]
@@ -16,7 +15,6 @@ export const sidebar = [
 
   {
     text: 'Next',
-    collapsed: false,
     items: [
       { text: 'Overview', link: '/next/' },
       { text: 'Learn', link: '/next/learn' },
@@ -25,7 +23,6 @@ export const sidebar = [
 
   {
     text: 'Vue',
-    collapsed: true,
     items: [
       { text: 'Overview', link: '/vue/' },
       { text: '速搭一个 VitePress 文档', link: '/vue/vitepress' },
@@ -34,7 +31,6 @@ export const sidebar = [
 
   {
     text: 'Nuxt',
-    collapsed: true,
     items: [
       { text: 'Overview', link: '/nuxt/' },
     ]
@@ -42,7 +38,6 @@ export const sidebar = [
 
   {
     text: 'Angular',
-    collapsed: false,
     items: [
       { text: 'Overview', link: '/angular/' },
       { text: 'First App', link: '/angular/first-app' },
@@ -55,7 +50,6 @@ export const algoSidebar = [
   { text: 'Overview', link: '/algo/' },
   {
     text: '二叉树',
-    collapsed: false,
     items: [
       { text: 'Overview', link: '/algo/binary-tree/' },
       { text: '104. 二叉树的最大深度', link: '/algo/binary-tree/104' },
@@ -64,7 +58,6 @@ export const algoSidebar = [
   },
   {
     text: 'JS',
-    collapsed: false,
     items: [
       { text: 'Overview', link: '/algo/js/' },
       { text: '2620. 计数器', link: '/algo/js/2620' },
@@ -73,13 +66,11 @@ export const algoSidebar = [
   },
   {
     text: '链表',
-    collapsed: true,
     items: [
     ]
   },
   {
     text: '剑指 Offer',
-    collapsed: true,
     items: [
       { text: 'Overview', link: '/algo/offer/' },
     ]
