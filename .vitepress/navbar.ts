@@ -11,6 +11,8 @@ export const navbar = [
   //   ]
   // },
 
+  { text: '前端', link: '/' },
+
   {
     text: '阅读',
     activeMatch: '^/(hbs|es6|xns|juejin|patterns)/',
