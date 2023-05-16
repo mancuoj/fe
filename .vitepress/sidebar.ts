@@ -78,6 +78,10 @@ export const algoSidebar = [
 
 export const interviewSidebar = [
   { text: 'Overview', link: '/interview/' },
+  { text: '1', link: '/interview/1' },
+  { text: '2', link: '/interview/2' },
+  { text: '3', link: '/interview/3' },
+  { text: '4', link: '/interview/4' },
 ]
 
 export const tschSidebar = [
