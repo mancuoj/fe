@@ -15,14 +15,15 @@ export const navbar = [
 
   {
     text: '阅读',
-    activeMatch: '^/(hbs|es6|xns|juejin|patterns)/',
+    activeMatch: '^/(hbs|xns|juejin|patterns)/',
     items: [
       {
         text: '常看常新',
         items: [
           { text: '红宝书', link: '/hbs/4/', activeMatch: '/hbs/' },
           { text: '犀牛书', link: '/xns/1/', activeMatch: '/xns/' },
-          { text: 'ES6 入门', link: '/es6/1', activeMatch: '/es6/' },
+          { text: 'ES6 入门', link: 'https://es6.ruanyifeng.com/#docs/intro' },
+          { text: 'javascript.info', link: 'https://zh.javascript.info/' },
         ],
       },
       {
@@ -35,19 +36,20 @@ export const navbar = [
       {
         text: 'patterns.dev',
         items: [
-          { text: '设计模式', link: '/patterns/design/', activeMatch: '/patterns/design/', },
-          { text: '渲染模式', link: '/patterns/rendering/', activeMatch: '/patterns/rendering/', },
+          { text: '设计模式', link: '/patterns/design/', activeMatch: '/patterns/design/' },
+          { text: '渲染模式', link: '/patterns/rendering/', activeMatch: '/patterns/rendering/' },
         ],
       }
     ]
   },
 
   {
-    text: '小镇做题家',
-    activeMatch: '^/(algo|tsch)/',
+    text: '做题家',
+    activeMatch: '^/(algo|tsch|interview)/',
     items: [
       { text: '算法', link: '/algo/', activeMatch: '/algo/' },
-      { text: 'Type Challenges', link: '/tsch/', activeMatch: '/tsch/' },
+      { text: '面试题', link: '/interview/', activeMatch: '/interview/' },
+      { text: '类型体操', link: '/tsch/', activeMatch: '/tsch/' },
     ]
   },
 ]

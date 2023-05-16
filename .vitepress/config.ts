@@ -1,5 +1,5 @@
 import { defineConfig } from 'vitepress'
-import { algoSidebar, es6Sidebar, hbsSidebar, juejinTsSidebar, juejinTschSidebar, patternsSidebar, sidebar, tschSidebar, xnsSidebar } from './sidebar'
+import { algoSidebar, hbsSidebar, interviewSidebar, juejinTsSidebar, juejinTschSidebar, patternsSidebar, sidebar, tschSidebar, xnsSidebar } from './sidebar'
 import { navbar } from './navbar'
 
 export default defineConfig({
@@ -26,11 +26,11 @@ export default defineConfig({
       '/algo/': algoSidebar,
       '/tsch/': tschSidebar,
       '/hbs/': hbsSidebar,
-      '/es6/': es6Sidebar,
       '/xns/': xnsSidebar,
       '/juejin/tsch/': juejinTschSidebar,
       '/juejin/ts/': juejinTsSidebar,
       '/patterns/': patternsSidebar,
+      '/interview/': interviewSidebar,
     },
     search: {
       provider: 'local'
