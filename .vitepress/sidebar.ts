@@ -82,6 +82,11 @@ export const interviewSidebar = [
   { text: '2', link: '/interview/2' },
   { text: '3', link: '/interview/3' },
   { text: '4', link: '/interview/4' },
+  { text: '5', link: '/interview/5' },
+  { text: '6', link: '/interview/6' },
+  { text: '7', link: '/interview/7' },
+  { text: '8', link: '/interview/8' },
+  { text: '9', link: '/interview/9' },
 ]
 
 export const tschSidebar = [
