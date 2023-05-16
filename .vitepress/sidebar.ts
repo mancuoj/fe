@@ -77,16 +77,16 @@ export const algoSidebar = [
 ]
 
 export const interviewSidebar = [
-  { text: 'Overview', link: '/interview/' },
-  { text: '1', link: '/interview/1' },
-  { text: '2', link: '/interview/2' },
-  { text: '3', link: '/interview/3' },
-  { text: '4', link: '/interview/4' },
-  { text: '5', link: '/interview/5' },
-  { text: '6', link: '/interview/6' },
-  { text: '7', link: '/interview/7' },
-  { text: '8', link: '/interview/8' },
-  { text: '9', link: '/interview/9' },
+  { text: '😍', link: '/interview/' },
+  { text: '🤮', link: '/interview/1' },
+  { text: '😢', link: '/interview/2' },
+  { text: '😢', link: '/interview/3' },
+  { text: '😅', link: '/interview/4' },
+  { text: '🤡', link: '/interview/5' },
+  { text: '🤡', link: '/interview/6' },
+  { text: '🤡', link: '/interview/7' },
+  { text: '🤡', link: '/interview/8' },
+  { text: '🤡', link: '/interview/9' },
 ]
 
 export const tschSidebar = [
