@@ -1,5 +1,3 @@
-# Cheat Sheet
-
 :::code-group
 
 ```ts [Bootstraping]
@@ -16,7 +14,7 @@ platformBrowserDynamic().bootstrapModule(AppModule)
 ```ts [NgModules]
 import { NgModule } from '@angular/core'
 
-// 定义一个包含组件，指令，管道和供应者的模块
+// 定义一个包含组件，指令，管道和服务提供者的模块
 @NgModule({ 
   declarations: …, 
   imports: …, 
