@@ -10,15 +10,14 @@ Learn in public, just do it and keep going 🐼
 - 起床后，写下最焦虑的三到五件事，然后 Focus 解决它们
 - 让其他紧急但不重要的事情过去吧，明天还在那里
 
-<Badge type="info" text="todo" />
-<Badge type="tip" text="done" />
-<Badge type="warning" text="on-hold" />
-<Badge type="danger" text="undone" />
+## 23/5/17
+
+逃避，懈怠，不知道什么时候是尽头
 
 
-## 23/5/2
+## 23/5/13
 
-学习就是不断地重复，再重复
+希望 angular 学习能有一个好结果
 
 
 ## 23/5/10
@@ -26,6 +25,8 @@ Learn in public, just do it and keep going 🐼
 React sucks, Next.js sucks
 
 
-## 23/5/13
+## 23/5/2
 
-希望 angular 学习能有一个好结果
+学习就是不断地重复，再重复
+
+

@@ -26,7 +26,7 @@ export const sidebar = [
     collapsed: true,
     items: [
       { text: 'Overview', link: '/vue/' },
-      { text: '速搭一个 VitePress 文档', link: '/vue/vitepress' },
+      { text: 'VitePress 速通', link: '/vue/vitepress' },
     ]
   },
 
@@ -395,28 +395,4 @@ export const juejinTsSidebar = [
   { text: '31. ', link: '/juejin/ts/31' },
   { text: '32. ', link: '/juejin/ts/32' },
   { text: '33. ', link: '/juejin/ts/33' },
-]
-
-export const patternsSidebar = [
-  {
-    text: '设计模式',
-    collapsed: false,
-    items: [
-      { text: 'Overview', link: '/patterns/design/' },
-      { text: 'Singleton Pattern', link: '/patterns/design/singleton' },
-      { text: 'Proxy Pattern', link: '/patterns/design/proxy' },
-    ]
-  },
-
-  {
-    text: '渲染模式',
-    collapsed: false,
-    items: [
-      { text: 'Overview', link: '/patterns/rendering/' },
-      { text: 'Overview of React.js', link: '/patterns/rendering/react' },
-      { text: 'Client-side Rendering', link: '/patterns/rendering/csr' },
-      { text: 'Server-side Rendering', link: '/patterns/rendering/ssr' },
-      { text: 'Static Rendering', link: '/patterns/rendering/ssg' },
-    ]
-  }
 ]
