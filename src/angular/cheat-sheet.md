@@ -69,3 +69,78 @@ providers: [
 bootstrap: [MyAppComponent]
 ```
 :::
+
+:::code-group
+```html [template syntax]
+<input [value]="firstName">
+<div [attr.role]="myAriaRole">
+```
+
+```html [style]
+<div [class.extra-sparkle]="isDelightful">
+<div [style.width.px]="mySize">
+```
+
+```html [event]
+<button (click)="readRainbow($event)">
+```
+
+```html [string]
+<div title="Hello {{ponyName}}">
+<!-- 等价于 ↓ -->
+<div [title]="'Hello ' + ponyName">
+
+<p>
+  Hello {{ponyName}} 
+</p>
+```
+
+```html [two-way]
+<my-cmp [(title)]="name">
+<!-- 等价于 ↓ -->
+<my-cmp [title]="name" (titleChange)="name=$event">
+```
+
+```html [local var]
+<!-- 绑定该元素实例，可以在模板的数据绑定和事件绑定中使用 -->
+<video #movieplayer …></video> 
+<button (click)="movieplayer.play()"> 
+  Play 
+</button>
+```
+
+```html [*]
+<!-- 将元素转换为嵌入模板 -->
+<p *myUnless="myExpression"> 
+  … 
+</p>
+<!-- 等价于 ↓ -->
+<ng-template [myUnless]="myExpression"> 
+  <p> 
+    … 
+  </p> 
+</ng-template>
+```
+
+```html [others]
+<p> 
+  Card No.: {{cardNumber | myCardNumberFormatter}} 
+</p>
+
+<p> 
+  Employer: {{employer?.companyName}} 
+</p>
+
+<svg:rect x="0" y="0" width="100" height="100"/>
+<svg>
+  <rect x="0" y="0" width="100" height="100"/> 
+</svg>
+```
+:::
+
+
+:::code-group
+```ts [built-in directives]
+
+```
+:::
