@@ -7,6 +7,7 @@ export const sidebar = [
 
   {
     text: 'React',
+    collapsed: true,
     items: [
       { text: 'Overview', link: '/react/' },
     ]
@@ -22,6 +23,7 @@ export const sidebar = [
 
   {
     text: 'Vue',
+    collapsed: true,
     items: [
       { text: 'Overview', link: '/vue/' },
       { text: '速搭一个 VitePress 文档', link: '/vue/vitepress' },
@@ -30,6 +32,7 @@ export const sidebar = [
 
   {
     text: 'Nuxt',
+    collapsed: true,
     items: [
       { text: 'Overview', link: '/nuxt/' },
     ]
@@ -41,6 +44,8 @@ export const sidebar = [
       { text: 'Overview', link: '/angular/' },
       { text: 'First App', link: '/angular/first-app' },
       { text: 'Tour of Heroes', link: '/angular/tour-of-heroes' },
+      { text: 'Cheat Sheet', link: '/angular/cheat-sheet' },
+      { text: 'Coding Style', link: '/angular/coding-style' },
     ]
   },
 ]
