@@ -1,16 +1,4 @@
 export const navbar = [
-  // {
-  //   text: '前端',
-  //   activeMatch: '^/($|vue|nuxt|react|next|angular)',
-  //   items: [
-  //     { text: 'React', link: '/react/', activeMatch: '/react/'  },
-  //     { text: 'Next', link: '/next/', activeMatch: '/next/'  },
-  //     { text: 'Vue', link: '/vue/', activeMatch: '/vue/'  },
-  //     { text: 'Nuxt', link: '/nuxt/', activeMatch: '/nuxt/'  },
-  //     { text: 'Angular', link: '/angular/', activeMatch: '/angular/'  },
-  //   ]
-  // },
-
   {
     text: 'Reading',
     activeMatch: '^/(hbs|xns|juejin)/',

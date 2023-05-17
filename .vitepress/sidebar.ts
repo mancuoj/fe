@@ -40,6 +40,7 @@ export const sidebar = [
 
   {
     text: 'Angular',
+    collapsed: false,
     items: [
       { text: 'Overview', link: '/angular/' },
       { text: 'First App', link: '/angular/first-app' },
