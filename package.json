@@ -1,10 +1,10 @@
 {
   "devDependencies": {
     "@fontsource/jetbrains-mono": "^4.5.12",
-    "@types/node": "^20.1.2",
+    "@types/node": "^20.1.7",
     "markdown-it-imsize": "^2.0.1",
     "vitepress": "1.0.0-alpha.75",
-    "vue": "^3.3.1"
+    "vue": "^3.3.2"
   },
   "scripts": {
     "dev": "vitepress dev",
