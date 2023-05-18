@@ -139,6 +139,111 @@ bootstrap: [MyAppComponent]
 
 :::code-group
 ```ts [built-in directives]
-
+import { CommonModule } from '@angular/common'
 ```
+
+```html [if]
+<!-- 删除或重新创建 DOM -->
+<section *ngIf="showSection">
+```
+
+```html [for]
+<li *ngFor="let item of list">
+```
+
+```html [switch]
+<div [ngSwitch]="conditionExpression">
+  <ng-template [ngSwitchCase]="case1Exp"> 
+    … 
+  </ng-template>
+  <ng-template ngSwitchCase="case2LiteralString"> 
+    … 
+  </ng-template>
+  <ng-template ngSwitchDefault> 
+    … 
+  </ng-template> 
+</div>
+```
+
+```html [style]
+<div [ngClass]="{'active': isActive, 'disabled': isDisabled}">
+
+<div [ngStyle]="{'property': 'value'}"> 
+<div [ngStyle]="dynamicStyles()">
+```
+:::
+
+
+:::code-group
+```ts [forms]
+import { FormsModule } from '@angular/forms'
+```
+
+```html
+<input [(ngModel)]="userName">
+```
+:::
+
+:::code-group
+```ts [class decorators]
+import { Directive, … } from '@angular/core'
+
+@Component({ ... })
+@Directive({ ... })
+@Pipe({ ... })
+@Injectable({ ... })
+```
+
+```ts [for components and directives]
+import { Input, … } from '@angular/core'
+
+// 父组件通过 [myProperty] 向子组件传值
+@Input() myProperty
+
+// 子组件定义一个输出事件，通过 myEvent.emit() 触发，父组件通过 (myEvent) 接收
+@Output() myEvent = new EventEmitter()
+
+// 将宿主元素的属性绑定到组件或指令的属性上
+@HostBinding('class.valid') isValid
+
+// 在宿主元素上监听事件
+@HostListener('click', ['$event']) onClick(e) {…}
+```
+:::
+
+
+:::code-group
+```ts [directive config]
+@Directive({ 
+  property1: value1, 
+
+  ...
+
+  // 选择器包含元素、属性、类名和 :not()，但不支持父子关系选择器
+  selector: '.cool-button:not(a)'
+  providers: [ 
+    MyService, 
+    { provide: … } 
+  ]
+})
+```
+
+```ts [component config]
+/* @Component 扩展自 @Directive，所以可以使用 @Directive 的配置项 */
+viewProviders: [MyService, { provide: … }]
+
+// 内联或外部模板
+template: 'Hello {{name}}' 
+templateUrl: 'my-component.html'
+
+// 内联或外部样式
+styles: ['.primary {color: red}'] 
+styleUrls: ['my-component.css']
+```
+:::
+
+
+
+
+:::code-group
 :::
