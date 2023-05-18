@@ -6,6 +6,22 @@ export const sidebar = [
   },
 
   {
+    text: 'CSS',
+    collapsed: true,
+    items: [
+      { text: 'Overview', link: '/css/' },
+    ]
+  },
+
+  {
+    text: 'JavaScript',
+    collapsed: true,
+    items: [
+      { text: 'Overview', link: '/js/' },
+    ]
+  },
+
+  {
     text: 'React',
     collapsed: true,
     items: [
@@ -15,9 +31,16 @@ export const sidebar = [
 
   {
     text: 'Next',
+    collapsed: true,
     items: [
-      { text: 'Overview', link: '/next/' },
-      { text: 'Learn', link: '/next/learn' },
+      {
+        text: 'Docs',
+        collapsed: true,
+        items: [
+          { text: 'Overview', link: '/next/' },
+          { text: 'Learn', link: '/next/learn' },
+        ]
+      },
     ]
   },
 
@@ -40,13 +63,19 @@ export const sidebar = [
 
   {
     text: 'Angular',
-    collapsed: false,
+    collapsed: true,
     items: [
-      { text: 'Overview', link: '/angular/' },
-      { text: 'First App', link: '/angular/first-app' },
-      { text: 'Tour of Heroes', link: '/angular/tour-of-heroes' },
-      { text: 'Cheat Sheet', link: '/angular/cheat-sheet' },
-      { text: 'Coding Style', link: '/angular/coding-style' },
+      {
+        text: 'Docs',
+        collapsed: true,
+        items: [
+          { text: 'Overview', link: '/angular/' },
+          { text: 'Cheat Sheet', link: '/angular/cheat-sheet' },
+          { text: 'Coding Style', link: '/angular/coding-style' },
+          { text: 'First App', link: '/angular/first-app' },
+          { text: 'Tour of Heroes', link: '/angular/tour-of-heroes' },
+        ]
+      },
     ]
   },
 ]

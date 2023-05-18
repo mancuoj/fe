@@ -21,6 +21,9 @@ table {
   opacity: 0.2;
 }
 
+.VPSidebarItem.has-active > .item > .caret {
+  display: none;
+}
 
 /**
  * VitePress: Custom fix

@@ -206,8 +206,23 @@ import { Input, … } from '@angular/core'
 // 将宿主元素的属性绑定到组件或指令的属性上
 @HostBinding('class.valid') isValid
 
-// 在宿主元素上监听事件
-@HostListener('click', ['$event']) onClick(e) {…}
+// 在宿主元素上绑定监听事件，然后通过 onClick() 订阅该事件
+@HostListener('click', ['$event']) 
+onClick(e) {…}
+```
+
+```ts [more]
+// 查询内容投影中满足条件的单个子组件
+// 会将查询结果绑定到 myChildComponent 属性上，可以通过它访问和操作子组件
+// 内容投影 <ng-content></ng-content> 类似于 React 的 props.children
+@ContentChild(myPredicate) myChildComponent
+
+// 类似于 @ContentChild，但查询结果是一个 QueryList 对象
+@ContentChildren(myPredicate) myChildComponents
+
+// 查询视图中的子组件，不适用于指令
+@ViewChild(myPredicate) myChildComponent
+@ViewChildren(myPredicate) myChildComponents
 ```
 :::
 
@@ -243,7 +258,8 @@ styleUrls: ['my-component.css']
 :::
 
 
-
+:::code-group
+:::
 
 :::code-group
 :::
