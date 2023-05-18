@@ -255,11 +255,128 @@ templateUrl: 'my-component.html'
 styles: ['.primary {color: red}'] 
 styleUrls: ['my-component.css']
 ```
+
+```ts [dependency injection config]
+{ provide: MyService, useClass: MyMockService }
+
+{ provide: MyService, useFactory: myFactory }
+
+{ provide: MyValue, useValue: 41 }
+```
 :::
 
 
 :::code-group
+```ts [hooks]
+// 最开始调用，用来注入依赖
+constructor(myService: MyService, …) { … }
+
+// 更改输入属性后，处理内容或子视图前
+ngOnChanges(changeRecord) { … }
+
+// 检查输入属性时
+ngDoCheck() { … }
+
+// 检查内容后
+ngAfterContentChecked() { … }
+
+// 检查视图后
+ngAfterViewChecked() { … }
+```
+
+```ts [lifecycle]
+// 构造函数后，初始化输入属性，并且会首先调用 ngOnChanges 一次
+ngOnInit() { … }
+
+// 初始化后
+ngAfterContentInit() { … }
+
+// 视图初始化后
+ngAfterViewInit() { … }
+
+// 被销毁前调用一次
+ngOnDestroy() { … }
+```
 :::
 
 :::code-group
+```ts [router]
+import { Routes, RouterModule, … } from '@angular/router'
+
+const routes: Routes = [ 
+  { path: '', component: HomeComponent }, 
+  { path: 'path/:routeParam', component: MyComponent }, 
+  { path: 'staticPath', component: … }, 
+  { path: '**', component: … }, 
+  { path: 'oldPath', redirectTo: '/staticPath' }, 
+  { path: …, component: …, data: { message: 'Custom' } } 
+]
+ 
+const routing = RouterModule.forRoot(routes)
+```
+
+```html [outlet]
+<router-outlet></router-outlet> 
+<router-outlet name="aux"></router-outlet>
+```
+
+```html [nav]
+<!-- 根路由使用 /，子路由使用 ./，兄弟或父路由使用 ../ -->
+<a routerLink="/path"> 
+<a [routerLink]="[ '/path', routeParam ]"> 
+<a [routerLink]="[ '/path', { matrixParam: 'value' } ]"> 
+<a [routerLink]="[ '/path' ]" [queryParams]="{ page: 1 }"> 
+<a [routerLink]="[ '/path' ]" fragment="anchor">
+
+<!-- 成为当前活动路由时，将所提供的类或属性添加到元素中 -->
+<a [routerLink]="[ '/path' ]" routerLinkActive="active">
+<a [routerLink]="[ '/path' ]" routerLinkActive="active" ariaCurrentWhenActive="page">
+```
+
+```ts [guard]
+/* 返回值为 boolean | UrlTree */
+// 是否允许用户访问当前页面
+function canActivateGuard: CanActivateFn = (
+  route: ActivatedRouteSnapshot, 
+  state: RouterStateSnapshot
+) => { … } 
+
+{ path: …, canActivate: [canActivateGuard] }
+
+// 包含子路由 children
+function canActivateChildGuard: CanActivateChildFn = 
+( 
+  route: ActivatedRouteSnapshot, 
+  state: RouterStateSnapshot 
+) => { … } 
+
+{ path: …, canActivateChild: [canActivateGuard], children: … }
+
+
+// 是否允许用户离开当前页面
+function canDeactivateGuard: CanDeactivateFn<T> = ( 
+  component: T, 
+  route: ActivatedRouteSnapshot, 
+  state: RouterStateSnapshot 
+) => { … } 
+
+{ path: …, canDeactivate: [canDeactivateGuard] }
+```
+
+```ts [more]
+// 访问路由前，预先获取数据，添加到 ActivatedRoute 的 data 属性中
+function resolveGuard implements ResolveFn<T> = 
+( 
+  route: ActivatedRouteSnapshot, 
+  state: RouterStateSnapshot 
+) => { … }
+{ path: …, resolve: [resolveGuard] }
+
+
+// 确保满足某些条件后才加载模块
+function canLoadGuard: CanLoadFn = (route: Route) => { … } 
+{ path: …, canLoad: [canLoadGuard], loadChildren: … }
+```
 :::
+
+

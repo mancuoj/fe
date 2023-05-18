@@ -13,7 +13,7 @@ export default defineConfig({
   markdown: {
     theme: {
       light: 'vitesse-light',
-      dark: 'vitesse-dark'
+      dark: 'vitesse-dark',
     },
     config: (md) => {
       md.use(require('markdown-it-imsize'))
