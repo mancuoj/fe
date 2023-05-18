@@ -359,6 +359,20 @@ export const xnsSidebar = [
   },
 ]
 
+export const jsdpSidebar = [
+  {
+    text: '第 1 章：面向对象的JavaScript',
+    collapsed: true,
+    items: [
+      { text: '1.0 本章内容', link: '/jsdp/1/' },
+      { text: '1.1 动态类型语言和鸭子类型', link: '/jsdp/1/1' },
+      { text: '1.2 多态', link: '/jsdp/1/2' },
+      { text: '1.3 封装', link: '/jsdp/1/3' },
+      { text: '1.4 原型模式和基于原型继承的 JavaScript 对象系统', link: '/jsdp/1/4' },
+    ]
+  },
+]
+
 export const juejinTschSidebar = [
   { text: '0. 个人总结', link: '/juejin/tsch/' },
   { text: '1. 如何阅读', link: '/juejin/tsch/1' },
