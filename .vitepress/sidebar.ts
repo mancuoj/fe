@@ -83,32 +83,47 @@ export const sidebar = [
 export const algoSidebar = [
   { text: 'Overview', link: '/algo/' },
   {
-    text: '二叉树',
+    text: 'labuladong 的算法小抄',
+    // collapsed: false,
     items: [
-      { text: 'Overview', link: '/algo/binary-tree/' },
-      { text: '104. 二叉树的最大深度', link: '/algo/binary-tree/104' },
-      { text: '144. 二叉树的前序遍历', link: '/algo/binary-tree/144' },
+      {
+        text: '二叉树',
+        // collapsed: false,
+        items: [
+          { text: '蠢人的总结', link: '/algo/binary-tree/' },
+          { text: '104. 二叉树的最大深度', link: '/algo/binary-tree/104' },
+          { text: '144. 二叉树的前序遍历', link: '/algo/binary-tree/144' },
+        ]
+      },
+      {
+        text: '链表',
+        items: [
+        ]
+      },
     ]
   },
   {
-    text: 'JS',
+    text: 'LeetCode',
+    // collapsed: false,
     items: [
-      { text: 'Overview', link: '/algo/js/' },
-      { text: '2620. 计数器', link: '/algo/js/2620' },
-      { text: '2621. 睡眠函数', link: '/algo/js/2621' },
+      {
+        text: 'JavaScript',
+        // collapsed: false,
+        items: [
+          { text: 'Overview', link: '/algo/js/' },
+          { text: '2620. 计数器', link: '/algo/js/2620' },
+          { text: '2621. 睡眠函数', link: '/algo/js/2621' },
+        ]
+      },
+      {
+        text: '剑指 Offer',
+        items: [
+          { text: 'Overview', link: '/algo/offer/' },
+        ]
+      },
     ]
   },
-  {
-    text: '链表',
-    items: [
-    ]
-  },
-  {
-    text: '剑指 Offer',
-    items: [
-      { text: 'Overview', link: '/algo/offer/' },
-    ]
-  },
+
 ]
 
 export const interviewSidebar = [
