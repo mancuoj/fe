@@ -133,7 +133,7 @@ export const interviewSidebar = [
   { text: '😢', link: '/interview/3' },
   { text: '😅', link: '/interview/4' },
   { text: '🤡', link: '/interview/5' },
-  { text: '🤡', link: '/interview/6' },
+  { text: '😉', link: '/interview/6' },
   { text: '🤡', link: '/interview/7' },
   { text: '🤡', link: '/interview/8' },
   { text: '🤡', link: '/interview/9' },
