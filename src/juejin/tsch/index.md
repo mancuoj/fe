@@ -11,10 +11,23 @@ TS 给 JS 加上了一套静态类型系统，让其从动态类型语言变成�
 类型检查可以在运行时做，叫做动态类型检查，也可以在编译时做，叫做静态类型检查。
 
 
+## 什么是类型体操
 
-## TS 类型
+TS 支持**类型编程**，就是可以对传入的类型参数（泛型）做各种逻辑运算，产生新的类型。 
 
+TS 的类型系统是**图灵完备**的，支持循环、条件各种操作，可以实现各种复杂的类型计算逻辑，所以被叫做类型体操。
 
+## TS 有哪些类型
 
+- JS 原有的类型 number, boolean, string, bigint, symbol, null, undefined
+- JS 原有类型的包装类型 Number, Boolean, String, Object, Symbol
+- JS 的复合类型 object, class, Array
+- TS 新增的类型 Tuple, Interface, Enum
+  - Tuple 个数和类型固定的数组类型 `type Tuple = [number, string, boolean]`
+  - Interface 用于描述函数、对象、构造器的结构
+  - Enum 是一系列值的集合
+- 字面量类型，其中字符串字面量还有模板字面量类型，比如 `aaa${string}` 可以限制字符串以 aaa 开头
+- 四种特殊类型 never, void, any, unknown
 
 ## TS 类型操作
+
