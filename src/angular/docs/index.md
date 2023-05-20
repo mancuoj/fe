@@ -168,3 +168,4 @@ export class HelloWorldDependencyInjectionComponent  {
 - [mancuoj/angular-try-it](https://github.com/mancuoj/angular-try-it)
 - [mancuoj/angular-first-app](https://github.com/mancuoj/angular-first-app)
 - [mancuoj/angular-tour-of-heroes](https://github.com/mancuoj/angular-tour-of-heroes)
+- [mancuoj/angular-demo](https://github.com/mancuoj/angular-demo)
