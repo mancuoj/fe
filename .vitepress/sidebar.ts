@@ -6,8 +6,25 @@ export const sidebar = [
   },
 
   {
+    text: 'Angular',
+    link: '/angular/',
+    collapsed: false,
+    items: [
+      {
+        text: 'Docs',
+        link: '/angular/docs/',
+        items: [
+          { text: 'Cheat Sheet', link: '/angular/docs/cheat-sheet' },
+          { text: 'First App', link: '/angular/docs/first-app' },
+          { text: 'Tour of Heroes', link: '/angular/docs/tour-of-heroes' },
+        ]
+      },
+    ]
+  },
+
+  {
     text: 'CSS',
-    collapsed: true,
+    collapsed: false,
     items: [
       { text: 'Overview', link: '/css/' },
     ]
@@ -15,9 +32,13 @@ export const sidebar = [
 
   {
     text: 'JavaScript',
-    collapsed: true,
+    collapsed: false,
     items: [
       { text: 'Overview', link: '/js/' },
+      {
+        text: 'Promise',
+        link: '/js/'
+      },
     ]
   },
 
@@ -58,24 +79,6 @@ export const sidebar = [
     collapsed: true,
     items: [
       { text: 'Overview', link: '/nuxt/' },
-    ]
-  },
-
-  {
-    text: 'Angular',
-    collapsed: true,
-    items: [
-      {
-        text: 'Docs',
-        collapsed: true,
-        items: [
-          { text: 'Overview', link: '/angular/' },
-          { text: 'Cheat Sheet', link: '/angular/cheat-sheet' },
-          { text: 'Coding Style', link: '/angular/coding-style' },
-          { text: 'First App', link: '/angular/first-app' },
-          { text: 'Tour of Heroes', link: '/angular/tour-of-heroes' },
-        ]
-      },
     ]
   },
 ]

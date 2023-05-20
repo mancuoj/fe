@@ -1,3 +1,5 @@
+# Cheat Sheet
+
 :::code-group
 
 ```ts [Bootstraping]
