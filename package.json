@@ -16,7 +16,6 @@
     "sass": "^1.62.1",
     "vitepress": "1.0.0-alpha.75",
     "vitepress-plugin-codeblocks-fold": "^1.2.14",
-    "vitepress-plugin-sandpack": "^0.3.0",
     "vue": "^3.3.4"
   }
 }

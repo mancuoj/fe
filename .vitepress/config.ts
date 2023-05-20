@@ -1,6 +1,4 @@
 import { defineConfig } from 'vitepress'
-import container from 'markdown-it-container'
-import { renderSandbox } from 'vitepress-plugin-sandpack'
 import { navbar } from './navbar'
 import { algoSidebar, hbsSidebar, interviewSidebar, jsdpSidebar, juejinTsSidebar, juejinTschSidebar, sidebar, tschSidebar, xnsSidebar } from './sidebar'
 
@@ -20,11 +18,6 @@ export default defineConfig({
     config: (md) => {
       // eslint-disable-next-line @typescript-eslint/no-require-imports, @typescript-eslint/no-var-requires
       md.use(require('markdown-it-imsize'))
-        .use(container, 'sandbox', {
-          render(tokens: any[], idx: number) {
-            return renderSandbox(tokens, idx, 'sandbox')
-          },
-        })
     },
   },
   themeConfig: {
