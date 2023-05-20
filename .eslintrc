@@ -1,0 +1,4 @@
+{
+  "extends": "@antfu",
+  "files":  [".vitepress/**/*.ts"]
+}

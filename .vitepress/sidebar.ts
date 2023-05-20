@@ -2,7 +2,7 @@ export const sidebar = [
   {
     items: [
       { text: 'Recent', link: '/' },
-    ]
+    ],
   },
 
   {
@@ -18,9 +18,9 @@ export const sidebar = [
           { text: 'Cheat Sheet', link: '/angular/docs/cheat-sheet' },
           { text: 'First App', link: '/angular/docs/first-app' },
           { text: 'Tour of Heroes', link: '/angular/docs/tour-of-heroes' },
-        ]
+        ],
       },
-    ]
+    ],
   },
 
   {
@@ -28,7 +28,7 @@ export const sidebar = [
     link: '/css/',
     // collapsed: false,
     items: [
-    ]
+    ],
   },
 
   {
@@ -36,7 +36,7 @@ export const sidebar = [
     link: '/js/',
     // collapsed: false,
     items: [
-    ]
+    ],
   },
 
   {
@@ -44,7 +44,7 @@ export const sidebar = [
     link: '/react/',
     // collapsed: true,
     items: [
-    ]
+    ],
   },
 
   {
@@ -57,9 +57,9 @@ export const sidebar = [
         link: '/next/docs/',
         items: [
           { text: 'Learn', link: '/next/docs/learn' },
-        ]
+        ],
       },
-    ]
+    ],
   },
 
   {
@@ -68,7 +68,7 @@ export const sidebar = [
     collapsed: true,
     items: [
       { text: 'VitePress 速通', link: '/vue/vitepress' },
-    ]
+    ],
   },
 
   {
@@ -76,7 +76,7 @@ export const sidebar = [
     link: '/nuxt/',
     // collapsed: true,
     items: [
-    ]
+    ],
   },
 ]
 
@@ -93,14 +93,14 @@ export const algoSidebar = [
         items: [
           { text: '104. 二叉树的最大深度', link: '/algo/binary-tree/104' },
           { text: '144. 二叉树的前序遍历', link: '/algo/binary-tree/144' },
-        ]
+        ],
       },
       {
         text: '链表',
         items: [
-        ]
+        ],
       },
-    ]
+    ],
   },
   {
     text: 'LeetCode',
@@ -113,16 +113,16 @@ export const algoSidebar = [
         items: [
           { text: '2620. 计数器', link: '/algo/js/2620' },
           { text: '2621. 睡眠函数', link: '/algo/js/2621' },
-        ]
+        ],
       },
       {
         text: '剑指 Offer',
         link: '/algo/offer/',
         // collapsed: false,
         items: [
-        ]
+        ],
       },
-    ]
+    ],
   },
 
 ]
@@ -155,7 +155,7 @@ export const hbsSidebar = [
       { text: '1.2 JavaScript 实现', link: '/hbs/1/2' },
       { text: '1.3 JavaScript 版本', link: '/hbs/1/3' },
       { text: '1.4 小结', link: '/hbs/1/4' },
-    ]
+    ],
   },
   {
     text: '第 2 章：HTML 中的 JavaScript',
@@ -167,7 +167,7 @@ export const hbsSidebar = [
       { text: '2.3 文档模式', link: '/hbs/2/3' },
       { text: '2.4 noscript 元素', link: '/hbs/2/4' },
       { text: '2.5 小结', link: '/hbs/2/5' },
-    ]
+    ],
   },
   {
     text: '第 3 章：语言基础',
@@ -182,7 +182,7 @@ export const hbsSidebar = [
       { text: '3.6 语句', link: '/hbs/3/6' },
       { text: '3.7 函数', link: '/hbs/3/7' },
       { text: '3.8 小结', link: '/hbs/3/8' },
-    ]
+    ],
   },
   {
     text: '第 4 章：变量、作用域与内存',
@@ -193,7 +193,7 @@ export const hbsSidebar = [
       { text: '4.2 执行上下文与作用域', link: '/hbs/4/2' },
       { text: '4.3 垃圾回收', link: '/hbs/4/3' },
       { text: '4.4 小结', link: '/hbs/4/4' },
-    ]
+    ],
   },
   {
     text: '第 5 章：基本引用类型',
@@ -205,7 +205,7 @@ export const hbsSidebar = [
       { text: '5.3 原始值包装类型', link: '/hbs/5/3' },
       { text: '5.4 单例内置对象', link: '/hbs/5/4' },
       { text: '5.5 小结', link: '/hbs/5/5' },
-    ]
+    ],
   },
   {
     text: '第 6 章：集合引用类型',
@@ -221,7 +221,7 @@ export const hbsSidebar = [
       { text: '6.7 WeakSet', link: '/hbs/6/7' },
       { text: '6.8 迭代与扩展操作', link: '/hbs/6/8' },
       { text: '6.9 小结', link: '/hbs/6/9' },
-    ]
+    ],
   },
   {
     text: '第 7 章：迭代器与生成器',
@@ -232,7 +232,7 @@ export const hbsSidebar = [
       { text: '7.2 迭代器模式', link: '/hbs/7/2' },
       { text: '7.3 生成器', link: '/hbs/7/3' },
       { text: '7.4 小结', link: '/hbs/7/4' },
-    ]
+    ],
   },
   {
     text: '第 8 章：对象、类与面向对象编程',
@@ -244,7 +244,7 @@ export const hbsSidebar = [
       { text: '8.3 继承', link: '/hbs/8/3' },
       { text: '8.4 类', link: '/hbs/8/4' },
       { text: '8.5 小结', link: '/hbs/8/5' },
-    ]
+    ],
   },
 ]
 
@@ -259,42 +259,42 @@ export const xnsSidebar = [
       { text: '1.3 JavaScript 之旅', link: '/xns/1/3' },
       { text: '1.4 示例：字符频率柱形图', link: '/xns/1/4' },
       { text: '1.5 小结', link: '/xns/1/5' },
-    ]
+    ],
   },
   {
     text: '第 2 章：词法结构',
     link: '/xns/2/',
     collapsed: true,
     items: [
-    ]
+    ],
   },
   {
     text: '第 3 章：类型、值和变量',
     link: '/xns/3/',
     collapsed: true,
     items: [
-    ]
+    ],
   },
   {
     text: '第 4 章：表达式和运算符',
     link: '/xns/4/',
     collapsed: true,
     items: [
-    ]
+    ],
   },
   {
     text: '第 5 章：语句',
     link: '/xns/5/',
     collapsed: true,
     items: [
-    ]
+    ],
   },
   {
     text: '第 6 章：对象',
     link: '/xns/6/',
     collapsed: true,
     items: [
-    ]
+    ],
   },
   // {
   //   text: '第 7 章：数组',
@@ -385,7 +385,7 @@ export const jsdpSidebar = [
       { text: '1.2 多态', link: '/jsdp/1/2' },
       { text: '1.3 封装', link: '/jsdp/1/3' },
       { text: '1.4 原型模式和基于原型继承的 JavaScript 对象系统', link: '/jsdp/1/4' },
-    ]
+    ],
   },
 ]
 

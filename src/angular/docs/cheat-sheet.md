@@ -30,10 +30,10 @@ class MyModule {}
 ```ts [declarations]
 // 属于该模块的组件，指令，管道和服务提供者列表
 // 模块内部使用
-declarations: [ 
-  MyRedComponent, 
-  MyBlueComponent, 
-  MyDatePipe 
+declarations: [
+  MyRedComponent,
+  MyBlueComponent,
+  MyDatePipe
 ]
 ```
 
@@ -41,16 +41,16 @@ declarations: [
 // 导入的其他模块
 // 可以在当前模块使用它们所提供的功能
 imports: [
-  BrowserModule, 
-  SomeOtherModule 
+  BrowserModule,
+  SomeOtherModule
 ]
 ```
 
 ```ts [exports]
 // 导出模块中的组件、管道等，使它们可以被其他模块使用
-exports: [ 
-  MyRedComponent, 
-  MyDatePipe 
+exports: [
+  MyRedComponent,
+  MyDatePipe
 ]
 ```
 

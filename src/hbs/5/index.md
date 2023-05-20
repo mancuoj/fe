@@ -45,7 +45,7 @@ Consider the following line of code:
 对象被认为是某个特定引用类型的**实例**。新对象通过使用 `new` 操作符后跟一个**构造函数**（constructor）来创建。构造函数就是用来创建新对象的函数，比如下面这行代码：
 
 ```js
-let now = new Date();
+const now = new Date()
 ```
 
 

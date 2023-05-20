@@ -24,9 +24,9 @@ export const navbar = [
           { text: 'ES6 入门', link: 'https://es6.ruanyifeng.com/#docs/intro' },
           { text: 'javascript.info', link: 'https://zh.javascript.info/' },
           { text: 'patterns.dev', link: 'https://www.patterns.dev/' },
-        ]
-      }
-    ]
+        ],
+      },
+    ],
   },
 
   {
@@ -36,6 +36,6 @@ export const navbar = [
       { text: '算法', link: '/algo/', activeMatch: '/algo/' },
       { text: '面试题', link: '/interview/', activeMatch: '/interview/' },
       { text: '类型体操', link: '/tsch/', activeMatch: '/tsch/' },
-    ]
+    ],
   },
 ]

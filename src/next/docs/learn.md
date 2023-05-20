@@ -183,7 +183,7 @@ export async function getServerSideProps(context) {
     props: {
       // props for your component
     },
-  };
+  }
 }
 ```
 
@@ -268,6 +268,6 @@ Next.js allows you to create API endpoints inside the `pages/api` directory. Eac
 ```js
 // req = HTTP incoming message, res = HTTP server response
 export default function handler(req, res) {
-  res.status(200).json({ text: 'Hello' });
+  res.status(200).json({ text: 'Hello' })
 }
 ```

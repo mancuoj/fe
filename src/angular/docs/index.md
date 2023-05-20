@@ -20,7 +20,7 @@ ng generate c my-component
 ::: code-group
 
 ```ts [@Component]
-import { Component } from '@angular/core';
+import { Component } from '@angular/core'
 
 @Component({
   selector: 'hello-world',
@@ -62,9 +62,9 @@ export class HelloWorldComponent {
 
   onEditClick() {
     this.canEdit = !this.canEdit
-    if (this.canEdit) {
+    if (this.canEdit)
       this.message = 'You can edit me!'
-    }
+
   }
 }
 ```
@@ -107,34 +107,34 @@ export class HelloWorldComponent {
 :::code-group
 
 ```ts [logger.service.ts]
-import { Injectable } from '@angular/core';
+import { Injectable } from '@angular/core'
 
-@Injectable({providedIn: 'root'})
+@Injectable({ providedIn: 'root' })
 export class Logger {
   writeCount(count: number) {
-    console.warn(count);
+    console.warn(count)
   }
 }
 ```
 
 ```ts [hello-di.component.ts]
-import { Component } from '@angular/core';
-import { Logger } from '../logger.service';
+import { Component } from '@angular/core'
+import { Logger } from '../logger.service'
 
 @Component({
   selector: 'hello-di',
   templateUrl: './hello-di.component.html'
 })
-export class HelloWorldDependencyInjectionComponent  {
-  count = 0;
+export class HelloWorldDependencyInjectionComponent {
+  count = 0
 
   // 创建组件实例时，Angular会自动注入 Logger 实例
   constructor(private logger: Logger) { }
 
   onLogMe() {
     // 调用 Logger 服务的方法
-    this.logger.writeCount(this.count);
-    this.count++;
+    this.logger.writeCount(this.count)
+    this.count++
   }
 }
 ```
