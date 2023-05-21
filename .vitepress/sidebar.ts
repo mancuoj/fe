@@ -1,19 +1,15 @@
 export const sidebar = [
-  {
-    items: [
-      { text: 'Recent', link: '/' },
-    ],
-  },
+  { text: 'Getting Started', link: '/' },
 
   {
     text: 'Angular',
     link: '/angular/',
-    // collapsed: false,
+    collapsed: false,
     items: [
       {
         text: 'Docs',
         link: '/angular/docs/',
-        // collapsed: false,
+        collapsed: false,
         items: [
           { text: 'Cheat Sheet', link: '/angular/docs/cheat-sheet' },
           { text: 'First App', link: '/angular/docs/first-app' },
@@ -26,7 +22,7 @@ export const sidebar = [
   {
     text: 'CSS',
     link: '/css/',
-    // collapsed: false,
+    collapsed: true,
     items: [
     ],
   },
@@ -34,7 +30,7 @@ export const sidebar = [
   {
     text: 'JavaScript',
     link: '/js/',
-    // collapsed: false,
+    collapsed: true,
     items: [
     ],
   },
@@ -42,7 +38,7 @@ export const sidebar = [
   {
     text: 'React',
     link: '/react/',
-    // collapsed: true,
+    collapsed: true,
     items: [
     ],
   },
@@ -74,10 +70,13 @@ export const sidebar = [
   {
     text: 'Nuxt',
     link: '/nuxt/',
-    // collapsed: true,
+    collapsed: true,
     items: [
     ],
   },
+
+  { text: 'Memos', link: '/memos' },
+  { text: 'About Me', link: '/about' },
 ]
 
 export const algoSidebar = [
