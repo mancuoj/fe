@@ -321,83 +321,83 @@ export const xnsSidebar = [
     items: [
     ],
   },
-  // {
-  //   text: '第 7 章：数组',
-  //   link: '/xns/7/',
-  //   collapsed: true,
-  //   items: [,
-  //   ]
-  // },
-  // {
-  //   text: '第 8 章：函数',
-  //   link: '/xns/8/',
-  //   collapsed: true,
-  //   items: [
-  //   ]
-  // },
-  // {
-  //   text: '第 9 章：类',
-  //   link: '/xns/9/',
-  //   collapsed: true,
-  //   items: [
-  //   ]
-  // },
-  // {
-  //   text: '第 10 章：模块',
-  //   link: '/xns/10/',
-  //   collapsed: true,
-  //   items: [
-  //   ]
-  // },
-  // {
-  //   text: '第 11 章：JavaScript 标准库',
-  //   link: '/xns/11/',
-  //   collapsed: true,
-  //   items: [
-  //   ]
-  // },
-  // {
-  //   text: '第 12 章：迭代器和生成器',
-  //   link: '/xns/12/',
-  //   collapsed: true,
-  //   items: [
-  //   ]
-  // },
-  // {
-  //   text: '第 13 章：异步 JavaScript',
-  //   link: '/xns/13/',
-  //   collapsed: true,
-  //   items: [
-  //   ]
-  // },
-  // {
-  //   text: '第 14 章：元编程',
-  //   link: '/xns/14/',
-  //   collapsed: true,
-  //   items: [
-  //   ]
-  // },
-  // {
-  //   text: '第 15 章：浏览器中的 JavaScript',
-  //   link: '/xns/15/',
-  //   collapsed: true,
-  //   items: [
-  //   ]
-  // },
-  // {
-  //   text: '第 16 章：Node 服务器端 JavaScript',
-  //   link: '/xns/16/',
-  //   collapsed: true,
-  //   items: [
-  //   ]
-  // },
-  // {
-  //   text: '第 17 章：JavaScript 工具和扩展',
-  //   link: '/xns/17/',
-  //   collapsed: true,
-  //   items: [
-  //   ]
-  // },
+  {
+    text: '第 7 章：数组',
+    link: '/xns/7/',
+    collapsed: true,
+    items: [
+    ],
+  },
+  {
+    text: '第 8 章：函数',
+    link: '/xns/8/',
+    collapsed: true,
+    items: [
+    ],
+  },
+  {
+    text: '第 9 章：类',
+    link: '/xns/9/',
+    collapsed: true,
+    items: [
+    ],
+  },
+  {
+    text: '第 10 章：模块',
+    link: '/xns/10/',
+    collapsed: true,
+    items: [
+    ],
+  },
+  {
+    text: '第 11 章：JavaScript 标准库',
+    link: '/xns/11/',
+    collapsed: true,
+    items: [
+    ],
+  },
+  {
+    text: '第 12 章：迭代器和生成器',
+    link: '/xns/12/',
+    collapsed: true,
+    items: [
+    ],
+  },
+  {
+    text: '第 13 章：异步 JavaScript',
+    link: '/xns/13/',
+    collapsed: true,
+    items: [
+    ],
+  },
+  {
+    text: '第 14 章：元编程',
+    link: '/xns/14/',
+    collapsed: true,
+    items: [
+    ],
+  },
+  {
+    text: '第 15 章：浏览器中的 JavaScript',
+    link: '/xns/15/',
+    collapsed: true,
+    items: [
+    ],
+  },
+  {
+    text: '第 16 章：Node 服务器端 JavaScript',
+    link: '/xns/16/',
+    collapsed: true,
+    items: [
+    ],
+  },
+  {
+    text: '第 17 章：JavaScript 工具和扩展',
+    link: '/xns/17/',
+    collapsed: true,
+    items: [
+    ],
+  },
 ]
 
 export const jsdpSidebar = [

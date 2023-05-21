@@ -18,6 +18,8 @@ JavaScript 是 Web 编程语言。
 
 Node 的巨大成功意味着 JavaScript 如今也是软件开发者最常用的编程语言。无论你是从头开始，还是已经在工作中使用 JavaScript，本书都能帮你掌握这门语言。
 
+
+
 :::info
 If you are already familiar with other programming languages, it may help you to know that JavaScript is a high-level, dynamic, interpreted programming language that is well-suited to object-oriented and functional programming styles. 
 
@@ -37,6 +39,7 @@ JavaScript 从 Scheme 借鉴了一类（first class）函数，从不太知名�
 但要阅读本书或学习 JavaScript 不需要了解这些语言，也不必熟悉这些术语。
 
 
+
 :::info
 The name "JavaScript" is quite misleading. 
 
@@ -50,6 +53,8 @@ JavaScript 这个名字相当有误导性。
 除了表面上语法相似，它与 Java 是完全不同的两门编程语言。
 
 JavaScript 经历了很长时间才从一门脚本语言成长为一门健壮高效的通用语言，适合开发代码量巨大的重要软件工程和项目。
+
+
 
 :::info JavaScript: Names, Versions, and Modes
 JavaScript was created at Netscape in the early days of the web, and technically, "JavaScript" is a trademark licensed from Sun Microsystems (now Oracle) used to describe Netscape's (now Mozilla's) implementation of the language. 
@@ -67,6 +72,8 @@ Netscape 将这门语言提交给 Ecma International [^1] 进行标准化，由�
 
 实践中，大家仍然称这门语言为 JavaScript。本书在讨论这门语言的标准及版本时使用“ECMAScript”及其缩写“ES”。
 
+
+
 :::info JavaScript: Names, Versions, and Modes
 For most of the 2010s, version 5 of the ECMAScript standard has been supported by all web browsers. 
 
@@ -77,6 +84,8 @@ ES6 was released in 2015 and added major new features—including class and modu
 Since ES6, the ECMAScript specification has moved to a yearly release cadence, and versions of the language—ES2016, ES2017, ES2018, ES2019, and ES2020—are now identified by year of release.
 :::
 
+
+
 2010 年以来，几乎所有浏览器都支持 ECMAScript 标准第 5 版。
 
 本书以 ES5 作为兼容性基准，不再讨论这门语言的更早版本。
@@ -86,6 +95,8 @@ ES6 发布于 2015 年，增加了重要的新特性（包括类和模块语法�
 这些新特性把JavaScript从一门脚本语言转变为一门适合大规模软件工程的严肃、通用语言。
 
 从 ES6 开始，ECMAScript 规范改为每年发布一次，语言的版本也以发布的年份来标识（ES2016、ES2017、ES2018、ES2019 和 ES2020）。
+
+
 
 :::info JavaScript: Names, Versions, and Modes
 As JavaScript evolved, the language designers attempted to correct flaws in the early (pre-ES5) versions. 
@@ -121,6 +132,8 @@ This book will cover the legacy features of JavaScript but is careful to point o
 
 本书会介绍 JavaScript 的传统特性，但会细心地指出它们在严格模式下无法使用。
 
+
+
 :::info
 To be useful, every language must have a platform, or standard library, for performing things like basic input and output. 
 
@@ -135,6 +148,8 @@ Input and output (as well as more sophisticated features, such as networking, st
 
 输入和输出（以及更复杂的特性，如联网、存储和图形处理）是内嵌 JavaScript 的“宿主环境”的责任。
 
+
+
 :::info
 The original host environment for JavaScript was a web browser, and this is still the most common execution environment for JavaScript code. 
 
@@ -146,6 +161,8 @@ And it allows JavaScript code to display output to the user with HTML and CSS.
 浏览器是 JavaScript 最早的宿主环境，也是 JavaScript 代码最常见的运行环境。
 
 浏览器环境允许 JavaScript 代码从用户的鼠标和键盘或者通过发送 HTTP 请求获取输入，也允许 JavaScript 代码通过 HTML 和 CSS 向用户显示输出。
+
+
 
 :::info
 Since 2010, another host environment has been available for JavaScript code. 
@@ -161,6 +178,8 @@ Node is a popular choice for implementing web servers and also a convenient tool
 
 Node 是实现 Web 服务器的一种流行方式，也是编写可以替代 shell 脚本的简单实用脚本的便捷工具。
 
+
+
 :::info
 Most of this book is focused on the JavaScript language itself. 
 
@@ -170,6 +189,8 @@ Chapter 11 documents the JavaScript standard library, Chapter 15 introduces the 
 本书大部分内容聚焦JavaScript语言本身。
 
 [第11章](/xns/11/) 讲述 JavaScript 标准库，[第 15 章](/xns/15/) 介绍浏览器宿主环境，[第 16 章](/xns/16/) 介绍 Node 宿主环境。
+
+
 
 :::info
 This book covers low-level fundamentals first, and then builds on those to more advanced and higher-level abstractions. 
