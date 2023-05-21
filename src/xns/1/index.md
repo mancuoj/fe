@@ -3,7 +3,7 @@
 :::info
 JavaScript is the programming language of the web. 
 
-The overwhelming majority of websites use JavaScript, and all modern web browsers — on desktops, tablets, and phones — include JavaScript interpreters, making JavaScript the most-deployed programming language in history. 
+The overwhelming majority of websites use JavaScript, and all modern web browsers—on desktops, tablets, and phones—include JavaScript interpreters, making JavaScript the most-deployed programming language in history. 
 
 Over the last decade, Node.js has enabled JavaScript programming outside of web browsers, and the dramatic success of Node means that JavaScript is now also the most-used programming language among software developers. 
 
@@ -54,7 +54,7 @@ JavaScript 经历了很长时间才从一门脚本语言成长为一门健壮高
 :::info JavaScript: Names, Versions, and Modes
 JavaScript was created at Netscape in the early days of the web, and technically, "JavaScript" is a trademark licensed from Sun Microsystems (now Oracle) used to describe Netscape's (now Mozilla's) implementation of the language. 
 
-Netscape submitted the language for standardization to ECMA—the European Computer Manufacturer's Association—and because of trademark issues, the standardized version of the language was stuck with the awkward name "ECMAScript." 
+Netscape submitted the language for standardization to ECMA—the European Computer Manufacturer's Association—and because of trademark issues, the standardized version of the language was stuck with the awkward name "ECMAScript". 
 
 In practice, everyone just calls the language JavaScript. This book uses the name "ECMAScript" and the abbreviation "ES" to refer to the language standard and to versions of that standard.
 :::
