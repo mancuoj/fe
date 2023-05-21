@@ -1,5 +1,13 @@
 export const sidebar = [
-  { text: 'Getting Started', link: '/' },
+  { text: 'Start', link: '/' },
+
+  {
+    text: 'JavaScript',
+    link: '/js/',
+    collapsed: true,
+    items: [
+    ],
+  },
 
   {
     text: 'Angular',
@@ -23,22 +31,6 @@ export const sidebar = [
         items: [
         ],
       },
-    ],
-  },
-
-  {
-    text: 'CSS',
-    link: '/css/',
-    collapsed: true,
-    items: [
-    ],
-  },
-
-  {
-    text: 'JavaScript',
-    link: '/js/',
-    collapsed: true,
-    items: [
     ],
   },
 
@@ -96,6 +88,7 @@ export const sidebar = [
     collapsed: true,
     items: [
       { text: 'Git', link: '/others/git' },
+      { text: 'CSS', link: '/others/css' },
       { text: 'NPM', link: '/others/npm' },
       { text: 'Monorepo', link: '/others/monorepo' },
     ],
