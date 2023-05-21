@@ -21,9 +21,9 @@ table {
   opacity: 0.2;
 }
 
-.VPSidebarItem.has-active > .item > .caret {
+/* .VPSidebarItem.has-active > .item > .caret {
   display: none;
-}
+} */
 
 .VPSidebarItem.level-1 .items, .VPSidebarItem.level-2 .items, .VPSidebarItem.level-3 .items, .VPSidebarItem.level-4 .items, .VPSidebarItem.level-5 .items, .VPDocAside .has-outline .content {
   position: relative;

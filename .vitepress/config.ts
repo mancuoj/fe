@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+/* eslint-disable @typescript-eslint/no-require-imports */
 import { defineConfig } from 'vitepress'
 import { navbar } from './navbar'
 import { algoSidebar, hbsSidebar, interviewSidebar, jsdpSidebar, juejinTsSidebar, juejinTschSidebar, sidebar, tschSidebar, xnsSidebar } from './sidebar'
@@ -16,8 +18,8 @@ export default defineConfig({
       dark: 'vitesse-dark',
     },
     config: (md) => {
-      // eslint-disable-next-line @typescript-eslint/no-require-imports, @typescript-eslint/no-var-requires
       md.use(require('markdown-it-imsize'))
+        .use(require('markdown-it-footnote'))
     },
   },
   themeConfig: {

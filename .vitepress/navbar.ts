@@ -24,6 +24,7 @@ export const navbar = [
           { text: 'ES6 入门', link: 'https://es6.ruanyifeng.com/#docs/intro' },
           { text: 'javascript.info', link: 'https://zh.javascript.info/' },
           { text: 'patterns.dev', link: 'https://www.patterns.dev/' },
+          { text: 'JavaScript 二十年', link: 'https://cn.history.js.org/' },
         ],
       },
     ],
