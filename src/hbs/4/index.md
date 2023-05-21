@@ -21,4 +21,10 @@ Because there are no rules defining the type of data that a variable must hold, 
 Though this is an interesting, powerful, and problematic feature, there are many more complexities related to variables.
 :::
 
-相比于其他语言，JavaScript 中的变量可谓独树一帜。正如 ECMA-262 所规定的，JavaScript 变量是松散类型的，而且变量不过就是特定时间点一个特定值的名称而已。由于没有规则定义变量必须包含什么数据类型，变量的值和数据类型在脚本生命期内可以改变。这样的变量很有意思，很强大，当然也有不少问题。本章会剖析错综复杂的变量。
+相比于其他语言，JavaScript 中的变量可谓独树一帜。
+
+正如 ECMA-262 所规定的，JavaScript 变量是松散类型的，而且变量不过就是特定时间点一个特定值的名称而已。
+
+由于没有规则定义变量必须包含什么数据类型，变量的值和数据类型在脚本生命期内可以改变。
+
+这样的变量很有意思，很强大，当然也有不少问题。本章会剖析错综复杂的变量。
