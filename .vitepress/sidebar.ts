@@ -95,8 +95,8 @@ export const sidebar = [
     text: 'Others',
     collapsed: true,
     items: [
-      { text: 'NPM', link: '/others/npm' },
       { text: 'Git', link: '/others/git' },
+      { text: 'NPM', link: '/others/npm' },
       { text: 'Monorepo', link: '/others/monorepo' },
     ],
   },
@@ -415,34 +415,65 @@ export const jsdpSidebar = [
 ]
 
 export const juejinTschSidebar = [
-  { text: '0. 个人总结', link: '/juejin/tsch/' },
-  { text: '1. 如何阅读', link: '/juejin/tsch/1' },
-  { text: '2. TypeScript', link: '/juejin/tsch/2' },
-  { text: '3. 类型体操', link: '/juejin/tsch/3' },
-  { text: '4. 类型和类型运算', link: '/juejin/tsch/4' },
-  { text: '5. 模式匹配做提取', link: '/juejin/tsch/5' },
-  { text: '6. 重新构造做变换', link: '/juejin/tsch/6' },
-  { text: '7. 递归复用做循环', link: '/juejin/tsch/7' },
-  { text: '8. 数组长度做计数', link: '/juejin/tsch/8' },
-  { text: '9. 联合分散可简化', link: '/juejin/tsch/9' },
-  { text: '10. 特殊特性要记清', link: '/juejin/tsch/10' },
-  { text: '11. 类型体操顺口溜', link: '/juejin/tsch/11' },
-  { text: '12. ', link: '/juejin/tsch/12' },
-  { text: '13. ', link: '/juejin/tsch/13' },
-  { text: '14. ', link: '/juejin/tsch/14' },
-  { text: '15. ', link: '/juejin/tsch/15' },
-  { text: '16. ', link: '/juejin/tsch/16' },
-  { text: '17. ', link: '/juejin/tsch/17' },
-  { text: '18. ', link: '/juejin/tsch/18' },
-  { text: '19. ', link: '/juejin/tsch/19' },
-  { text: '20. ', link: '/juejin/tsch/20' },
-  { text: '21. ', link: '/juejin/tsch/21' },
-  { text: '22. 小册总结', link: '/juejin/tsch/22' },
-  { text: '23. ', link: '/juejin/tsch/23' },
-  { text: '24. ', link: '/juejin/tsch/24' },
-  { text: '25. ', link: '/juejin/tsch/25' },
-  { text: '26. ', link: '/juejin/tsch/26' },
-  { text: '27. 新语法 satisfies', link: '/juejin/tsch/27' },
+  { text: '蠢人的总结', link: '/juejin/tsch/' },
+  {
+    text: '简介',
+    collapsed: false,
+    items: [
+      { text: '1. 如何阅读', link: '/juejin/tsch/1' },
+      { text: '2. TypeScript', link: '/juejin/tsch/2' },
+      { text: '3. 类型体操', link: '/juejin/tsch/3' },
+      { text: '4. 类型和类型运算', link: '/juejin/tsch/4' },
+    ],
+  },
+  {
+    text: '方法',
+    collapsed: false,
+    items: [
+      { text: '5. 模式匹配做提取', link: '/juejin/tsch/5' },
+      { text: '6. 重新构造做变换', link: '/juejin/tsch/6' },
+      { text: '7. 递归复用做循环', link: '/juejin/tsch/7' },
+      { text: '8. 数组长度做计数', link: '/juejin/tsch/8' },
+      { text: '9. 联合分散可简化', link: '/juejin/tsch/9' },
+      { text: '10. 特殊特性要记清', link: '/juejin/tsch/10' },
+      { text: '11. 类型体操顺口溜', link: '/juejin/tsch/11' },
+    ],
+  },
+  {
+    text: '实战',
+    collapsed: true,
+    items: [
+      { text: '12. ', link: '/juejin/tsch/12' },
+      { text: '13. ', link: '/juejin/tsch/13' },
+      { text: '14. ', link: '/juejin/tsch/14' },
+      { text: '15. ', link: '/juejin/tsch/15' },
+      { text: '16. ', link: '/juejin/tsch/16' },
+    ],
+  },
+  {
+    text: '原理和总结',
+    collapsed: true,
+    items: [
+      { text: '17. ', link: '/juejin/tsch/17' },
+      { text: '18. ', link: '/juejin/tsch/18' },
+      { text: '19. ', link: '/juejin/tsch/19' },
+      { text: '20. ', link: '/juejin/tsch/20' },
+      { text: '21. ', link: '/juejin/tsch/21' },
+      { text: '22. 小册总结', link: '/juejin/tsch/22' },
+    ],
+  },
+  {
+    text: '加餐',
+    collapsed: true,
+    items: [
+      { text: '23. ', link: '/juejin/tsch/23' },
+      { text: '24. ', link: '/juejin/tsch/24' },
+      { text: '25. ', link: '/juejin/tsch/25' },
+      { text: '26. ', link: '/juejin/tsch/26' },
+      { text: '27. 新语法 satisfies', link: '/juejin/tsch/27' },
+    ],
+  },
+
 ]
 
 export const juejinTsSidebar = [
