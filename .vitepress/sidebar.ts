@@ -91,6 +91,16 @@ export const sidebar = [
     ],
   },
 
+  {
+    text: 'Others',
+    collapsed: true,
+    items: [
+      { text: 'npm', link: '/others/npm' },
+      { text: 'git', link: '/others/git' },
+      { text: 'monorepo', link: '/others/monorepo' },
+    ],
+  },
+
   { text: 'Memos', link: '/memos' },
   { text: 'About Me', link: '/about' },
 ]
