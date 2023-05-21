@@ -6,6 +6,11 @@ Stupid, fat pig, a opinionated full-stack developer (in imagination).
 
 ## Tech Stack
 
-- TypeScript + React + Next.js
-- TypeScript + Angular
-- Python + Flask
+![](https://skillicons.dev/icons?i=js,ts,react,nextjs,tailwind)
+
+## Want to Learn
+
+![](https://skillicons.dev/icons?i=py,java,go,rust,py,dart,vue,angular,svelte,wasm,lit,solidity,solidjs,threejs&perline=8)
+
+![](https://skillicons.dev/icons?i=nodejs,nestjs,nuxtjs,electron,tauri,prisma,mongodb,graphql,postgres,redis,nginx,spring,flask,django,fastapi,flutter&perline=8)
+
