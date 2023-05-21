@@ -58,6 +58,7 @@ export const sidebar = [
       {
         text: 'Docs',
         link: '/next/docs/',
+        collapsed: true,
         items: [
           { text: 'Learn', link: '/next/docs/learn' },
         ],
@@ -70,6 +71,14 @@ export const sidebar = [
     link: '/vue/',
     collapsed: true,
     items: [
+      {
+        text: 'Docs',
+        link: '/vue/docs/',
+        collapsed: true,
+        items: [
+          { text: 'Learn', link: '/vue/docs/learn' },
+        ],
+      },
       { text: 'VitePress 速通', link: '/vue/vitepress' },
     ],
   },
