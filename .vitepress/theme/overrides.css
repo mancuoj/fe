@@ -25,6 +25,56 @@ table {
   display: none;
 }
 
+.VPSidebarItem.level-1 .items, .VPSidebarItem.level-2 .items, .VPSidebarItem.level-3 .items, .VPSidebarItem.level-4 .items, .VPSidebarItem.level-5 .items, .VPDocAside .has-outline .content {
+  position: relative;
+  border-left-color: transparent !important;
+}
+
+.VPSidebarItem.level-1 .items:before, .VPSidebarItem.level-2 .items:before, .VPSidebarItem.level-3 .items:before, .VPSidebarItem.level-4 .items:before, .VPSidebarItem.level-5 .items:before, .VPDocAside .has-outline .content:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -1px;
+  width: 1px;
+  background: var(--vp-c-border);
+  animation: 0.5s linear forwards border-horizontal;
+}
+
+.vp-doc h2, .group + .group[data-v-1e48ca08] {
+  position: relative;
+  border-top-width: 0;
+}
+
+.vp-doc h2:before, .group + .group[data-v-1e48ca08]:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--vp-c-border);
+  animation: 2s linear forwards border-line;
+}
+
+@keyframes border-line {
+  from {
+    right: 100%;
+  }
+  to {
+    right: 0;
+  }
+}
+
+@keyframes border-horizontal {
+  from {
+    bottom: 100%;
+  }
+  to {
+    bottom: 0;
+  }
+}
+
 /**
  * VitePress: Custom fix
  * -------------------------------------------------------------------------- */

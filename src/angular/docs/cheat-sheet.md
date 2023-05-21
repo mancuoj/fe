@@ -1,5 +1,8 @@
 # Cheat Sheet
 
+
+## 启动
+
 :::code-group
 
 ```ts [Bootstraping]
@@ -11,6 +14,9 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic'
 platformBrowserDynamic().bootstrapModule(AppModule)
 ```
 :::
+
+
+## 模块
 
 :::code-group
 ```ts [NgModules]
@@ -69,6 +75,8 @@ providers: [
 bootstrap: [MyAppComponent]
 ```
 :::
+
+## 模板语法
 
 :::code-group
 ```html [template syntax]
@@ -186,6 +194,8 @@ import { FormsModule } from '@angular/forms'
 ```
 :::
 
+## 装饰器
+
 :::code-group
 ```ts [class decorators]
 import { Directive, … } from '@angular/core'
@@ -268,6 +278,8 @@ styleUrls: ['my-component.css']
 :::
 
 
+## Hooks
+
 :::code-group
 ```ts [hooks]
 // 最开始调用，用来注入依赖
@@ -300,6 +312,8 @@ ngAfterViewInit() { … }
 ngOnDestroy() { … }
 ```
 :::
+
+## 路由
 
 :::code-group
 ```ts [router]

@@ -4,16 +4,23 @@ export const sidebar = [
   {
     text: 'Angular',
     link: '/angular/',
-    collapsed: false,
+    collapsed: true,
     items: [
       {
         text: 'Docs',
         link: '/angular/docs/',
-        collapsed: false,
+        collapsed: true,
         items: [
           { text: 'Cheat Sheet', link: '/angular/docs/cheat-sheet' },
           { text: 'First App', link: '/angular/docs/first-app' },
           { text: 'Tour of Heroes', link: '/angular/docs/tour-of-heroes' },
+        ],
+      },
+      {
+        text: 'Learn',
+        link: '/angular/learn/',
+        collapsed: true,
+        items: [
         ],
       },
     ],
