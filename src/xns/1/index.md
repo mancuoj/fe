@@ -204,7 +204,6 @@ This introductory chapter makes a quick first pass through the language, introdu
 If you are already a practicing JavaScript programmer, you can probably skip this chapter. (Although you might enjoy reading Example 1-1 at the end of the chapter before you move on.)
 :::
 
-<!-- TODO：示例 1-1 引用 -->
 全书首先从底层基础讲起，然后逐步过渡到高级及更高层次的抽象。
 
 这些章节的安排多多少少考虑了阅读的先后次序。
@@ -213,7 +212,7 @@ If you are already a practicing JavaScript programmer, you can probably skip thi
 
 本书的交叉引用非常多，有的指向前面的章节，有的指向后面的章节。本章会先快速地过一遍这门语言，介绍一些对理解后续章节的深入剖析有帮助的关键特性。
 
-如果你是一名 JavaScript 程序员，可以跳过这一章（但在跳过之前，读一读本章末尾的示例 1-1 应该会让你很开心）。
+如果你是一名 JavaScript 程序员，可以跳过这一章（但在跳过之前，读一读本章末尾的 [示例 1-1](/xns/1/4#example-1-1) 应该会让你很开心）。
 
 
 [^1]: 读者可以参考 Allen Wirfs-Brock 和 Brendan Eich（JavaScript 之父）为第 4 届编程语言历史大会（2020 年 6 月）撰写的论文 [JavaScript: The First 20 Years](https://cn.history.js.org/) 以及 [维基百科词条](https://en.wikipedia.org/wiki/Ecma_International)。
