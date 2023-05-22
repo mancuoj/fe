@@ -87,8 +87,8 @@ export const sidebar = [
     text: 'Others',
     collapsed: true,
     items: [
-      { text: 'npm', link: '/others/npm' },
       { text: 'Git', link: '/others/git' },
+      { text: 'npm', link: '/others/npm' },
       { text: 'CSS', link: '/others/css' },
       { text: 'Monorepo', link: '/others/monorepo' },
     ],

@@ -7,6 +7,9 @@ devDependencies:
   '@fontsource/jetbrains-mono':
     specifier: ^5.0.0
     version: 5.0.0
+  '@fontsource/merriweather':
+    specifier: ^5.0.0
+    version: 5.0.0
   '@types/markdown-it-container':
     specifier: ^2.0.5
     version: 2.0.5
@@ -16,6 +19,9 @@ devDependencies:
   eslint:
     specifier: ^8.41.0
     version: 8.41.0
+  lxgw-wenkai-screen-webfont:
+    specifier: ^1.7.0
+    version: 1.7.0
   markdown-it-container:
     specifier: ^3.0.0
     version: 3.0.0
@@ -565,6 +571,10 @@ packages:
 
   /@fontsource/jetbrains-mono@5.0.0:
     resolution: {integrity: sha512-+urFA/HPgYCzKQLiZbtzWIEyHgoJavVAau9B2mRndqDoPqfoFofEi3tj+VdRyG06ew2L3RTQIoZZLfrS2Fk4iQ==}
+    dev: true
+
+  /@fontsource/merriweather@5.0.0:
+    resolution: {integrity: sha512-NTM4+fhRpp0ssEXBK9rQRIq7YPMOMSKK1fs49D/wbuquFwJQ0OWzGdIxm9WsJmqFHcUA6wUU+V2/12fLn8W0fw==}
     dev: true
 
   /@humanwhocodes/config-array@0.11.8:
@@ -2407,6 +2417,10 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       yallist: 4.0.0
+    dev: true
+
+  /lxgw-wenkai-screen-webfont@1.7.0:
+    resolution: {integrity: sha512-xvfF4V26Mb335xKg3uxljz+V2nq4F5ek0ku9pmyKgT0Dzo/d2rHi7WpnqgvM9mlXAcAKOrxrcDmUZiIs/ZQ9bQ==}
     dev: true
 
   /magic-string@0.30.0:
