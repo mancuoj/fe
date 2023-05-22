@@ -1,7 +1,7 @@
 export const navbar = [
   {
     text: 'Reading',
-    activeMatch: '^/(hbs|xns|jsdp|juejin)/',
+    activeMatch: '^/(hbs|xns|jsdp)/',
     items: [
       {
         text: '常看常新',
@@ -20,23 +20,28 @@ export const navbar = [
           { text: 'JavaScript 二十年', link: 'https://cn.history.js.org/' },
         ],
       },
-      {
-        text: '掘金小册',
-        items: [
-          { text: 'TS 类型体操通关秘籍', link: '/juejin/tsch/', activeMatch: '/juejin/tsch' },
-          { text: 'TS 全面进阶指南', link: '/juejin/ts/', activeMatch: '/juejin/ts/' },
-        ],
-      },
     ],
   },
 
   {
-    text: 'Problems',
-    activeMatch: '^/(algo|tsch|interview)/',
+    text: 'Learning',
+    activeMatch: '^/(algo|tsch|interview|juejin)/',
     items: [
-      { text: '算法', link: '/algo/', activeMatch: '/algo/' },
-      { text: '面试题', link: '/interview/', activeMatch: '/interview/' },
-      { text: '类型体操', link: '/tsch/', activeMatch: '/tsch/' },
+      {
+        text: 'Problems',
+        items: [
+          { text: '算法', link: '/algo/', activeMatch: '/algo/' },
+          { text: '面试题', link: '/interview/', activeMatch: '/interview/' },
+          { text: '类型体操', link: '/tsch/', activeMatch: '/tsch/' },
+        ],
+      },
+      {
+        text: '掘金小册',
+        items: [
+          { text: 'TS 类型体操通关秘籍', link: '/juejin/tsch/', activeMatch: '/juejin/tsch/' },
+          { text: 'TS 全面进阶指南', link: '/juejin/ts/', activeMatch: '/juejin/ts/' },
+        ],
+      },
     ],
   },
 ]
