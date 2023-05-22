@@ -29,8 +29,8 @@ devDependencies:
     specifier: ^1.62.1
     version: 1.62.1
   vitepress:
-    specifier: 1.0.0-alpha.76
-    version: 1.0.0-alpha.76(@algolia/client-search@4.17.0)(@types/node@20.2.3)(sass@1.62.1)
+    specifier: 1.0.0-beta.1
+    version: 1.0.0-beta.1(@algolia/client-search@4.17.0)(@types/node@20.2.3)(sass@1.62.1)
   vitepress-plugin-codeblocks-fold:
     specifier: ^1.2.14
     version: 1.2.14
@@ -3123,8 +3123,8 @@ packages:
     resolution: {integrity: sha512-J1JEBF4M+Cq/X/w2e98U1PfS1kNFwJa3a32Yu1TZtw54PudY/LWmgq+TRGFIbTOFiSnhIRoEVKudfa1gJKKEDg==}
     dev: true
 
-  /vitepress@1.0.0-alpha.76(@algolia/client-search@4.17.0)(@types/node@20.2.3)(sass@1.62.1):
-    resolution: {integrity: sha512-fzR1pDpGnSMeCJ+AnDdMe/ETD2G0Go+g6mTxDv9ps7Hmr1JjVqw97nasCyZg3jgfQxi2nt78EJ/bw7hY5n/rlw==}
+  /vitepress@1.0.0-beta.1(@algolia/client-search@4.17.0)(@types/node@20.2.3)(sass@1.62.1):
+    resolution: {integrity: sha512-V2yyCwQ+v9fh7rbnGDLp8M7vHa9sLElexXf/JHtBOsOwv7ed9wt1QI4WUagYgKR3TeoJT9v2s6f0UaQSne0EvQ==}
     hasBin: true
     dependencies:
       '@docsearch/css': 3.3.5
