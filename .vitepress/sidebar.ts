@@ -395,14 +395,76 @@ export const xnsSidebar = [
 
 export const jsdpSidebar = [
   {
-    text: '第 1 章：面向对象的JavaScript',
-    link: '/jsdp/1/',
-    collapsed: true,
+    text: '第一部分 基础知识',
     items: [
-      { text: '1.1 动态类型语言和鸭子类型', link: '/jsdp/1/1' },
-      { text: '1.2 多态', link: '/jsdp/1/2' },
-      { text: '1.3 封装', link: '/jsdp/1/3' },
-      { text: '1.4 原型模式和基于原型继承的 JavaScript 对象系统', link: '/jsdp/1/4' },
+      {
+        text: '第 1 章：面向对象的 JavaScript',
+        link: '/jsdp/1/',
+        collapsed: true,
+        items: [
+          { text: '1.1 动态类型语言和鸭子类型', link: '/jsdp/1/1' },
+          { text: '1.2 多态', link: '/jsdp/1/2' },
+          { text: '1.3 封装', link: '/jsdp/1/3' },
+          { text: '1.4 原型模式和基于原型继承的 JavaScript 对象系统', link: '/jsdp/1/4' },
+        ],
+      },
+      {
+        text: '第 2 章：this、call 和 apply',
+        link: '/jsdp/2/',
+        collapsed: true,
+        items: [
+          { text: '2.1 this', link: '/jsdp/2/1' },
+          { text: '2.1 call 和 apply', link: '/jsdp/2/2' },
+        ],
+      },
+      {
+        text: '第 3 章：闭包和高阶函数',
+        link: '/jsdp/3/',
+        collapsed: true,
+        items: [
+          { text: '3.1 闭包', link: '/jsdp/3/1' },
+          { text: '3.2 高阶函数', link: '/jsdp/3/2' },
+          { text: '3.3 小结', link: '/jsdp/3/3' },
+        ],
+      },
+    ],
+  },
+  {
+    text: '第二部分 设计模式',
+    items: [
+      {
+        text: '第 4 章：单例模式',
+        link: '/jsdp/4/',
+        collapsed: true,
+        items: [
+        ],
+      },
+      {
+        text: '第 5 章：策略模式',
+        link: '/jsdp/5/',
+        collapsed: true,
+        items: [
+        ],
+      },
+    ],
+  },
+  {
+    text: '第三部分 设计原则和编程技巧',
+    items: [
+      {
+        text: '第 18 章：单一职责原则',
+        link: '/jsdp/18/',
+        collapsed: true,
+        items: [
+        ],
+      },
+      {
+        text: '第 19 章：最少知识原则',
+        link: '/jsdp/19/',
+        collapsed: true,
+        items: [
+        ],
+      },
     ],
   },
 ]
