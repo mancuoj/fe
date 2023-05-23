@@ -25,7 +25,7 @@ export const sidebar = [
         ],
       },
       {
-        text: 'Learn',
+        text: 'Notes',
         link: '/angular/learn/',
         collapsed: true,
         items: [
@@ -39,6 +39,7 @@ export const sidebar = [
     link: '/react/',
     collapsed: true,
     items: [
+      { text: 'React 项目的文件结构', link: '/react/file-structure' },
     ],
   },
 
