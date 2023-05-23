@@ -2,6 +2,17 @@ export const sidebar = [
   { text: 'Start', link: '/' },
 
   {
+    text: 'X',
+    collapsed: true,
+    items: [
+      { text: 'Git', link: '/x/git' },
+      { text: 'CSS', link: '/x/css' },
+      { text: 'Monorepo', link: '/x/monorepo' },
+      { text: 'npm', link: '/x/npm' },
+    ],
+  },
+
+  {
     text: 'JavaScript',
     link: '/js/',
     collapsed: true,
@@ -81,17 +92,6 @@ export const sidebar = [
     link: '/nuxt/',
     collapsed: true,
     items: [
-    ],
-  },
-
-  {
-    text: 'Others',
-    collapsed: true,
-    items: [
-      { text: 'Git', link: '/others/git' },
-      { text: 'npm', link: '/others/npm' },
-      { text: 'CSS', link: '/others/css' },
-      { text: 'Monorepo', link: '/others/monorepo' },
     ],
   },
 
