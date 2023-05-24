@@ -52,6 +52,13 @@ export const sidebar = [
     items: [
       { text: 'React 项目的文件结构', link: '/react/file-structure' },
       {
+        text: 'Docs',
+        collapsed: true,
+        items: [
+          { text: 'Learn', link: '/react/docs/learn' },
+        ],
+      },
+      {
         text: 'Next',
         collapsed: true,
         items: [
@@ -75,7 +82,6 @@ export const sidebar = [
       { text: 'VitePress 速通', link: '/vue/vitepress' },
       {
         text: 'Docs',
-        link: '/vue/docs/',
         collapsed: true,
         items: [
           { text: 'Learn', link: '/vue/docs/learn' },
@@ -83,7 +89,6 @@ export const sidebar = [
       },
       {
         text: 'Nuxt',
-        link: '/vue/nuxt/',
         collapsed: true,
         items: [
         ],
