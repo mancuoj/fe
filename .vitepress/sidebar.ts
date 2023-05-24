@@ -14,7 +14,6 @@ export const sidebar = [
 
   {
     text: 'JavaScript',
-    link: '/js/',
     collapsed: true,
     items: [
     ],
@@ -22,7 +21,6 @@ export const sidebar = [
 
   {
     text: 'Angular',
-    link: '/angular/',
     collapsed: true,
     items: [
       {
@@ -47,7 +45,6 @@ export const sidebar = [
 
   {
     text: 'React',
-    link: '/react/',
     collapsed: true,
     items: [
       { text: 'React 项目的文件结构', link: '/react/file-structure' },
@@ -76,7 +73,6 @@ export const sidebar = [
 
   {
     text: 'Vue',
-    link: '/vue/',
     collapsed: true,
     items: [
       { text: 'VitePress 速通', link: '/vue/vitepress' },
