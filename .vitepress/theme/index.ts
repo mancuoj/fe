@@ -17,6 +17,6 @@ export default {
   setup() {
     const { frontmatter } = useData()
     const route = useRoute()
-    codeblocksFold({ route, frontmatter }, true, 350)
+    codeblocksFold({ route, frontmatter }, true, 500)
   },
 }
