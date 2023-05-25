@@ -1,24 +1,9 @@
-.vp-code-group .tabs label {
-  background-color: transparent;
+::-webkit-scrollbar {
+  width: 0px;
 }
 
-table {
-  width: 100% !important;
-  display: table;
-}
-
-.custom-block.tip .custom-block-title {
-  color: var(--vp-c-brand);
-}
-
-.VPHero .image-bg {
-  z-index: 1;
-  opacity: 0.8;
-  transition: opacity 1s ease;
-}
-
-.VPHero .image-container:hover .image-bg {
-  opacity: 0.2;
+::-webkit-scrollbar-horizontal {
+  height: 0px;
 }
 
 strong {
@@ -94,6 +79,34 @@ strong {
     bottom: 0;
   }
 }
+
+/**
+ * Copy from https://github.com/unocss/unocss/blob/main/docs/.vitepress/theme/overrides.css
+ * -------------------------------------------------------------------------- */
+ 
+.vp-code-group .tabs label {
+  background-color: transparent;
+}
+
+table {
+  width: 100% !important;
+  display: table;
+}
+
+.custom-block.tip .custom-block-title {
+  color: var(--vp-c-brand);
+}
+
+.VPHero .image-bg {
+  z-index: 1;
+  opacity: 0.8;
+  transition: opacity 1s ease;
+}
+
+.VPHero .image-container:hover .image-bg {
+  opacity: 0.2;
+}
+
 
 /**
  * VitePress: Custom fix
