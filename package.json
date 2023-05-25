@@ -6,9 +6,9 @@
     "lint:fix": "eslint . --fix"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.39.1",
-    "@fontsource/jetbrains-mono": "^5.0.0",
-    "@fontsource/merriweather": "^5.0.0",
+    "@antfu/eslint-config": "^0.39.3",
+    "@fontsource/jetbrains-mono": "^5.0.1",
+    "@fontsource/merriweather": "^5.0.1",
     "@types/markdown-it-container": "^2.0.5",
     "@types/node": "^20.2.3",
     "eslint": "^8.41.0",
@@ -18,7 +18,7 @@
     "markdown-it-imsize": "^2.0.1",
     "sass": "^1.62.1",
     "vitepress": "1.0.0-beta.1",
-    "vitepress-plugin-codeblocks-fold": "^1.2.14",
+    "vitepress-plugin-codeblocks-fold": "^1.2.15",
     "vue": "^3.3.4"
   }
 }
