@@ -48,7 +48,7 @@ Therefore, proxies and reflection are useful only in situations where native sup
 It is possible to detect support for proxies and divert to fallback code as necessary, but this would lead to code duplication and is therefore discouraged.
 :::
 
-在 ES6 之前，ECMAScript 中并没有类似代理的特性。
+**注意**：在 ES6 之前，ECMAScript 中并没有类似代理的特性。
 
 由于代理是一种新的基础性语言能力，很多转译程序都不能把代理行为转换为之前的 ECMAScript 代码，因为代理的行为实际上是无可替代的。
 

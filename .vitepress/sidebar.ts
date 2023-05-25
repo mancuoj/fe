@@ -230,7 +230,7 @@ export const hbsSidebar = [
         ],
       },
       {
-        text: '第 10 章：代理与反射',
+        text: '第 10 章：函数',
         link: '/hbs/10/',
         collapsed: true,
         items: [
