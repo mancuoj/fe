@@ -29,6 +29,8 @@ TS 的类型系统是**图灵完备**的，支持循环、条件各种操作，�
 - 字面量类型，其中字符串字面量还有模板字面量类型，比如 `aaa${string}` 可以限制字符串以 aaa 开头
 - 四种特殊类型 never, void, any, unknown
 
+<<< @/z/tsch/juejin/4-1.ts
+
 ## TS 类型操作
 
 - 条件判断 `extends ? :`
