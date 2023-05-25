@@ -59,13 +59,7 @@ export const sidebar = [
         text: 'Next',
         collapsed: true,
         items: [
-          {
-            text: 'Docs',
-            collapsed: true,
-            items: [
-              { text: 'Learn', link: '/react/next/docs/learn' },
-            ],
-          },
+          { text: 'Learn', link: '/react/next/learn' },
         ],
       },
     ],
