@@ -157,7 +157,7 @@ export const tschSidebar = [
 
 export const hbsSidebar = [
   {
-    text: '语言特性',
+    text: 'Features',
     // collapsed: true,
     items: [
       {
@@ -247,7 +247,7 @@ export const hbsSidebar = [
   },
 
   {
-    text: '提高',
+    text: 'Advanced',
     // collapsed: true,
     items: [
       {
@@ -324,7 +324,7 @@ export const hbsSidebar = [
   },
 
   {
-    text: '其他',
+    text: 'Others',
     items: [
       {
         text: '第 1 章：什么是 JavaScript',
