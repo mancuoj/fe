@@ -66,7 +66,7 @@ export const sidebar = [
         text: 'Notes',
         collapsed: true,
         items: [
-          { text: 'React TodoMVC', link: '/react/notes/todomvc' },
+          { text: 'TodoMVC', link: '/react/notes/todomvc' },
         ],
       },
     ],
