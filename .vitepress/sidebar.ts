@@ -100,6 +100,43 @@ export const sidebar = [
     ],
   },
 
+  {
+    text: 'Backend',
+    collapsed: true,
+    items: [
+      {
+        text: 'Python',
+        collapsed: true,
+        items: [
+        ],
+      },
+      {
+        text: 'Java',
+        collapsed: true,
+        items: [
+        ],
+      },
+      {
+        text: 'Go',
+        collapsed: true,
+        items: [
+        ],
+      },
+      {
+        text: 'Rust',
+        collapsed: true,
+        items: [
+        ],
+      },
+      {
+        text: 'Cpp',
+        collapsed: true,
+        items: [
+        ],
+      },
+    ],
+  },
+
   { text: 'Memos', link: '/memos' },
   { text: 'About Me', link: '/about' },
 ]
