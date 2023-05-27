@@ -35,9 +35,10 @@ export const sidebar = [
       },
       {
         text: 'Notes',
-        link: '/angular/learn/',
+        link: '/angular/notes/',
         collapsed: true,
         items: [
+          { text: 'TodoMVC', link: '/angular/notes/todomvc' },
         ],
       },
     ],
@@ -50,16 +51,16 @@ export const sidebar = [
       { text: 'React 项目的文件结构', link: '/react/file-structure' },
       {
         text: 'Docs',
+        link: '/react/docs/',
         collapsed: true,
         items: [
-          { text: 'Learn', link: '/react/docs/learn' },
         ],
       },
       {
         text: 'Next',
+        link: '/react/next/',
         collapsed: true,
         items: [
-          { text: 'Learn', link: '/react/next/learn' },
         ],
       },
     ],
@@ -72,9 +73,9 @@ export const sidebar = [
       { text: 'VitePress 速通', link: '/vue/vitepress' },
       {
         text: 'Docs',
+        link: '/vue/docs/',
         collapsed: true,
         items: [
-          { text: 'Learn', link: '/vue/docs/learn' },
         ],
       },
       {
