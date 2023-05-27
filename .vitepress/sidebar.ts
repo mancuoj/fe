@@ -35,7 +35,6 @@ export const sidebar = [
       },
       {
         text: 'Notes',
-        link: '/angular/notes/',
         collapsed: true,
         items: [
           { text: 'TodoMVC', link: '/angular/notes/todomvc' },
@@ -63,6 +62,13 @@ export const sidebar = [
         items: [
         ],
       },
+      {
+        text: 'Notes',
+        collapsed: true,
+        items: [
+          { text: 'React TodoMVC', link: '/react/notes/todomvc' },
+        ],
+      },
     ],
   },
 
@@ -82,6 +88,13 @@ export const sidebar = [
         text: 'Nuxt',
         collapsed: true,
         items: [
+        ],
+      },
+      {
+        text: 'Notes',
+        collapsed: true,
+        items: [
+          { text: 'TodoMVC', link: '/vue/notes/todomvc' },
         ],
       },
     ],
