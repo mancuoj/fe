@@ -142,11 +142,11 @@ Next.js pre-renders every page by default, it generates HTML for each page in ad
 - Choose which pre-rendering form to use for each page
   - use SSR when the data needs to be up-to-date with every request
 
-![](/next/pre-rendering.png =555x)
+![](/next/pre-rendering.png =600x)
 
-![](/next/server-side-rendering.png =555x)
+![](/next/server-side-rendering.png =600x)
 
-![](/next/static-generation.png =555x)
+![](/next/static-generation.png =600x)
 
 ## SSG with data
 
