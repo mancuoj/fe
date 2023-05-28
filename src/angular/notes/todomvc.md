@@ -4,7 +4,7 @@
 
 ## Setup
 
-整一个简单的[起手模板](https://github.com/mancuoj/at)先，只有 Tailwind CSS + ESLint 😍
+整一个简单的 [起手模板](https://github.com/mancuoj/at) 先，暂时只有 Tailwind CSS + ESLint 😍
 
 ## 理一下思路
 
