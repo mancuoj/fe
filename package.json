@@ -10,7 +10,7 @@
     "@fontsource/jetbrains-mono": "^5.0.1",
     "@fontsource/merriweather": "^5.0.1",
     "@types/markdown-it-container": "^2.0.5",
-    "@types/node": "^20.2.3",
+    "@types/node": "^20.2.5",
     "eslint": "^8.41.0",
     "lxgw-wenkai-screen-webfont": "^1.7.0",
     "markdown-it-container": "^3.0.0",
