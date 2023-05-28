@@ -18,7 +18,7 @@
     "markdown-it-imsize": "^2.0.1",
     "sass": "^1.62.1",
     "vitepress": "1.0.0-beta.1",
-    "vitepress-plugin-codeblocks-fold": "^1.2.15",
+    "vitepress-plugin-codeblocks-fold": "^1.2.16",
     "vue": "^3.3.4"
   }
 }
