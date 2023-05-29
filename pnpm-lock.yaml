@@ -38,8 +38,8 @@ devDependencies:
     specifier: 1.0.0-beta.1
     version: 1.0.0-beta.1(@algolia/client-search@4.17.0)(@types/node@20.2.5)(sass@1.62.1)
   vitepress-plugin-codeblocks-fold:
-    specifier: ^1.2.16
-    version: 1.2.16
+    specifier: ^1.2.23
+    version: 1.2.23
   vue:
     specifier: ^3.3.4
     version: 3.3.4
@@ -3163,8 +3163,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitepress-plugin-codeblocks-fold@1.2.16:
-    resolution: {integrity: sha512-p/m2+i2+g35bX0av602UmlfMOaCgAUGalTc4duzOh8CG9bjtORVQlp4tU/XWCoTQxYVfBmPyNoFoYAfjzHYhHA==}
+  /vitepress-plugin-codeblocks-fold@1.2.23:
+    resolution: {integrity: sha512-TUkim0rvJ3Is4Sx0KKi0hgep9yRMKiJUIidrUOmHHBiLBgL2J5GYLwY4BKuG92+RAYPrBVS4Q/A/IMXThBzTpg==}
     dev: true
 
   /vitepress@1.0.0-beta.1(@algolia/client-search@4.17.0)(@types/node@20.2.5)(sass@1.62.1):
