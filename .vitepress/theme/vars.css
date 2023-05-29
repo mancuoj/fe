@@ -51,7 +51,7 @@
 }
 
 .dark {
-  --vp-code-block-bg: rgba(0, 0, 0, 0.75);
+  --vp-code-block-bg: rgba(0, 0, 0, 0.75); /* 原始透明度 0.2 */
   --vp-c-text-code: #c0cec0;
   --vp-code-tab-text-color: var(--vp-c-text-dark-2);
   --vp-code-tab-active-text-color: var(--vp-c-text-dark-1);
