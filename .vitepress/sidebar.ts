@@ -16,6 +16,7 @@ export const sidebar = [
     text: 'JavaScript',
     collapsed: true,
     items: [
+      { text: 'TodoMVC', link: '/js/todomvc' },
     ],
   },
 
