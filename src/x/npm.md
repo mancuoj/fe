@@ -1,5 +1,13 @@
 # 关于 npm 的一切
 
+## npm publish
+
+```sh
+npm adduser
+npm login
+npm publish (--access public)
+```
+
 ## Release
 
 首先确保已经拉取了最新的代码，通过了所有的 CI，已经登录了 npm 账号。
