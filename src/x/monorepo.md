@@ -1,7 +1,5 @@
 # 关于 Monorepo 的一切
 
-A monorepo is a single repository containing multiple distinct projects, with well-defined relationships.
-
 ## pnpm workspace
 
 只需要在根目录创建一个 `pnpm-workspace.yaml` 文件，然后在其中指定目录即可：
@@ -21,3 +19,5 @@ packages:
   "@mancuoj/xxx": "workspace:*"
 }
 ```
+
+版本升级 + 打包发布可以查看 [npm](./npm.md#release)。
