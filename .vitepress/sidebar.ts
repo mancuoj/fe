@@ -5,10 +5,18 @@ export const sidebar = [
     text: 'X',
     collapsed: true,
     items: [
+      { text: 'npm', link: '/x/npm' },
+      { text: 'Monorepo', link: '/x/monorepo' },
       { text: 'Git', link: '/x/git' },
       { text: 'CSS', link: '/x/css' },
-      { text: 'Monorepo', link: '/x/monorepo' },
-      { text: 'npm', link: '/x/npm' },
+      {
+        text: 'Python',
+        collapsed: true,
+        items: [
+          { text: '类型提示', link: '/py/types' },
+          { text: 'FastAPI 入门', link: '/py/fastapi/' },
+        ],
+      },
     ],
   },
 
@@ -24,6 +32,7 @@ export const sidebar = [
     text: 'Angular',
     collapsed: true,
     items: [
+      { text: 'TodoMVC', link: '/angular/todomvc' },
       {
         text: 'Docs',
         link: '/angular/docs/',
@@ -32,13 +41,6 @@ export const sidebar = [
           { text: 'Cheat Sheet', link: '/angular/docs/cheat-sheet' },
           { text: 'First App', link: '/angular/docs/first-app' },
           { text: 'Tour of Heroes', link: '/angular/docs/tour-of-heroes' },
-        ],
-      },
-      {
-        text: 'Notes',
-        collapsed: true,
-        items: [
-          { text: 'TodoMVC', link: '/angular/notes/todomvc' },
         ],
       },
     ],
@@ -63,13 +65,6 @@ export const sidebar = [
         items: [
         ],
       },
-      {
-        text: 'Notes',
-        collapsed: true,
-        items: [
-          { text: 'TodoMVC', link: '/react/notes/todomvc' },
-        ],
-      },
     ],
   },
 
@@ -81,56 +76,6 @@ export const sidebar = [
       {
         text: 'Docs',
         link: '/vue/docs/',
-        collapsed: true,
-        items: [
-        ],
-      },
-      {
-        text: 'Nuxt',
-        collapsed: true,
-        items: [
-        ],
-      },
-      {
-        text: 'Notes',
-        collapsed: true,
-        items: [
-          { text: 'TodoMVC', link: '/vue/notes/todomvc' },
-        ],
-      },
-    ],
-  },
-
-  {
-    text: 'Backend',
-    collapsed: true,
-    items: [
-      {
-        text: 'Python',
-        collapsed: true,
-        items: [
-        ],
-      },
-      {
-        text: 'Java',
-        collapsed: true,
-        items: [
-        ],
-      },
-      {
-        text: 'Go',
-        collapsed: true,
-        items: [
-        ],
-      },
-      {
-        text: 'Rust',
-        collapsed: true,
-        items: [
-        ],
-      },
-      {
-        text: 'Cpp',
         collapsed: true,
         items: [
         ],
