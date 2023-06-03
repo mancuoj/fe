@@ -6,11 +6,11 @@
   height: 0px;
 }
 
-strong {
+/* strong {
   text-decoration: underline dotted var(--vp-c-brand) 2px;
   text-underline-offset: 5px;
   text-decoration-thickness: 3px;
-}
+} */
 
 /* .VPSidebarItem.has-active > .item > .caret {
   display: none;

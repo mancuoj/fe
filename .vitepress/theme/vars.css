@@ -1,7 +1,7 @@
 /**
  * Width
  * -------------------------------------------------------------------------- */
-:root {
+/* :root {
   --vp-layout-max-width: 1580px;
   --vp-sidebar-width: 275px;
 }
@@ -12,7 +12,7 @@
 
 .vp-doc .container {
   max-width: 368px !important;
-}
+} */
 
 /**
  * Typography
