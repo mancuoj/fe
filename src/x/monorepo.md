@@ -20,4 +20,4 @@ packages:
 }
 ```
 
-版本升级 + 打包发布可以查看 [npm](./npm.md#release)。
+版本升级 + 打包发布可以查看 [npm#release](./npm.md#release)，以及我试水的 [第一个 monorepo 仓库](https://github.com/mancuoj/first-monorepo)。
