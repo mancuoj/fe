@@ -14,11 +14,11 @@
 },
 ```
 
-反正抄我偶像的就对了，我的练手项目 [mancuoj/first-monorepo](https://github.com/mancuoj/first-monorepo)。
+反正抄我偶像的就对了！
 
 ## Changelog
 
-偶像的 [antfu/changelogithub](https://github.com/antfu/changelogithub) 自动生成，创建 `.github/workflows/release.yml` 文件：
+使用 [antfu/changelogithub](https://github.com/antfu/changelogithub) 自动生成，创建 `.github/workflows/release.yml` 文件：
 
 ```yml
 name: Release
@@ -113,15 +113,11 @@ jobs:
 
 ## npm tag
 
-比如安装 `vue` 时默认安装的是 `latest` 标签的版本，也就是最新版本。
+我们在安装一个 npm 包时，会默认安装 `latest` 标签的版本，也就是最新版本。
 
-但是我们可以指定安装其他标签的版本，比如 `next` 标签的版本：
+但是我们可以指定安装其他标签的版本，比如使用 `npm install vue@next` 安装 `next` 标签的版本。
 
-```bash
-npm install vue@next
-```
-
-我们可以在发包时指定标签：
+开发者可以在发版时指定标签：
 
 ```sh
 npm publish --tag next
@@ -139,7 +135,7 @@ npm dist-tags 包名
 
 ## devDependencies
 
-**生产打包 与 devDependencies 字段无关！**
+之前一直有误区，但其实**生产打包与 devDependencies 字段毫无关联**！
 
 - 不需要发 npm 包的时候，写在 devDependencies 和 dependencies 里面其实没有任何区别。
 - 需要发 npm 包的时候，才需要区分
