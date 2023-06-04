@@ -6,11 +6,10 @@ Stupid, fat pig, a opinionated full-stack developer (in imagination).
 
 ## Tech Stack
 
-![](https://skillicons.dev/icons?i=js,ts,react,angular,python,fastapi)
+![](https://skillicons.dev/icons?i=js,ts,react,angular,py,fastapi)
 
 ## Want to Learn
 
-![](https://skillicons.dev/icons?i=py,java,go,rust,py,dart,vue,angular,svelte,wasm,lit,solidity,solidjs,threejs&perline=8)
+![](https://skillicons.dev/icons?i=java,go,rust,dart,vue,svelte,wasm,lit,solidity,solidjs,threejs&perline=8)
 
-![](https://skillicons.dev/icons?i=nodejs,nestjs,nuxtjs,electron,tauri,prisma,mongodb,graphql,postgres,redis,nginx,spring,flask,django,fastapi,flutter&perline=8)
-
+![](https://skillicons.dev/icons?i=nodejs,nextjs,nestjs,nuxtjs,electron,tauri,prisma,mongodb,graphql,postgres,redis,nginx,spring,flask,django,flutter&perline=8)
