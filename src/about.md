@@ -6,7 +6,7 @@ Stupid, fat pig, a opinionated full-stack developer (in imagination).
 
 ## Tech Stack
 
-![](https://skillicons.dev/icons?i=js,ts,react,nextjs,tailwind)
+![](https://skillicons.dev/icons?i=js,ts,react,angular,python,fastapi)
 
 ## Want to Learn
 
