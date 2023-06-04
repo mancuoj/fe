@@ -124,8 +124,6 @@ def get_person_name(one_person: Person):
 >
 > Define how data should be in pure, canonical Python; validate it with pydantic.
 
-将数据定义为具有属性的类，然后创建该类的实例，Pydantic 将验证数据并将其转换为适当的类型。
-
 ```py
 from datetime import datetime
 from pydantic import BaseModel
@@ -147,6 +145,8 @@ print(user)
 print(user.id)
 # > 123
 ```
+
+将数据定义为具有属性的类，然后创建该类的实例，Pydantic 将验证数据并将其转换为适当的类型。
 
 ## Metadata Annotations
 
