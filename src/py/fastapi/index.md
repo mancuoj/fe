@@ -1,3 +1,7 @@
+---
+outline: deep
+---
+
 # [FastAPI 文档](https://fastapi.tiangolo.com/zh/tutorial/) 快速入门
 
 ## Setup
@@ -74,13 +78,11 @@ async def read_item(item_id: int):
     return {"item_id": item_id}
 ```
 
-路径参数 `item_id` 将会作为参数传入函数，打开 http://127.0.0.1:8000/items/1 会看到响应。
+路径参数 `item_id` 将会作为参数传入函数，打开 `http://127.0.0.1:8000/items/1` 会看到响应。
 
-为路径参数声明类型会给函数提供编辑器支持，包括错误检查、代码补全等等。
+FastAPI 通过类型声明提供了数据验证的功能，访问 `http://127.0.0.1:8000/items/foo` 会看到一个清晰可读的 HTTP 错误：
 
-如果你访问 http://127.0.0.1:8000/items/foo 会看到一个清晰可读的 HTTP 错误：
-
-```json
+```json 8
 {
     "detail": [
         {
@@ -95,13 +97,11 @@ async def read_item(item_id: int):
 }
 ```
 
-FastAPI 通过同样的类型声明提供了数据验证和转换功能。
-
 ### 顺序很重要
 
 如下，`/users/me` 必须放在前面，否则会匹配到 `/users/{user_id}`。
 
-```py
+```py 1,6
 @app.get("/users/me")
 async def read_user_me():
     return {"user_id": "the current user"}
@@ -116,7 +116,7 @@ async def read_user(user_id: str):
 
 导入 `Enum` 并创建一个继承自 `str` 和 `Enum` 的子类。
 
-```py
+```py 1,7-8
 class ModelName(str, Enum):
     alexnet = "alexnet"
     resnet = "resnet"
@@ -138,12 +138,56 @@ async def get_model(model_name: ModelName):
 
 当参数为 `/home/mancuoj/file.txt` 时，URL 为 `/files//home/mancuoj/file.txt`，会有一个双斜杠。
 
-```py
+```py 1-2
 @app.get("/files/{file_path:path}")
 async def read_file(file_path: str):
     return {"file_path": file_path}
 ```
 
 ## Query parameters
+
+声明不属于路径参数的其他参数时，它们会被自动解析为查询参数。
+
+```py 2
+@app.get("/items/")
+async def read_item(skip: int = 0, limit: int = 10):
+    return fake_items_db[skip : skip + limit]
+```
+
+查询参数时键值对的集合，比如 `http://127.0.0.1:8000/items/?skip=0&limit=10`
+
+- 位于 URL 的 `?` 之后，以 `&` 分隔
+- 在声明了类型之后，字符串会被转换，然后校验
+- 定义了默认值，其实就相当于访问 `http://127.0.0.1:8000/items/`
+
+### 可选参数
+
+将默认值设为 None 即可。
+
+```py 2
+@app.get("/items/{item_id}")
+# async def read_item(item_id: str, q: Union[str, None] = None):
+async def read_item(item_id: str, q: str | None = None):
+    if q:
+        return {"item_id": item_id, "q": q}
+    return {"item_id": item_id}
+```
+
+反过来说，如果你想让一个参数称为必需的，不提供默认值即可。
+
+### bool 类型
+
+当你声明 bool 类型时，会自动转换：
+
+```
+?b=True
+?b=true
+?b=1
+?b=yes
+?b=on
+```
+
+如上的值（无论大小写）都会被转换为 `True`。
+
 
 
