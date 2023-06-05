@@ -1,10 +1,6 @@
----
-outline: deep
----
-
 # [FastAPI 文档](https://fastapi.tiangolo.com/zh/tutorial/) 快速入门
 
-## Setup
+## 开始
 
 ```sh
 python3 -m venv .venv
@@ -15,7 +11,7 @@ deactivate
 pip install "fastapi[all]"
 ```
 
-## Minimal Application
+## 最小应用
 
 :::code-group
 ```py [main.py]
@@ -42,7 +38,7 @@ uvicorn main:app --reload
 - http://127.0.0.1:8000/docs
 - http://127.0.0.1:8000/redoc
 
-## Path operation decorator
+## 路径操作装饰器
 
 ```py
 from fastapi import FastAPI
@@ -68,7 +64,7 @@ async def root():
 - `@app.delete()`，删除数据
 - ...
 
-## Path parameters
+## 路径参数
 
 ```py 1
 @app.get("/items/{item_id}")
@@ -140,7 +136,7 @@ async def read_file(file_path: str):
     return {"file_path": file_path}
 ```
 
-## Query parameters
+## 查询参数
 
 声明不属于路径参数的其他参数时，它们会被自动解析为查询参数。
 
@@ -186,7 +182,7 @@ async def read_item(item_id: str, q: str | None = None):
 如上的值（无论大小写）都会被转换为 `True`。
 
 
-## Request body
+## 请求体
 
 当你需要把数据从客户端（比如浏览器）发送给 API 时，将其作为请求体发送。
 
@@ -246,9 +242,9 @@ async def update_item(item_id: int, item: Item, q: str | None = None):
 
 FastAPI 允许您为参数声明附加信息和验证。
 
-### 字符串长度限制
+:::code-group
 
-```py 3
+```py [字符串长度限制] 3
 @app.get("/items/")
 async def read_item(
     q: Annotated[str | None, Query(min_length=3, max_length=50)] = None
@@ -259,22 +255,15 @@ async def read_item(
     return results
 ```
 
-### 正则表达式
-
-```py
+```py [正则表达式]
 q: Annotated[
     str | None, Query(min_length=3, max_length=50, regex="^fixquery$")
 ] = None
+
+# 只能匹配 fixquery，其他的都会报错
 ```
 
-只能匹配 `fixquery`，其他的都会报错。
-
-### 必需值
-
-以上我们将 None 作为默认值，代表该参数是可选的。如果你想让它变成必需的，如下即可：
-
-```py
-# 首选！
+```py [必需值]
 q: Annotated[str, Query(min_length=3)]
 
 # 显式声明
@@ -287,10 +276,7 @@ q: Annotated[str, Query(min_length=3)] = Required
 q: Annotated[str | None, Query(min_length=3)] = ...
 ```
 
-### 接收多个值
-
-```py
-# http://localhost:8000/items/?q=foo&q=bar
+```py [接收多个值]
 q: Annotated[list[str] | None, Query()] = None
 
 # 同下
@@ -298,13 +284,11 @@ q: Annotated[list, Query()] = []
 
 # 提供默认值
 q: Annotated[list[str], Query()] = ["foo", "bar"]
+
+# http://localhost:8000/items/?q=foo&q=bar
 ```
 
-### 更多元数据
-
-可以给参数添加更多信息，它们将包含在生成的 OpenAPI 中，可由文档 UI 和外部工具使用。
-
-```py
+```py [更多元数据]
 q: Annotated[
     str | None,
     Query(
@@ -313,34 +297,35 @@ q: Annotated[
         min_length=3,
     ),
 ] = None
+
+# 给参数添加更多信息，它们将包含在生成的 OpenAPI 中，由文档 UI 和外部工具使用
 ```
 
-### 参数别名
-
-因为 Python 参数不能是 item-query 这样的形式，在必须的时候可以使用别名。
-
-```py
+```py [参数别名]
 q: Annotated[str | None, Query(alias="item-query")] = None
+
+# 因为 Python 参数不能是 item-query 这样的形式，在必须的时候可以使用别名
 ```
 
-### 弃用参数
 
-参数弃用之后必须保留一段时间，以便用户有时间迁移，在文档中表明：
-
-```py
+```py [弃用参数]
 Query(
     ...
     deprecated=True
 ),
+
+# 参数弃用之后必须保留一段时间，以便用户有时间迁移，在文档中表明这一点
 ```
 
-### 排除参数
-
-从生成的 OpenAPI 中排除查询参数，同时从自动文档中排除：
-
-```py
+```py [排除参数]
 Query(
     ...
     include_in_schema=False
 ),
+
+# 从生成的 OpenAPI 中排除查询参数，同时从自动文档中排除
 ```
+:::
+
+
+## 路径参数和数字验证
