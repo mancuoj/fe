@@ -70,7 +70,7 @@ async def root():
 
 ## Path parameters
 
-```py
+```py 1
 @app.get("/items/{item_id}")
 async def read_item(item_id: int):
     return {"item_id": item_id}
@@ -80,7 +80,7 @@ async def read_item(item_id: int):
 
 FastAPI 通过类型声明提供了数据验证的功能，访问 `http://127.0.0.1:8000/items/foo` 会看到一个清晰可读的 HTTP 错误：
 
-```json
+```json 8
 {
     "detail": [
         {
@@ -113,7 +113,7 @@ async def read_user(user_id: str):
 
 导入 `Enum` 并创建一个继承自 `str` 和 `Enum` 的子类。
 
-```py
+```py 1,6
 class ModelName(str, Enum):
     alexnet = "alexnet"
     resnet = "resnet"
@@ -134,7 +134,7 @@ async def get_model(model_name: ModelName):
 
 当参数为 `/home/mancuoj/file.txt` 时，URL 为 `/files//home/mancuoj/file.txt`，会有一个双斜杠。
 
-```py
+```py 1
 @app.get("/files/{file_path:path}")
 async def read_file(file_path: str):
     return {"file_path": file_path}
@@ -160,7 +160,7 @@ async def read_item(skip: int = 0, limit: int = 10):
 
 将默认值设为 None 即可。
 
-```py
+```py 3
 @app.get("/items/{item_id}")
 # async def read_item(item_id: str, q: Union[str, None] = None):
 async def read_item(item_id: str, q: str | None = None):
@@ -220,7 +220,7 @@ async def create_item(item: Item):
 
 在函数内部可以直接访问模型对象的所有属性：
 
-```py
+```py 3
 @app.post("/items/")
 async def create_item(item: Item):
     item_dict = item.dict()
@@ -233,11 +233,28 @@ async def create_item(item: Item):
 ### 请求体 + 路径参数 + 查询参数
 
 
-```py
+```py 2
 @app.put("/items/{item_id}")
 async def update_item(item_id: int, item: Item, q: str | None = None):
     result = {"item_id": item_id, **item.dict()}
     if q:
         result.update({"q": q})
     return result
+```
+
+## 查询参数和字符串验证
+
+FastAPI 允许您为参数声明附加信息和验证。
+
+### 字符串长度限制
+
+```py 3
+@app.get("/items/")
+async def read_item(
+    q: Annotated[str | None, Query(min_length=3, max_length=50)] = None
+):
+    results = {"items": [{"item_id": "Foo"}, {"item_id": "Bar"}]}
+    if q:
+        results.update({"q": q})
+    return results
 ```
