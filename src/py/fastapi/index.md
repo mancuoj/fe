@@ -23,7 +23,6 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
-
 @app.get("/")
 async def root():
     return {"message": "Hello, FastAPI!"}
@@ -45,11 +44,10 @@ uvicorn main:app --reload
 
 ## Path operation decorator
 
-```py 6
+```py
 from fastapi import FastAPI
 
 app = FastAPI()
-
 
 @app.get("/")
 async def root():
@@ -72,7 +70,7 @@ async def root():
 
 ## Path parameters
 
-```py 1
+```py
 @app.get("/items/{item_id}")
 async def read_item(item_id: int):
     return {"item_id": item_id}
@@ -101,11 +99,10 @@ FastAPI 通过类型声明提供了数据验证的功能，访问 `http://127.0.
 
 如下，`/users/me` 必须放在前面，否则会匹配到 `/users/{user_id}`。
 
-```py 1,6
+```py
 @app.get("/users/me")
 async def read_user_me():
     return {"user_id": "the current user"}
-
 
 @app.get("/users/{user_id}")
 async def read_user(user_id: str):
@@ -116,12 +113,11 @@ async def read_user(user_id: str):
 
 导入 `Enum` 并创建一个继承自 `str` 和 `Enum` 的子类。
 
-```py 1,7-8
+```py
 class ModelName(str, Enum):
     alexnet = "alexnet"
     resnet = "resnet"
     lenet = "lenet"
-
 
 @app.get("/models/{model_name}")
 async def get_model(model_name: ModelName):
@@ -138,7 +134,7 @@ async def get_model(model_name: ModelName):
 
 当参数为 `/home/mancuoj/file.txt` 时，URL 为 `/files//home/mancuoj/file.txt`，会有一个双斜杠。
 
-```py 1-2
+```py
 @app.get("/files/{file_path:path}")
 async def read_file(file_path: str):
     return {"file_path": file_path}
@@ -148,7 +144,7 @@ async def read_file(file_path: str):
 
 声明不属于路径参数的其他参数时，它们会被自动解析为查询参数。
 
-```py 2
+```py
 @app.get("/items/")
 async def read_item(skip: int = 0, limit: int = 10):
     return fake_items_db[skip : skip + limit]
@@ -164,7 +160,7 @@ async def read_item(skip: int = 0, limit: int = 10):
 
 将默认值设为 None 即可。
 
-```py 2
+```py
 @app.get("/items/{item_id}")
 # async def read_item(item_id: str, q: Union[str, None] = None):
 async def read_item(item_id: str, q: str | None = None):
@@ -190,4 +186,25 @@ async def read_item(item_id: str, q: str | None = None):
 如上的值（无论大小写）都会被转换为 `True`。
 
 
+## Request body
+
+当你需要把数据从客户端（比如浏览器）发送给 API 时，将其作为请求体发送。
+
+请求体就是客户端发送给 API 的数据，响应体就是 API 发送给客户端的数据。
+
+使用 Pydantic 模型声明请求体，使用 POST、PUT、DELETE 或是 PATCH 方法发送数据。
+
+```py
+from pydantic import BaseModel
+
+class Item(BaseModel):
+    name: str
+    description: str | None = None
+    price: float
+    tax: float | None = None
+
+@app.post("/items/")
+async def create_item(item: Item):
+    return item
+```
 
