@@ -34,13 +34,19 @@ export const sidebar = [
     items: [
       { text: 'TodoMVC', link: '/angular/todomvc' },
       {
-        text: 'Docs',
-        link: '/angular/docs/',
+        text: 'Learn',
         collapsed: true,
         items: [
-          { text: 'Cheat Sheet', link: '/angular/docs/cheat-sheet' },
-          { text: 'First App', link: '/angular/docs/first-app' },
-          { text: 'Tour of Heroes', link: '/angular/docs/tour-of-heroes' },
+          {
+            text: 'Docs',
+            link: '/angular/learn/docs/',
+            collapsed: false,
+            items: [
+              { text: 'Cheat Sheet', link: '/angular/learn/docs/cheat-sheet' },
+              { text: 'First App', link: '/angular/learn/docs/first-app' },
+              { text: 'Tour of Heroes', link: '/angular/learn/docs/tour-of-heroes' },
+            ],
+          },
         ],
       },
     ],
@@ -52,10 +58,10 @@ export const sidebar = [
     items: [
       { text: 'React 项目的文件结构', link: '/react/file-structure' },
       {
-        text: 'Docs',
-        link: '/react/docs/',
+        text: 'Learn',
         collapsed: true,
         items: [
+          { text: 'Docs', link: '/react/learn/docs/' },
         ],
       },
       {
