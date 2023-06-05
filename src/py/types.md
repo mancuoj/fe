@@ -118,11 +118,13 @@ def get_person_name(one_person: Person):
 
 ## [Pydantic models](https://docs.pydantic.dev/1.10/)
 
-> Data validation and settings management using Python type annotations.
->  
-> Pydantic enforces type hints at runtime, and provides user friendly errors when data is invalid.
->
-> Define how data should be in pure, canonical Python; validate it with pydantic.
+:::info
+Data validation and settings management using Python type annotations.
+
+Pydantic enforces type hints at runtime, and provides user friendly errors when data is invalid.
+
+Define how data should be in pure, canonical Python; validate it with pydantic.
+:::
 
 ```py
 from datetime import datetime
