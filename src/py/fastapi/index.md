@@ -80,7 +80,7 @@ async def read_item(item_id: int):
 
 FastAPI 通过类型声明提供了数据验证的功能，访问 `http://127.0.0.1:8000/items/foo` 会看到一个清晰可读的 HTTP 错误：
 
-```json 8
+```json
 {
     "detail": [
         {
@@ -213,5 +213,31 @@ async def create_item(item: Item):
 - 请求体读取为 JSON
 - 转换相应类型（如果需要的话）
 - 验证数据
-- 为 Model 生成 JSON Schema
-- 
+- 将接收的数据赋值到参数 item 中
+- 为 Model 生成 JSON Schema 定义，并会在自动化文档中使用
+
+### 使用模型
+
+在函数内部可以直接访问模型对象的所有属性：
+
+```py
+@app.post("/items/")
+async def create_item(item: Item):
+    item_dict = item.dict()
+    if item.tax:
+        price_with_tax = item.price + item.tax
+        item_dict.update({"price_with_tax": price_with_tax})
+    return item_dict
+```
+
+### 请求体 + 路径参数 + 查询参数
+
+
+```py
+@app.put("/items/{item_id}")
+async def update_item(item_id: int, item: Item, q: str | None = None):
+    result = {"item_id": item_id, **item.dict()}
+    if q:
+        result.update({"q": q})
+    return result
+```
