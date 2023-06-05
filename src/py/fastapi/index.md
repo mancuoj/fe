@@ -258,3 +258,89 @@ async def read_item(
         results.update({"q": q})
     return results
 ```
+
+### 正则表达式
+
+```py
+q: Annotated[
+    str | None, Query(min_length=3, max_length=50, regex="^fixquery$")
+] = None
+```
+
+只能匹配 `fixquery`，其他的都会报错。
+
+### 必需值
+
+以上我们将 None 作为默认值，代表该参数是可选的。如果你想让它变成必需的，如下即可：
+
+```py
+# 首选！
+q: Annotated[str, Query(min_length=3)]
+
+# 显式声明
+q: Annotated[str, Query(min_length=3)] = ...
+
+# 使用 Required
+q: Annotated[str, Query(min_length=3)] = Required
+
+# 可以接受 None，但必须要发送一个 None
+q: Annotated[str | None, Query(min_length=3)] = ...
+```
+
+### 接收多个值
+
+```py
+# http://localhost:8000/items/?q=foo&q=bar
+q: Annotated[list[str] | None, Query()] = None
+
+# 同下
+q: Annotated[list, Query()] = []
+
+# 提供默认值
+q: Annotated[list[str], Query()] = ["foo", "bar"]
+```
+
+### 更多元数据
+
+可以给参数添加更多信息，它们将包含在生成的 OpenAPI 中，可由文档 UI 和外部工具使用。
+
+```py
+q: Annotated[
+    str | None,
+    Query(
+        title="Query string",
+        description="Query string description ...",
+        min_length=3,
+    ),
+] = None
+```
+
+### 参数别名
+
+因为 Python 参数不能是 item-query 这样的形式，在必须的时候可以使用别名。
+
+```py
+q: Annotated[str | None, Query(alias="item-query")] = None
+```
+
+### 弃用参数
+
+参数弃用之后必须保留一段时间，以便用户有时间迁移，在文档中表明：
+
+```py
+Query(
+    ...
+    deprecated=True
+),
+```
+
+### 排除参数
+
+从生成的 OpenAPI 中排除查询参数，同时从自动文档中排除：
+
+```py
+Query(
+    ...
+    include_in_schema=False
+),
+```
