@@ -79,13 +79,6 @@ export const sidebar = [
     collapsed: true,
     items: [
       { text: 'VitePress 速通', link: '/vue/vitepress' },
-      {
-        text: 'Docs',
-        link: '/vue/docs/',
-        collapsed: true,
-        items: [
-        ],
-      },
     ],
   },
 
