@@ -208,3 +208,10 @@ async def create_item(item: Item):
     return item
 ```
 
+通过类型声明，FastAPI 将：
+
+- 请求体读取为 JSON
+- 转换相应类型（如果需要的话）
+- 验证数据
+- 为 Model 生成 JSON Schema
+- 
