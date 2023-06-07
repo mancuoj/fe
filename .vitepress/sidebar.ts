@@ -17,6 +17,13 @@ export const sidebar = [
           { text: 'FastAPI 入门', link: '/py/fastapi/' },
         ],
       },
+      {
+        text: '设计模式',
+        collapsed: true,
+        items: [
+          { text: '单例模式', link: '/patterns/singleton' },
+        ],
+      },
     ],
   },
 

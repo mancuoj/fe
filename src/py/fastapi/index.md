@@ -240,7 +240,7 @@ async def update_item(item_id: int, item: Item, q: str | None = None):
 
 ## 查询参数和字符串验证
 
-FastAPI 允许您为参数声明附加信息和验证。
+为参数附加信息和验证：
 
 :::code-group
 
