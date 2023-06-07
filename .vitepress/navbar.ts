@@ -1,14 +1,12 @@
 export const navbar = [
   {
     text: 'Reading',
-    activeMatch: '^/(hbs|xns|jsdp)/',
+    activeMatch: 'hbs',
     items: [
       {
         text: '常看常新',
         items: [
           { text: '红宝书', link: '/hbs/4/', activeMatch: '/hbs/' },
-          { text: '犀牛书', link: '/xns/1/', activeMatch: '/xns/' },
-          { text: '设计模式', link: '/jsdp/1/', activeMatch: '/jsdp/' },
         ],
       },
       {

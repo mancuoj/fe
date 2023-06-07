@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-require-imports */
 import { defineConfig } from 'vitepress'
 import { navbar } from './navbar'
-import { algoSidebar, hbsSidebar, interviewSidebar, jsdpSidebar, juejinTsSidebar, juejinTschSidebar, sidebar, tschSidebar, xnsSidebar } from './sidebar'
+import { algoSidebar, hbsSidebar, interviewSidebar, juejinTsSidebar, juejinTschSidebar, sidebar, tschSidebar } from './sidebar'
 
 export default defineConfig({
   title: 'FE',
@@ -29,8 +29,6 @@ export default defineConfig({
       '/algo/': algoSidebar,
       '/tsch/': tschSidebar,
       '/hbs/': hbsSidebar,
-      '/xns/': xnsSidebar,
-      '/jsdp/': jsdpSidebar,
       '/juejin/tsch/': juejinTschSidebar,
       '/juejin/ts/': juejinTsSidebar,
       '/interview/': interviewSidebar,
