@@ -256,9 +256,7 @@ async def read_item(
 ```
 
 ```py [正则表达式]
-q: Annotated[
-    str | None, Query(min_length=3, max_length=50, regex="^fixquery$")
-] = None
+q: Annotated[str | None, Query(regex="^fixquery$")] = None
 
 # 只能匹配 fixquery，其他的都会报错
 ```
@@ -329,3 +327,15 @@ Query(
 
 
 ## 路径参数和数字验证
+
+就像用 `Query` 一样，使用 `Path` 为路径参数添加相同类型的验证和元数据：
+
+:::code-group
+```py
+```
+
+```py
+```
+
+:::
+
