@@ -141,3 +141,11 @@ rye uninstall black
 rye tools list
 rye tools list --include-scripts
 ```
+
+## Publish
+
+```sh
+rye version 0.2.0
+rye build
+rye publish
+```
