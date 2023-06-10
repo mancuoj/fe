@@ -13,8 +13,9 @@ export const sidebar = [
         text: 'Python',
         collapsed: true,
         items: [
-          { text: '类型提示', link: '/py/types' },
-          { text: 'FastAPI 入门', link: '/py/fastapi/' },
+          { text: 'Rye', link: '/py/rye' },
+          { text: 'Types', link: '/py/types' },
+          { text: 'FastAPI', link: '/py/fastapi/' },
         ],
       },
       {
