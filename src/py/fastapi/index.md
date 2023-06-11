@@ -1,3 +1,7 @@
+---
+outline: deep
+---
+
 # [FastAPI 文档](https://fastapi.tiangolo.com/zh/tutorial/) 快速入门
 
 ## 开始
@@ -331,10 +335,86 @@ Query(
 就像用 `Query` 一样，使用 `Path` 为路径参数添加相同类型的验证和元数据：
 
 :::code-group
-```py
+```py 3 [元数据]
+@app.get("/items/{item_id}")
+async def read_item(
+    item_id: Annotated[int, Path(title="The ID of the item to get")],
+    q: Annotated[str | None, Query(alias="item-query")] = None,
+):
+    item = {"item_id": item_id}
+    if q:
+        item.update({"q": q})
+    return item
 ```
 
-```py
+```py [大于，小于，等于]
+Path(title="The ID of the item to get", ge=1)
+# ge >= 
+# le <=
+# gt >
+# lt <
 ```
 :::
 
+## 请求体
+
+### 多个参数
+
+```py
+class Item(BaseModel):
+    name: str
+    description: Union[str, None] = None
+    price: float
+    tax: Union[float, None] = None
+
+
+class User(BaseModel):
+    username: str
+    full_name: Union[str, None] = None
+
+
+@app.put("/items/{item_id}")
+async def update_item(item_id: int, item: Item, user: User):
+    results = {"item_id": item_id, "item": item, "user": user}
+    return results
+```
+
+FastAPI 将使用参数名称作为请求体中的 key 值，并期望类似以下内容的请求体：
+
+```json
+{
+    "item": {
+        "name": "Foo",
+        "description": "The pretender",
+        "price": 42.0,
+        "tax": 3.2
+    },
+    "user": {
+        "username": "dave",
+        "full_name": "Dave Grohl"
+    }
+}
+```
+
+
+### Body
+
+使用 `Body` 将一个单一值作为请求体的另一个 key 来处理，默认情况下会被解释为查询参数。
+
+`Body` 具有与 `Path`，`Query` 以及后面将会看到的类完全相同的额外校验和元数据参数。
+
+```py
+@app.put("/items/{item_id}")
+async def update_item(
+    item_id: int, item: Item, user: User, importance: int = Body(gt=0)
+):
+    ...
+```
+
+如果只有一个请求体参数，但却希望得到一个带有 key 值的请求体，可以使用 `embed` 参数：
+
+```py
+@app.put("/items/{item_id}")
+async def update_item(item_id: int, item: Item = Body(embed=True)):
+    ...
+```
