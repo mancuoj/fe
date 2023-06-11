@@ -335,32 +335,20 @@ Query(
 就像用 `Query` 一样，使用 `Path` 为路径参数添加相同类型的验证和元数据：
 
 :::code-group
-```py 3 [元数据]
-@app.get("/items/{item_id}")
-async def read_item(
-    item_id: Annotated[int, Path(title="The ID of the item to get")],
-    q: Annotated[str | None, Query(alias="item-query")] = None,
-):
-    item = {"item_id": item_id}
-    if q:
-        item.update({"q": q})
-    return item
+```py [元数据]
+item_id: Annotated[int, Path(title="The ID of the item to get")],
 ```
 
 ```py [大于，小于，等于]
 Path(title="The ID of the item to get", ge=1)
-# ge >= 
-# le <=
-# gt >
-# lt <
+# ge >=, gt >, le <=, lt <
 ```
 :::
 
 ## 请求体
 
-### 多个参数
-
-```py 14
+:::code-group
+```py [多个参数]
 class Item(BaseModel):
     name: str
     description: Union[str, None] = None
@@ -377,11 +365,8 @@ class User(BaseModel):
 async def update_item(item_id: int, item: Item, user: User):
     results = {"item_id": item_id, "item": item, "user": user}
     return results
-```
 
-FastAPI 将使用参数名称作为请求体中的 key 值，并期望类似以下内容的请求体：
-
-```json
+# FastAPI 将使用参数名称作为请求体中的 key 值，并期望类似以下内容的请求体： 
 {
     "item": {
         "name": "Foo",
@@ -396,14 +381,9 @@ FastAPI 将使用参数名称作为请求体中的 key 值，并期望类似以�
 }
 ```
 
-
-### Body
-
-使用 `Body` 将一个单一值作为请求体的另一个 key 来处理，默认情况下会被解释为查询参数。
-
-`Body` 具有与 `Path`，`Query` 以及后面将会看到的类完全相同的额外校验和元数据参数。
-
-```py 3
+```py [Body]
+# 使用 Body 将一个单一值作为请求体的另一个 key 来处理，默认情况下会被解释为查询参数
+# Body 具有与 Path，Query 以及后面将会看到的类完全相同的额外校验和元数据参数
 @app.put("/items/{item_id}")
 async def update_item(
     item_id: int, item: Item, user: User, importance: int = Body(gt=0)
@@ -411,24 +391,124 @@ async def update_item(
     ...
 ```
 
-如果只有一个请求体参数，但却希望得到一个带有 key 值的请求体，可以使用 `embed` 参数：
 
-```py 2
+```py [Body embed]
+# 如果只有一个请求体参数，但却希望得到一个带有 key 值的请求体，可以使用 embed 参数
 @app.put("/items/{item_id}")
 async def update_item(item_id: int, item: Item = Body(embed=True)):
     ...
 ```
 
-### Field
-
-为 Model 声明额外的验证和元数据：
-
-```py 3,6
+```py [Field]
+# 为 Model 声明额外的验证和元数据
 class Item(BaseModel):
-    name: str
     description: str | None = Field(
         default=None, title="The description of the item", max_length=300
     )
     price: float = Field(gt=0, description="The price must be greater than zero")
-    tax: float | None = None
 ```
+
+```py [List & Set]
+class Item(BaseModel):
+    tags: list = []  # 无类型
+    tags: List[str] = []
+    tags: Set[str] = set()  # 唯一项
+```
+
+```py [嵌套 Model]
+class Image(BaseModel):
+    url: HttpUrl  # 更多类型：https://docs.pydantic.dev/latest/usage/types/
+    name: str
+
+class Item(BaseModel):
+    image: Image | None = None
+    images: list[Image] | None = None  # 这样也行，可以无脑嵌套
+```
+
+```py [列表]
+# 如果期望请求体 JSON 顶级为 array，3.9+ 可以使用 list[Model] 语法
+async def create_multiple_images(images: list[Image]):
+```
+
+```py [任意 Dict]
+async def create_index_weights(weights: Dict[int, float])
+```
+:::
+
+## 请求体示例数据
+
+:::code-group
+```py [Config schema_extra]
+class Item(BaseModel):
+    ...
+
+    class Config:
+        schema_extra = {
+            "example": {
+                "name": "Foo",
+                "description": "A very nice Item",
+                "price": 35.4,
+                "tax": 3.2,
+            }
+        }
+```
+
+```py [Field]
+# 添加额外字段
+class Item(BaseModel):
+    name: str = Field(example="Foo")
+    description: str | None = Field(default=None, example="A very nice Item")
+    price: float = Field(example=35.4)
+    tax: float | None = Field(default=None, example=3.2)
+```
+
+```py [example]
+# Path, Query, Body, Header, Cookie, File, Form
+item: Annotated[
+    Item,
+    Body(
+        example={
+            "name": "Foo",
+            "description": "A very nice Item",
+            "price": 35.4,
+            "tax": 3.2,
+        },
+    ),
+],
+```
+
+```py [examples]
+item: Annotated[
+    Item,
+    Body(
+        examples={
+            "normal": {
+                "summary": "A normal example",
+                "description": "A **normal** item works correctly.",
+                "value": {
+                    "name": "Foo",
+                    "description": "A very nice Item",
+                    "price": 35.4,
+                    "tax": 3.2,
+                },
+            },
+            "converted": {
+                "summary": "An example with converted data",
+                "description": "FastAPI can convert price `strings` to actual `numbers` automatically",
+                "value": {
+                    "name": "Bar",
+                    "price": "35.4",
+                },
+            },
+            "invalid": {
+                "summary": "Invalid data is rejected with an error",
+                "value": {
+                    "name": "Baz",
+                    "price": "thirty five point four",
+                },
+            },
+        },
+    ),
+],
+```
+:::
