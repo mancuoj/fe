@@ -360,7 +360,7 @@ Path(title="The ID of the item to get", ge=1)
 
 ### 多个参数
 
-```py
+```py 14
 class Item(BaseModel):
     name: str
     description: Union[str, None] = None
@@ -391,7 +391,7 @@ FastAPI 将使用参数名称作为请求体中的 key 值，并期望类似以�
     },
     "user": {
         "username": "dave",
-        "full_name": "Dave Grohl"
+        "full_name": "Dave Growl"
     }
 }
 ```
@@ -403,7 +403,7 @@ FastAPI 将使用参数名称作为请求体中的 key 值，并期望类似以�
 
 `Body` 具有与 `Path`，`Query` 以及后面将会看到的类完全相同的额外校验和元数据参数。
 
-```py
+```py 3
 @app.put("/items/{item_id}")
 async def update_item(
     item_id: int, item: Item, user: User, importance: int = Body(gt=0)
@@ -413,8 +413,22 @@ async def update_item(
 
 如果只有一个请求体参数，但却希望得到一个带有 key 值的请求体，可以使用 `embed` 参数：
 
-```py
+```py 2
 @app.put("/items/{item_id}")
 async def update_item(item_id: int, item: Item = Body(embed=True)):
     ...
+```
+
+### Field
+
+为 Model 声明额外的验证和元数据：
+
+```py 3,6
+class Item(BaseModel):
+    name: str
+    description: str | None = Field(
+        default=None, title="The description of the item", max_length=300
+    )
+    price: float = Field(gt=0, description="The price must be greater than zero")
+    tax: float | None = None
 ```
