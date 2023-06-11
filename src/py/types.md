@@ -7,7 +7,7 @@ outline: deep
 
 3.6+ 版本新增，声明变量类型，以获得更好的编辑体验。
 
-由于整个 FastAPI 都基于它来构建，所以浅学一下，更多请查看 [Cheat Sheet](https://mypy.readthedocs.io/en/stable/cheat_sheet_py3.html)。
+由于整个 FastAPI 都基于它来构建，所以浅学一下，更多请查看 [Cheat Sheet](https://mypy.readthedocs.io/en/stable/cheat_sheet_py3.html) 🐹
 
 ## 一个示例
 

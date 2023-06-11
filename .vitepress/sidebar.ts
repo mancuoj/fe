@@ -45,6 +45,8 @@ export const sidebar = [
         text: 'Learn',
         collapsed: true,
         items: [
+          { text: 'Observable', link: '/angular/learn/observable' },
+          { text: '前后端通信', link: '/angular/learn/http' },
           {
             text: 'Docs',
             link: '/angular/learn/docs/',
