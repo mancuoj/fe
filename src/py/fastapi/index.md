@@ -512,3 +512,34 @@ item: Annotated[
 ],
 ```
 :::
+
+
+## Cookie 和 Header
+
+就像 `Path` 和 `Query` 一样：
+
+:::code-group
+```py 2 [Cookie] 
+@app.get("/items/")
+async def read_items(ads_id: Annotated[str | None, Cookie()] = None):
+    return {"ads_id": ads_id}
+```
+
+```py 2 [Header]
+@app.get("/items/")
+async def read_items(user_agent: Annotated[str | None, Header()] = None):
+    return {"User-Agent": user_agent}
+# 大部分 Headers 都是由 - 连接，python 不允许这种变量，所以会自动转换
+# 会把 user_agent 转换为 User-Agent
+# 当然也可以使用 convert_underscores=False 禁用自动转换
+```
+
+```py [重复的 Headers]
+@app.get("/items/")
+async def read_items(x_token: Union[List[str], None] = Header(default=None)):
+    return {"X-Token values": x_token}
+```
+:::
+
+## 响应模型
+
