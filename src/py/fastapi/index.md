@@ -543,3 +543,19 @@ async def read_items(x_token: Union[List[str], None] = Header(default=None)):
 
 ## 响应模型
 
+:::code-group
+```py [return type]
+@app.post("/items/")
+async def create_item(item: Item) -> Item:
+    ...
+
+@app.get("/items/")
+async def read_items() -> list[Item]:
+    ...
+# FastAPI 将根据模型验证返回的数据，如果不符合，则返回服务器错误
+```
+
+```py [response_model]
+
+```
+:::
