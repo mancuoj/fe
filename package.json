@@ -11,7 +11,7 @@
     "@fontsource/merriweather": "^5.0.3",
     "@fontsource/mononoki": "^5.0.3",
     "@types/markdown-it-container": "^2.0.5",
-    "@types/node": "^20.3.0",
+    "@types/node": "^20.3.1",
     "eslint": "^8.42.0",
     "lxgw-wenkai-screen-webfont": "^1.7.0",
     "markdown-it-container": "^3.0.0",
