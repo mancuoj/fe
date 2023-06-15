@@ -545,17 +545,27 @@ async def read_items(x_token: Union[List[str], None] = Header(default=None)):
 
 :::code-group
 ```py [return type]
+# FastAPI 将根据模型验证返回的数据，如果不符合，则返回服务器错误
 @app.post("/items/")
 async def create_item(item: Item) -> Item:
     ...
 
+
 @app.get("/items/")
 async def read_items() -> list[Item]:
     ...
-# FastAPI 将根据模型验证返回的数据，如果不符合，则返回服务器错误
 ```
 
 ```py [response_model]
+# 某些情况下，需要返回一些与类型声明不同的数据
+# 同时声明的话，response_model 优先级比较高
+@app.post("/items/", response_model=Item)
+async def create_item(item: Item) -> Any:
+    ...
 
+
+@app.get("/items/", response_model=list[Item])
+async def read_items() -> Any:
+    ...
 ```
 :::
