@@ -32,6 +32,7 @@ export const sidebar = [
     text: 'JavaScript',
     collapsed: true,
     items: [
+      { text: 'Remake', link: '/js/remake' },
       { text: 'TodoMVC', link: '/js/todomvc' },
     ],
   },
