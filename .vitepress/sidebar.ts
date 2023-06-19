@@ -16,6 +16,7 @@ export const sidebar = [
           { text: 'Rye', link: '/py/rye' },
           { text: 'Types', link: '/py/types' },
           { text: 'FastAPI', link: '/py/fastapi/' },
+          { text: 'Flask', link: '/py/flask/' },
         ],
       },
       {
@@ -32,7 +33,14 @@ export const sidebar = [
     text: 'JavaScript',
     collapsed: true,
     items: [
-      { text: 'Remake', link: '/js/remake' },
+      {
+        text: 'Remake',
+        items: [
+          { text: 'JavaScript Info', link: '/js/remake/1' },
+          { text: 'ES6 入门教程', link: '/js/remake/2' },
+          { text: '红宝书', link: '/js/remake/3' },
+        ],
+      },
       { text: 'TodoMVC', link: '/js/todomvc' },
     ],
   },
