@@ -13,7 +13,7 @@ pnpm exec vitepress init
 
 ## Config
 
-::: code-group
+:::code-group
 
 ```ts [config.ts]
 import { defineConfig } from 'vitepress'

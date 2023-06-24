@@ -11,17 +11,21 @@ export const sidebar = [
       { text: 'CSS', link: '/x/css' },
       {
         text: 'Python',
-        collapsed: true,
         items: [
+          { text: '项目配置', link: '/py/config' },
           { text: 'Rye', link: '/py/rye' },
-          { text: 'Types', link: '/py/types' },
-          { text: 'FastAPI', link: '/py/fastapi/' },
+          { text: 'Type Hints', link: '/py/types' },
+          {
+            text: 'FastAPI',
+            items: [
+              { text: '文档速通', link: '/py/fastapi/' },
+            ],
+          },
           { text: 'Flask', link: '/py/flask/' },
         ],
       },
       {
         text: '设计模式',
-        collapsed: true,
         items: [
           { text: '单例模式', link: '/patterns/singleton' },
         ],
@@ -51,19 +55,17 @@ export const sidebar = [
     items: [
       { text: 'TodoMVC', link: '/angular/todomvc' },
       {
-        text: 'Learn',
-        collapsed: true,
+        text: '学习记录',
         items: [
-          { text: 'Observable', link: '/angular/learn/observable' },
-          { text: '前后端通信', link: '/angular/learn/http' },
+          { text: 'RxJS', link: '/angular/learn/rxjs' },
+          { text: 'Http', link: '/angular/learn/http' },
           {
-            text: 'Docs',
-            link: '/angular/learn/docs/',
-            collapsed: false,
+            text: '文档',
             items: [
+              { text: '文档速通', link: '/angular/learn/docs/' },
               { text: 'Cheat Sheet', link: '/angular/learn/docs/cheat-sheet' },
-              { text: 'First App', link: '/angular/learn/docs/first-app' },
-              { text: 'Tour of Heroes', link: '/angular/learn/docs/tour-of-heroes' },
+              { text: '第一个 App', link: '/angular/learn/docs/first-app' },
+              { text: '英雄之旅', link: '/angular/learn/docs/tour-of-heroes' },
             ],
           },
         ],
@@ -77,17 +79,15 @@ export const sidebar = [
     items: [
       { text: 'React 项目的文件结构', link: '/react/file-structure' },
       {
-        text: 'Learn',
-        collapsed: true,
+        text: '学习记录',
         items: [
-          { text: 'Docs', link: '/react/learn/docs/' },
+          { text: '文档速通', link: '/react/learn/docs/' },
         ],
       },
       {
         text: 'Next',
-        link: '/react/next/',
-        collapsed: true,
         items: [
+          { text: '文档速通', link: '/react/next/' },
         ],
       },
     ],

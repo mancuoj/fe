@@ -19,7 +19,7 @@ ng generate c my-component
 
 ## Component
 
-::: code-group
+:::code-group
 
 ```ts [@Component]
 import { Component } from '@angular/core'
