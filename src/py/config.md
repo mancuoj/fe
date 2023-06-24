@@ -24,9 +24,12 @@ code --install-extension ms-python.isort
 ```
 :::
 
-## flake8
-
-## mypy
-
 ## pre-commit
+
+- black
+- flake8
+- isort
+- mypy
+- pydocstyle
+- poetry
 
