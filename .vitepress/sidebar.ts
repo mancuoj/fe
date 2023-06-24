@@ -9,16 +9,20 @@ export const sidebar = [
       { text: 'Monorepo', link: '/x/monorepo' },
       { text: 'Git', link: '/x/git' },
       { text: 'CSS', link: '/x/css' },
+      { text: 'MongoDB', link: '/x/mongodb' },
       {
         text: 'Python',
+        collapsed: true,
         items: [
           { text: '项目配置', link: '/py/config' },
           { text: 'Rye', link: '/py/rye' },
+          { text: 'Poetry', link: '/py/poetry' },
           { text: 'Type Hints', link: '/py/types' },
           {
             text: 'FastAPI',
             items: [
               { text: '文档速通', link: '/py/fastapi/' },
+              { text: 'FARM', link: '/py/fastapi/farm' },
             ],
           },
           { text: 'Flask', link: '/py/flask/' },
@@ -39,6 +43,7 @@ export const sidebar = [
     items: [
       {
         text: 'Remake',
+        collapsed: true,
         items: [
           { text: 'JavaScript Info', link: '/js/remake/1' },
           { text: 'ES6 入门教程', link: '/js/remake/2' },
@@ -56,13 +61,14 @@ export const sidebar = [
       { text: 'TodoMVC', link: '/angular/todomvc' },
       {
         text: '学习记录',
+        collapsed: true,
         items: [
           { text: 'RxJS', link: '/angular/learn/rxjs' },
           { text: 'Http', link: '/angular/learn/http' },
           {
             text: '文档',
             items: [
-              { text: '文档速通', link: '/angular/learn/docs/' },
+              { text: '速通', link: '/angular/learn/docs/' },
               { text: 'Cheat Sheet', link: '/angular/learn/docs/cheat-sheet' },
               { text: '第一个 App', link: '/angular/learn/docs/first-app' },
               { text: '英雄之旅', link: '/angular/learn/docs/tour-of-heroes' },
