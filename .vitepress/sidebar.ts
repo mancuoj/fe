@@ -70,8 +70,6 @@ export const sidebar = [
       { text: 'VitePress 速通', link: '/vue/vitepress' },
     ],
   },
-
-  { text: 'Memos', link: '/memos' },
   { text: 'About Me', link: '/about' },
 ]
 
