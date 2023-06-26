@@ -2,42 +2,6 @@ export const sidebar = [
   { text: 'Start', link: '/' },
 
   {
-    text: 'X',
-    collapsed: true,
-    items: [
-      { text: 'npm', link: '/x/npm' },
-      { text: 'Monorepo', link: '/x/monorepo' },
-      { text: 'Git', link: '/x/git' },
-      { text: 'CSS', link: '/x/css' },
-      { text: 'MongoDB', link: '/x/mongodb' },
-      {
-        text: 'Python',
-        collapsed: true,
-        items: [
-          { text: '项目配置', link: '/py/config' },
-          { text: 'Rye', link: '/py/rye' },
-          { text: 'Poetry', link: '/py/poetry' },
-          { text: 'Type Hints', link: '/py/types' },
-          {
-            text: 'FastAPI',
-            items: [
-              { text: '文档速通', link: '/py/fastapi/' },
-              { text: 'FARM', link: '/py/fastapi/farm' },
-            ],
-          },
-          { text: 'Flask', link: '/py/flask/' },
-        ],
-      },
-      {
-        text: '设计模式',
-        items: [
-          { text: '单例模式', link: '/patterns/singleton' },
-        ],
-      },
-    ],
-  },
-
-  {
     text: 'JavaScript',
     collapsed: true,
     items: [
@@ -109,6 +73,37 @@ export const sidebar = [
 
   { text: 'Memos', link: '/memos' },
   { text: 'About Me', link: '/about' },
+]
+
+export const patternsSidebar = [
+  { text: '蠢人的总结', link: '/patterns/' },
+  { text: '单例模式', link: '/patterns/singleton' },
+]
+
+export const xSidebar = [
+  { text: 'npm', link: '/x/npm' },
+  { text: 'Monorepo', link: '/x/monorepo' },
+  { text: 'Git', link: '/x/git' },
+  { text: 'CSS', link: '/x/css' },
+  { text: 'MongoDB', link: '/x/mongodb' },
+  {
+    text: 'Python',
+    collapsed: false,
+    items: [
+      { text: '项目配置', link: '/py/config' },
+      { text: 'Rye', link: '/py/rye' },
+      { text: 'Poetry', link: '/py/poetry' },
+      { text: 'Type Hints', link: '/py/types' },
+      {
+        text: 'FastAPI',
+        items: [
+          { text: '文档速通', link: '/py/fastapi/' },
+          { text: 'FARM', link: '/py/fastapi/farm' },
+        ],
+      },
+      { text: 'Flask', link: '/py/flask/' },
+    ],
+  },
 ]
 
 export const algoSidebar = [
