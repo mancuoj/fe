@@ -1,0 +1,1 @@
+type Tuple = [number, string]
