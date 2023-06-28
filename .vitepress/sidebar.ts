@@ -104,8 +104,8 @@ export const xSidebar = [
   },
 ]
 
-export const algoSidebar = [
-  { text: '蠢人的总结', link: '/algo/' },
+export const dailySidebar = [
+  { text: '蠢人的总结', link: '/daily/' },
   {
     text: '每日一题',
     items: [

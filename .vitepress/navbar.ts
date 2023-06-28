@@ -28,7 +28,7 @@ export const navbar = [
 
   {
     text: 'Problems',
-    activeMatch: '^/(algo|interview)/',
+    activeMatch: '^/(daily|interview)/',
     items: [
       {
         text: '小镇做题家',
