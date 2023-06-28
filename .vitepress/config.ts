@@ -29,7 +29,7 @@ export default defineConfig({
       '/x/': xSidebar,
       '/py/': xSidebar,
       '/patterns/': patternsSidebar,
-      '/daily': dailySidebar,
+      '/daily/': dailySidebar,
       '/hbs/': hbsSidebar,
       '/juejin/tsch/': juejinTschSidebar,
       '/juejin/ts/': juejinTsSidebar,
