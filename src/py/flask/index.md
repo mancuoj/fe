@@ -1,3 +1,3 @@
-# [Flask 文档](https://flask.palletsprojects.com/) 快速入门
+# [Flask 文档速通](https://flask.palletsprojects.com/)
 
 

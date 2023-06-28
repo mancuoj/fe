@@ -1,4 +1,4 @@
-# [Angular 文档](https://angular.io/start) 快速入门
+# [Angular 文档速通](https://angular.io/start)
 
 毕竟是处在前端鄙视链顶端的框架，还是要学一下的，写代码直接看 [Cheat Sheet](./cheat-sheet) 吧 🐶
 

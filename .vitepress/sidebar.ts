@@ -5,16 +5,16 @@ export const sidebar = [
     text: 'JavaScript',
     collapsed: true,
     items: [
+      { text: 'TodoMVC', link: '/js/todomvc' },
       {
         text: 'Remake',
-        collapsed: true,
+        // collapsed: true,
         items: [
           { text: 'JavaScript Info', link: '/js/remake/1' },
           { text: 'ES6 入门教程', link: '/js/remake/2' },
           { text: '红宝书', link: '/js/remake/3' },
         ],
       },
-      { text: 'TodoMVC', link: '/js/todomvc' },
     ],
   },
 
@@ -24,20 +24,15 @@ export const sidebar = [
     items: [
       { text: 'TodoMVC', link: '/angular/todomvc' },
       {
-        text: '学习记录',
+        text: 'Learn',
         collapsed: true,
         items: [
+          { text: '文档速通', link: '/angular/learn/docs/' },
+          { text: 'Cheat Sheet', link: '/angular/learn/docs/cheat-sheet' },
+          { text: 'First App', link: '/angular/learn/docs/first-app' },
+          { text: 'Tour of Heroes', link: '/angular/learn/docs/tour-of-heroes' },
           { text: 'RxJS', link: '/angular/learn/rxjs' },
-          { text: 'Http', link: '/angular/learn/http' },
-          {
-            text: '文档',
-            items: [
-              { text: '速通', link: '/angular/learn/docs/' },
-              { text: 'Cheat Sheet', link: '/angular/learn/docs/cheat-sheet' },
-              { text: '第一个 App', link: '/angular/learn/docs/first-app' },
-              { text: '英雄之旅', link: '/angular/learn/docs/tour-of-heroes' },
-            ],
-          },
+          { text: 'Http Client', link: '/angular/learn/http' },
         ],
       },
     ],
@@ -49,7 +44,7 @@ export const sidebar = [
     items: [
       { text: 'React 项目的文件结构', link: '/react/file-structure' },
       {
-        text: '学习记录',
+        text: 'Learn',
         items: [
           { text: '文档速通', link: '/react/learn/docs/' },
         ],
@@ -73,11 +68,6 @@ export const sidebar = [
   { text: 'About Me', link: '/about' },
 ]
 
-export const patternsSidebar = [
-  { text: '蠢人的总结', link: '/patterns/' },
-  { text: '单例模式', link: '/patterns/singleton' },
-]
-
 export const xSidebar = [
   { text: 'npm', link: '/x/npm' },
   { text: 'Monorepo', link: '/x/monorepo' },
@@ -99,7 +89,12 @@ export const xSidebar = [
           { text: 'FARM', link: '/py/fastapi/farm' },
         ],
       },
-      { text: 'Flask', link: '/py/flask/' },
+      {
+        text: 'Flask',
+        items: [
+          { text: '文档速通', link: '/py/flask/' },
+        ],
+      },
     ],
   },
 ]
@@ -113,6 +108,11 @@ export const dailySidebar = [
       { text: '23-6-28', link: 'https://juejin.cn/post/7249514793421783095' },
     ],
   },
+]
+
+export const patternsSidebar = [
+  { text: '蠢人的总结', link: '/patterns/' },
+  { text: '单例模式', link: '/patterns/singleton' },
 ]
 
 export const interviewSidebar = [

@@ -1,4 +1,4 @@
-# [React 文档](https://react.dev/) 学习记录
+# [React 文档速通](https://react.dev/)
 
 React 新文档写的还是很好的，重学一遍，记录一下。
 

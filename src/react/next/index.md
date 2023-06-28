@@ -1,4 +1,4 @@
-# [Next.js 文档](https://nextjs.org/learn) 快速入门
+# [Next.js 文档速通](https://nextjs.org/learn)
 
 ## Rendering methods
 
