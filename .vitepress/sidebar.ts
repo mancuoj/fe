@@ -81,8 +81,8 @@ export const patternsSidebar = [
 export const xSidebar = [
   { text: 'npm', link: '/x/npm' },
   { text: 'Monorepo', link: '/x/monorepo' },
+  { text: 'Linux', link: '/x/linux' },
   { text: 'Git', link: '/x/git' },
-  { text: 'CSS', link: '/x/css' },
   { text: 'MongoDB', link: '/x/mongodb' },
   {
     text: 'Python',
@@ -107,48 +107,12 @@ export const xSidebar = [
 export const algoSidebar = [
   { text: '蠢人的总结', link: '/algo/' },
   {
-    text: 'labuladong 的算法小抄',
-    // collapsed: false,
+    text: '每日一题',
     items: [
-      {
-        text: '二叉树',
-        link: '/algo/binary-tree/',
-        // collapsed: false,
-        items: [
-          { text: '104. 二叉树的最大深度', link: '/algo/binary-tree/104' },
-          { text: '144. 二叉树的前序遍历', link: '/algo/binary-tree/144' },
-        ],
-      },
-      {
-        text: '链表',
-        items: [
-        ],
-      },
+      { text: '23-6-27', link: 'https://juejin.cn/post/7249228528574414909' },
+      { text: '23-6-28', link: 'https://juejin.cn/post/7249514793421783095' },
     ],
   },
-  {
-    text: 'LeetCode',
-    // collapsed: false,
-    items: [
-      {
-        text: 'JavaScript',
-        link: '/algo/js/',
-        // collapsed: false,
-        items: [
-          { text: '2620. 计数器', link: '/algo/js/2620' },
-          { text: '2621. 睡眠函数', link: '/algo/js/2621' },
-        ],
-      },
-      {
-        text: '剑指 Offer',
-        link: '/algo/offer/',
-        // collapsed: false,
-        items: [
-        ],
-      },
-    ],
-  },
-
 ]
 
 export const interviewSidebar = [
@@ -162,11 +126,6 @@ export const interviewSidebar = [
   { text: '🤡🤡🤡', link: '/interview/7' },
   { text: '🤡🤡🤡', link: '/interview/8' },
   { text: '🤡🤡🤡', link: '/interview/9' },
-]
-
-export const tschSidebar = [
-  { text: '蠢人的总结', link: '/tsch/' },
-  { text: '13. Hello World', link: '/tsch/13' },
 ]
 
 export const hbsSidebar = [

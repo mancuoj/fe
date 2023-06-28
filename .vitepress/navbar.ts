@@ -23,30 +23,20 @@ export const navbar = [
           { text: 'TS 全面进阶指南', link: '/juejin/ts/', activeMatch: '/juejin/ts/' },
         ],
       },
-      {
-        text: '在线阅读',
-        items: [
-          { text: 'ES6 入门', link: 'https://es6.ruanyifeng.com/#docs/intro' },
-          { text: 'javascript.info', link: 'https://zh.javascript.info/' },
-          { text: 'patterns.dev', link: 'https://www.patterns.dev/' },
-          { text: 'JavaScript 二十年', link: 'https://cn.history.js.org/' },
-        ],
-      },
     ],
   },
 
   {
     text: 'Problems',
-    activeMatch: '^/(algo|tsch|interview)/',
+    activeMatch: '^/(algo|interview)/',
     items: [
       {
         text: '小镇做题家',
         items: [
-          { text: '算法', link: '/algo/', activeMatch: '/algo/' },
-          { text: '类型体操', link: '/tsch/', activeMatch: '/tsch/' },
+          { text: '每日一题', link: '/daily/', activeMatch: '/daily/' },
+          { text: '面试题', link: '/interview/', activeMatch: '/interview/' },
         ],
       },
-      { text: '面试题', link: '/interview/', activeMatch: '/interview/' },
     ],
   },
 ]
