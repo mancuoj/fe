@@ -75,10 +75,17 @@ export const xSidebar = [
   { text: 'Git', link: '/x/git' },
   { text: 'MongoDB', link: '/x/mongodb' },
   {
-    text: 'Python',
-    collapsed: false,
+    text: 'Go',
+    collapsed: true,
     items: [
-      { text: '项目配置', link: '/py/config' },
+      { text: '配置', link: '/go/' },
+    ],
+  },
+  {
+    text: 'Python',
+    collapsed: true,
+    items: [
+      { text: '配置', link: '/py/' },
       { text: 'Rye', link: '/py/rye' },
       { text: 'Poetry', link: '/py/poetry' },
       { text: 'Type Hints', link: '/py/types' },

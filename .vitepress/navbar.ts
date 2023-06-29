@@ -2,7 +2,7 @@ export const navbar = [
   {
     text: 'X',
     link: '/x/npm',
-    activeMatch: 'x',
+    activeMatch: '/x/',
   },
 
   {

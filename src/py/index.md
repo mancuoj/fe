@@ -1,4 +1,4 @@
-# Python 项目配置
+# Python
 
 ## VSCode
 
