@@ -1,9 +1,12 @@
 # Go
 
+> 因为公司项目后端都是 Go，学会了方便之后和他们撕逼
+
+- [官网入门教程](https://go.dev/doc/tutorial/)
 - [Learn Go with Tests](https://quii.gitbook.io/learn-go-with-tests/)
 - [Go by Example](https://github.com/mmcgrana/gobyexample)
 - [七天用 Go 动手写/从零实现系列](https://github.com/geektutu/7days-golang)
-
+- [Let's Go!]()
 
 ## Install
 

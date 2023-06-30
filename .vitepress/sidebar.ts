@@ -79,7 +79,6 @@ export const xSidebar = [
     collapsed: true,
     items: [
       { text: '配置', link: '/go/' },
-      { text: 'TDD', link: '/go/tdd' },
     ],
   },
   {
