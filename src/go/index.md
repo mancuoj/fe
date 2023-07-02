@@ -6,7 +6,6 @@
 - [Learn Go with Tests](https://quii.gitbook.io/learn-go-with-tests/)
 - [Go by Example](https://github.com/mmcgrana/gobyexample)
 - [七天用 Go 动手写/从零实现系列](https://github.com/geektutu/7days-golang)
-- [Let's Go!]()
 
 ## Install
 
