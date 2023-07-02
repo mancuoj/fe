@@ -1,16 +1,30 @@
 # 关于 Linux 的一切
 
-## zsh + ohmyzsh
+## Modern alternatives command-line tools
 
-按照文档装上就好了，配置文件在我的 dotfiles 仓库。
-
-## fzf
-
-使用 git 安装就会自动配置，根据文档稍微配置以下。
-
-只要记住两个命令 `Ctrl+T` 和 `Ctrl+R` 就可以了。
-
-## gdu
-
-进化版 du（disk usage），查看磁盘使用情况。
-
+- zsh + oh-my-zsh + zsh-plugins
+- fzf: fuzzy finder
+- bat: replace `cat`
+- exa: replace `ls`
+- gdu/dust: replace `du`
+- duf: replace `df`
+- bottom/btop/gtop/htop/glances/gotop: replace `top`
+- neofetch/onefetch: system info tool
+- tldr/tealdeer: cheatsheets for console commands
+- gping: replace `ping`
+- curlie/httpie/xh: replace `curl`
+- slides: presentation tool
+- grex: simplify the often complicated and tedious task of creating regular expressions
+- zoxide: replace `cd`
+- procs: replace `ps`
+- sd: replace `sed`
+- fd: replace `find`
+- hyperfine: benchmarking tool
+- tokei: count your code quickly
+- ripgrep: replace `grep`
+- jq: `sed` for json files
+- choose: replace `cut`
+- ctop: top-like interface for container metrics
+- lazydocker: the lazier way to manage everything docker
+- frogmouth/glow: markdown viewer
+- ...
