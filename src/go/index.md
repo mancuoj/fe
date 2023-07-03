@@ -17,4 +17,6 @@ sudo tar -C /usr/local -xzf go1.20.5.linux-amd64.tar.gz
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+
+go version
 ```
