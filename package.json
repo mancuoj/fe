@@ -6,10 +6,10 @@
     "lint:fix": "eslint . --fix"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.39.6",
-    "@fontsource/jetbrains-mono": "^5.0.3",
-    "@fontsource/merriweather": "^5.0.3",
-    "@fontsource/mononoki": "^5.0.3",
+    "@antfu/eslint-config": "^0.39.7",
+    "@fontsource/jetbrains-mono": "^5.0.4",
+    "@fontsource/merriweather": "^5.0.4",
+    "@fontsource/mononoki": "^5.0.4",
     "@types/markdown-it-container": "^2.0.5",
     "@types/node": "^20.3.3",
     "eslint": "^8.44.0",
@@ -19,5 +19,8 @@
     "markdown-it-imsize": "^2.0.1",
     "vitepress": "1.0.0-beta.5",
     "vue": "^3.3.4"
+  },
+  "dependencies": {
+    "@chinese-fonts/jxzk": "^1.2.0"
   }
 }
