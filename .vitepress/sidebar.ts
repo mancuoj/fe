@@ -80,6 +80,7 @@ export const xSidebar = [
     items: [
       { text: '配置', link: '/go/' },
       { text: 'TDD', link: '/go/tdd' },
+      { text: 'Snippetbox', link: '/go/snippetbox' },
     ],
   },
   {
