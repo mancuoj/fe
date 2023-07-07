@@ -1,13 +1,9 @@
-# Cheat Sheet
-
+# Cheatsheet
 
 ## 启动
 
 :::code-group
-
 ```ts [Bootstraping]
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic'
-
 // 通过指定模块中的根组件引导和启动应用
 // 通常在程序的主入口文件 main.ts 中调用
 // 这里的根组件是指 AppModule 中 bootstrap 数组中定义的组件

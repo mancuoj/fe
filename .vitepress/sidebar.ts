@@ -28,11 +28,9 @@ export const sidebar = [
         collapsed: true,
         items: [
           { text: '文档速通', link: '/angular/learn/docs/' },
-          { text: 'Cheat Sheet', link: '/angular/learn/docs/cheat-sheet' },
+          { text: 'Cheatsheet', link: '/angular/learn/docs/cheatsheet' },
           { text: 'First App', link: '/angular/learn/docs/first-app' },
           { text: 'Tour of Heroes', link: '/angular/learn/docs/tour-of-heroes' },
-          { text: 'RxJS', link: '/angular/learn/rxjs' },
-          { text: 'Http Client', link: '/angular/learn/http' },
         ],
       },
     ],
@@ -79,6 +77,7 @@ export const xSidebar = [
     collapsed: true,
     items: [
       { text: '配置', link: '/go/' },
+      { text: 'Cheatsheet', link: '/go/cheatsheet' },
       { text: 'TDD', link: '/go/tdd' },
       { text: 'Snippetbox', link: '/go/snippetbox' },
     ],
@@ -113,8 +112,12 @@ export const dailySidebar = [
   {
     text: '每日一题',
     items: [
-      { text: '23-6-27', link: 'https://juejin.cn/post/7249228528574414909' },
-      { text: '23-6-28', link: 'https://juejin.cn/post/7249514793421783095' },
+      { text: '23-06-27', link: 'https://juejin.cn/post/7249228528574414909' },
+      { text: '23-06-28', link: 'https://juejin.cn/post/7249514793421783095' },
+      { text: '23-06-29', link: 'https://juejin.cn/post/7250179028647624763' },
+      { text: '23-06-30', link: 'https://juejin.cn/post/7250328942842150973' },
+      { text: '23-07-03', link: 'https://juejin.cn/post/7251776511220465723' },
+      { text: '23-07-04', link: 'https://juejin.cn/post/7251786367788613687' },
     ],
   },
 ]

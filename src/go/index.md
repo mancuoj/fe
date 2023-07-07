@@ -4,6 +4,7 @@
 
 - [官网入门教程](https://go.dev/doc/tutorial/)
 - [Go 指南](https://tour.go-zh.org/list)
+- [Go Cheatsheet](https://quickref.me/go.html)
 - [Learn Go with Tests](https://quii.gitbook.io/learn-go-with-tests/)
 - [Go by Example](https://github.com/mmcgrana/gobyexample)
 - [七天用 Go 动手写/从零实现系列](https://github.com/geektutu/7days-golang)
