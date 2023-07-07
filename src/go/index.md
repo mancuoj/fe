@@ -21,35 +21,3 @@ export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
 go version
 ```
-
-## Packages
-
-```go
-// every package file has to start with package
-package hello
-
-// import packages, alias r
-import "fmt"
-import r "math/rand"
-
-import (
-  "fmt"
-  r "math/rand"
-)
-
-// exported names begin with capital letters
-func Hello() {
-  ...
-}
-```
-
-## Variables
-
-```go
-var msg string
-string = "hello"
-
-var msg = "hello" // infer types
-
-msg := "hello" // infer types, shortcut 
-```
