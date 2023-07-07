@@ -74,7 +74,7 @@ export const xSidebar = [
   { text: 'MongoDB', link: '/x/mongodb' },
   {
     text: 'Go',
-    collapsed: true,
+    // collapsed: true,
     items: [
       { text: '配置', link: '/go/' },
       { text: 'Cheatsheet', link: '/go/cheatsheet' },
