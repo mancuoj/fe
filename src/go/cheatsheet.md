@@ -241,6 +241,7 @@ ptr := new(int) // 动态申请了一块内存空间，返回该内存空间的�
 type Vertex struct {
 	X int
 	Y int
+  // 可以简写为 X, Y int
 }
 
 func main() {
@@ -335,15 +336,23 @@ type Vertex struct {
 	Lat, Long float64
 }
 
-var m map[string]Vertex
-
-func main() {
-	m = make(map[string]Vertex)
-	m["Bell Labs"] = Vertex{
-		40.68433, -74.39967,
-	}
+var m = map[string]Vertex{
+	"Bell Labs": Vertex{ 40.68433, -74.39967 },
+	"Google": { 37.42202, -122.08408 }, // 可以省略类型名
 }
 ```
+
+基本操作如下。
+
+```go
+m[key] = val
+
+val := m[key]
+val, ok := m[key] // 若 key 在 map 中，ok 为 true，否则为 false 
+
+delete(m, key)
+```
+
 
 ## 条件控制 Flow Control
 
