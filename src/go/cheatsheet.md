@@ -140,12 +140,12 @@ s1 := "Hello" + "World"
 s2 := `A "raw" string literal
 can include line breaks.`
 
-num := 3              // int
-num := 3.1            // float64
-num := 3 + 4i         // complex128
-num := byte('a')      // byte (alias: uint8)
-var u uint = 7        // uint (unsigned)
-var p float32 = 22.7  // 32-bit float
+num := 3             // int
+num := 3.1           // float64
+num := 3 + 4i        // complex128
+num := byte('a')     // byte (alias: uint8)
+var u uint = 7       // uint (unsigned)
+var p float32 = 22.7 // 32-bit float
 ```
 
 没有明确初始值的变量会赋予“零值”。
@@ -162,5 +162,140 @@ var p float32 = 22.7  // 32-bit float
 i := 42
 f := float64(i)
 u := uint(f)
+```
+
+声明一个变量而不指定其类型时，变量的类型由右值推导得出。
+
+右值声明了类型时，左值新变量的类型与其相同。
+
+```go
+var i int
+j := int // j 也是 int 类型
+```
+
+右边声明未指定的数值常量时，新变量的类型就可能是 `int, float64, complex18` 了。
+
+```go
+i := 42           // int
+f := 3.142        // float64
+g := 0.867 + 0.5i // complex128
+```
+
+常量使用 `const` 声明，不能使用 `:=` 语法，可以是字符、字符串、布尔值或数值。
+
+```go
+const Pi = 3.14
+
+// 分组声明
+const (
+  s string = "constant"
+  Phi = 1.618
+)
+
+// 常量枚举，a = 0, b = 1, c = 2
+const (
+  a = iota
+  b
+  c
+)
+```
+
+## 条件控制 Flow Control
+
+Go 只有一种循环结构：`for` 循环。与其他语言类似，由三部分组成：
+
+- 初始化语句：第一次迭代前执行，通常为短声明变量，仅在 `for` 作用域中可见
+- 条件表达式：每次迭代前求值，求值结果为 `false` 时就会终止循环
+- 后置语句：每次迭代后执行
+
+与其它语言不同，没有小括号，只有大括号。
+
+```go
+sum := 0
+for i := 0; i < 10; i++ {
+  sum += i
+}
+```
+
+初始化语句和后置语句可选。
+
+```go
+sum := 1
+for ; sum < 1000; {
+  sum += sum
+}
+```
+
+此时去掉分号即变为其他语言中的 `while` 循环。
+
+```go
+sum := 1
+for sum < 1000 {
+  sum += sum
+}
+```
+
+省略循环条件即是无限循环。
+
+```go
+for {
+  ...
+}
+```
+
+`if` 语句与 `for` 类似，同样不需要小括号，也可以在条件表达式之前执行一个简单的语句。
+
+分支与其他语言类似，即 `else if` 和 `else`。
+
+```go
+func pow(x, n, lim float64) float64 {
+	if v := math.Pow(x, n); v < lim {
+		return v
+	}
+	return lim
+}
+```
+
+在 `if` 的简短语句中声明的变量可以在任何对应的 else 块中使用。
+
+```go
+func pow(x, n, lim float64) float64 {
+	if v := math.Pow(x, n); v < lim {
+    return v
+	} else {
+		fmt.Printf("%g >= %g\n", v, lim)
+	}
+	// 这里开始就不能使用 v 了
+	return lim
+}
+```
+
+使用 `switch-case` 简化一连串的 `if-else` 语句。
+
+Go 会自动为每个 case 提供 `break` 语句，除非以 `fallthrough` 语句结束，否则分支会自动终止。
+
+```go
+switch os := runtime.GOOS; os {
+case "darwin":
+  fmt.Println("OS X.")
+case "linux":
+  fmt.Println("Linux.")
+default:
+  fmt.Printf("%s.\n", os)
+}
+```
+
+`switch` 可以省略条件用于编写长的 `if-then-else` 链。
+
+```go
+t := time.Now()
+switch {
+case t.Hour() < 12:
+  fmt.Println("Good morning!")
+case t.Hour() < 17:
+  fmt.Println("Good afternoon.")
+default:
+  fmt.Println("Good evening.")
+}
 ```
 
