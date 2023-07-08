@@ -283,10 +283,10 @@ for i := range pow // 只需要下标时也可以直接忽略第二个变量
 
 ```go
 func pow(x, n, lim float64) float64 {
-	if v := math.Pow(x, n); v < lim {
-		return v
-	}
-	return lim
+  if v := math.Pow(x, n); v < lim {
+    return v
+  }
+  return lim
 }
 ```
 
@@ -294,13 +294,13 @@ func pow(x, n, lim float64) float64 {
 
 ```go
 func pow(x, n, lim float64) float64 {
-	if v := math.Pow(x, n); v < lim {
+  if v := math.Pow(x, n); v < lim {
     return v
-	} else {
-		fmt.Printf("%g >= %g\n", v, lim)
-	}
-	// 这里开始就不能使用 v 了
-	return lim
+  } else {
+    fmt.Printf("%g >= %g\n", v, lim)
+  }
+  // 这里开始就不能使用 v 了
+  return lim
 }
 ```
 
@@ -645,7 +645,122 @@ func main() {
 // 9 8 7 6 5 4 3 2 1 0
 ```
 
-## 并发
+## 并发 Concurrency
+
+goroutine 是由 Go 运行时管理的轻量级线程。
+
+信道是带有类型的管道，可以通过信道操作符 `<-` 来发送或接收值。
+
+以下示例将求和任务分给两个 goroutine，一旦它们完成了计算，就可以计算最终结果。
+
+```go
+func sum(s []int, c chan int) {
+  sum := 0
+  for _, v := range s {
+    sum += v
+  }
+  c <- sum // 将和送入 c
+}
+
+func main() {
+  s := []int{7, 2, 8, -9, 4, 0}
+
+  c := make(chan int)
+  go sum(s[:len(s)/2], c)
+  go sum(s[len(s)/2:], c)
+  x, y := <-c, <-c // 从 c 中接收
+
+  fmt.Println(x, y, x+y)
+}
+```
+
+可以提供第二个参数作为信道的缓冲区长度，当缓冲区被填满后再向其发送数据时才会阻塞。
+
+发送者可以通过 `close` 关闭一个信道来表示没有需要发送的值了（只有发送者可以关闭）。
+
+接收者可以通过为接收表达式分配第二个参数 `ok` 来测试信道是否被关闭。
+
+循环 `for i := range c` 会不断从信道接收值，直到它被关闭。
+
+```go
+func fibonacci(n int, c chan int) {
+  x, y := 0, 1
+  for i := 0; i < n; i++ {
+    c <- x
+    x, y = y, x+y
+  }
+  close(c)
+}
+
+func main() {
+  c := make(chan int, 10)
+  go fibonacci(cap(c), c)
+  for i := range c {
+    fmt.Println(i)
+  }
+}
+```
+
+`select` 语句使得一个 goroutine 可以等待多个通信操作。
+
+会阻塞到某个分支可以继续执行为止，这时就会执行该分支。
+
+多个分支都准备好时会随机选择一个执行，其他分支都没有准备好时，`default` 分支会被执行。
+
+```go
+func main() {
+  tick := time.Tick(100 * time.Millisecond)
+  boom := time.After(500 * time.Millisecond)
+  for {
+    select {
+    case <-tick:
+      fmt.Println("tick.")
+    case <-boom:
+      fmt.Println("BOOM!")
+      return
+    default:
+      fmt.Println("    .")
+      time.Sleep(50 * time.Millisecond)
+    }
+  }
+}
+```
+
+使用 `sync.Mutex` 保证每次只有一个 goroutine 能访问一个共享的变量。
+
+```go
+// SafeCounter 的并发使用是安全的
+type SafeCounter struct {
+  v   map[string]int
+  mux sync.Mutex
+}
+
+// Inc 增加给定 key 的计数器的值
+func (c *SafeCounter) Inc(key string) {
+  c.mux.Lock()
+  // Lock 之后同一时刻只有一个 goroutine 能访问 c.v
+  c.v[key]++
+  c.mux.Unlock()
+}
+
+// Value 返回给定 key 的计数器的当前值
+func (c *SafeCounter) Value(key string) int {
+  c.mux.Lock()
+  // Lock 之后同一时刻只有一个 goroutine 能访问 c.v
+  defer c.mux.Unlock()
+  return c.v[key]
+}
+
+func main() {
+  c := SafeCounter{v: make(map[string]int)}
+  for i := 0; i < 1000; i++ {
+    go c.Inc("somekey")
+  }
+
+  time.Sleep(time.Second)
+  fmt.Println(c.Value("somekey"))
+}
+```
 
 ## 嵌入 Embed
 

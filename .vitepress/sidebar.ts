@@ -76,7 +76,7 @@ export const xSidebar = [
     text: 'Go',
     // collapsed: true,
     items: [
-      { text: '配置', link: '/go/' },
+      { text: '启动', link: '/go/' },
       { text: 'Cheatsheet', link: '/go/cheatsheet' },
       { text: 'TDD', link: '/go/tdd' },
       { text: 'Snippetbox', link: '/go/snippetbox' },
@@ -86,7 +86,7 @@ export const xSidebar = [
     text: 'Python',
     collapsed: true,
     items: [
-      { text: '配置', link: '/py/' },
+      { text: '启动', link: '/py/' },
       { text: 'Rye', link: '/py/rye' },
       { text: 'Poetry', link: '/py/poetry' },
       { text: 'Type Hints', link: '/py/types' },
