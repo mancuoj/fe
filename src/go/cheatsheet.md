@@ -485,6 +485,139 @@ delete(m, key)
 ```
 
 
+## 方法 Methods
+
+Go 没有类，但可以为结构体类型定义方法。
+
+方法就是一种带特殊的**接收者**参数的函数，接收者 Receiver 位于 `func` 和方法名中间。
+
+建议使用接收者类型名的第一个小写字母命名，比如 `Vertex` 的 `v`。
+
+```go
+type Vertex struct {
+	X, Y float64
+}
+
+func (v Vertex) Abs() float64 {
+	return math.Sqrt(v.X*v.X + v.Y*v.Y)
+}
+
+func main() {
+  v := Vertex{3, 4}
+	fmt.Println(v.Abs())
+}
+```
+
+也可以为同一个包内定义的类型的接收者定义方法，但不能为其他包定义的类型（包括 `int` 等的内建类型）的接收者定义方法。
+
+```go
+type MyFloat float64
+
+func (f MyFloat) Abs() float64 {
+	if f < 0 {
+		return float64(-f)
+	}
+	return float64(f)
+}
+```
+
+可以为指针接收者声明方法，这样可以直接修改接收者指向的值。
+
+以指针为接收者的方法被调用时，接收者既能为值又能为指针。
+
+```go
+var v Vertex
+p := &v
+p.Scale(10) // OK
+v.Scale(5)  // OK，会隐式地取 (&v)
+```
+
+相反的，以值为接收者的方法被调用时，接收者也是既能为值又能为指针。
+
+```go
+var v Vertex
+v.Abs() // OK
+p := &v
+p.Abs() // OK，会隐式地取 (*p)
+```
+
+## 接口 Interfaces
+
+接口类型是一组方法签名定义的集合。
+
+无需显式声明，类型可以通过实现一个接口的所有方法来实现该接口。
+
+在内部，接口值可以看做包含值和具体类型的元组 `(type value)`。
+
+即使接口具体值为 `nil`，仍可调用方法，但需要特殊处理。
+
+```go
+// 接口
+type Shape interface {
+  Area() float64
+  Perimeter() float64
+}
+
+// 类型
+type Rectangle struct {
+  Length, Width float64
+}
+
+// 方法一
+func (r Rectangle) Area() float64 {
+  return r.Length * r.Width
+}
+
+// 方法二
+func (r Rectangle) Perimeter() float64 {
+  return 2 * (r.Length + r.Width)
+}
+
+// 实例
+func main() {
+  var r Shape = Rectangle{Length: 3, Width: 4}
+  fmt.Printf("Type of r: %T, Area: %v, Perimeter: %v.", r, r.Area(), r.Perimeter())
+}
+
+// 接口值保存了一个具体底层类型的具体值
+func describe(i I) {
+	fmt.Printf("(%v, %T)\n", i, i)
+}
+```
+
+没有定义方法的接口值称为空接口，空接口可以保存任意类型的值，所以可以用来处理未知类型的值。
+
+```go
+var i interface{}
+```
+
+使用类型断言 `t, ok := i.(T)` 访问接口值底层具体值，断言接口值 `i` 保存了具体类型 `T`。
+
+若 `i` 确实保存了一个 `T`，则 `ok` 为 `true`，底层类型为 `T` 的具体值会赋值给变量 `t`。
+
+否则，`ok` 为 `false`，`t` 为 `T` 类型的零值，程序不会产生恐慌，如果不定义 `ok` 则会产生恐慌。
+
+也可以使用类型选择按顺序从几个类型断言中选择分支。
+
+```go
+func do(i interface{}) {
+	switch v := i.(type) {
+	case int:
+		fmt.Printf("Twice %v is %v\n", v, v*2)
+	case string:
+		fmt.Printf("%q is %v bytes long\n", v, len(v))
+	default:
+		fmt.Printf("I don't know about type %T!\n", v)
+	}
+}
+
+func main() {
+	do(21)
+	do("hello")
+	do(true)
+}
+```
+
 
 ## 错误控制 Error Control
 
@@ -512,3 +645,8 @@ func main() {
 
 TODO: Lambda Defer
 
+
+## 嵌入 Embed
+
+
+## 泛型 Generic
