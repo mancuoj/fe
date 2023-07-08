@@ -370,14 +370,14 @@ ptr := new(int) // 动态申请了一块内存空间，返回该内存空间的�
 
 ```go
 type Vertex struct {
-	X int
-	Y int
+  X int
+  Y int
   // 可以简写为 X, Y int
 }
 
 func main() {
-	v := Vertex{1, 2}
-	v.X = 4
+  v := Vertex{1, 2}
+  v.X = 4
 
   p := &v
   p.X = 5
@@ -388,10 +388,10 @@ func main() {
 
 ```go
 var (
-	v1 = Vertex{1, 2}  // 创建一个 Vertex 类型的结构体
-	v2 = Vertex{X: 1}  // Y:0 被隐式地赋予
-	v3 = Vertex{}      // X:0 Y:0
-	p  = &Vertex{1, 2} // 创建一个指针，结构体的地址
+  v1 = Vertex{1, 2}  // 创建一个 Vertex 类型的结构体
+  v2 = Vertex{X: 1}  // Y:0 被隐式地赋予
+  v3 = Vertex{}      // X:0 Y:0
+  p  = &Vertex{1, 2} // 创建一个指针，结构体的地址
 )
 ```
 
@@ -464,12 +464,12 @@ s = append(s, 2, 3, 4) // len=5 cap=6 [0, 1, 2, 3, 4]
 
 ```go
 type Vertex struct {
-	Lat, Long float64
+  Lat, Long float64
 }
 
 var m = map[string]Vertex{
-	"Bell Labs": Vertex{ 40.68433, -74.39967 },
-	"Google": { 37.42202, -122.08408 }, // 可以省略类型名
+  "Bell Labs": Vertex{ 40.68433, -74.39967 },
+  "Google": { 37.42202, -122.08408 }, // 可以省略类型名
 }
 ```
 
@@ -495,16 +495,16 @@ Go 没有类，但可以为结构体类型定义方法。
 
 ```go
 type Vertex struct {
-	X, Y float64
+  X, Y float64
 }
 
 func (v Vertex) Abs() float64 {
-	return math.Sqrt(v.X*v.X + v.Y*v.Y)
+  return math.Sqrt(v.X*v.X + v.Y*v.Y)
 }
 
 func main() {
   v := Vertex{3, 4}
-	fmt.Println(v.Abs())
+  fmt.Println(v.Abs())
 }
 ```
 
@@ -514,10 +514,10 @@ func main() {
 type MyFloat float64
 
 func (f MyFloat) Abs() float64 {
-	if f < 0 {
-		return float64(-f)
-	}
-	return float64(f)
+  if f < 0 {
+    return float64(-f)
+  }
+  return float64(f)
 }
 ```
 
@@ -581,103 +581,45 @@ func main() {
 
 // 接口值保存了一个具体底层类型的具体值
 func describe(i I) {
-	fmt.Printf("(%v, %T)\n", i, i)
+  fmt.Printf("(%v, %T)\n", i, i)
 }
 ```
 
-没有定义方法的接口值称为空接口，空接口可以保存任意类型的值，所以可以用来处理未知类型的值。
+没有定义方法的接口值称为空接口.
+
+空接口可以保存任意类型的值，所以可以用来处理未知类型的值。
 
 ```go
 var i interface{}
 ```
 
-使用类型断言 `t, ok := i.(T)` 访问接口值底层具体值，断言接口值 `i` 保存了具体类型 `T`。
+使用类型断言 `t, ok := i.(T)` 可以访问接口值底层具体值。
 
-若 `i` 确实保存了一个 `T`，则 `ok` 为 `true`，底层类型为 `T` 的具体值会赋值给变量 `t`。
+断言接口值 `i` 保存了具体类型 `T`
 
-否则，`ok` 为 `false`，`t` 为 `T` 类型的零值，程序不会产生恐慌，如果不定义 `ok` 则会产生恐慌。
+- 若 `i` 确实保存了一个 `T`，则 `ok` 为 `true`，底层类型为 `T` 的具体值会赋值给变量 `t`
+- 否则，`ok` 为 `false`，`t` 为 `T` 类型的零值，程序不会产生恐慌，不定义 `ok` 时会产生恐慌
 
-也可以使用类型选择按顺序从几个类型断言中选择分支。
+你也可以使用类型选择按顺序从几个类型断言中选择分支。
 
 ```go
 func do(i interface{}) {
-	switch v := i.(type) {
-	case int:
-		fmt.Printf("Twice %v is %v\n", v, v*2)
-	case string:
-		fmt.Printf("%q is %v bytes long\n", v, len(v))
-	default:
-		fmt.Printf("I don't know about type %T!\n", v)
-	}
+  switch v := i.(type) {
+  case int:
+    fmt.Printf("Twice %v is %v\n", v, v*2)
+  case string:
+    fmt.Printf("%q is %v bytes long\n", v, len(v))
+  default:
+    fmt.Printf("I don't know about type %T!\n", v)
+  }
 }
 
 func main() {
-	do(21)
-	do("hello")
-	do(true)
+  do(21)
+  do("hello")
+  do(true)
 }
 ```
-
-### Stringer
-
-实现 `fmt.Stringer` 接口：
-
-```go
-type Stringer interface {
-    String() string
-}
-```
-
-可以用 `String()` 方法来自定义打印输出的格式。
-
-```go
-type Person struct {
-	Name string
-	Age  int
-}
-
-func (p Person) String() string {
-	return fmt.Sprintf("%v (%v years)", p.Name, p.Age)
-}
-
-func main() {
-	a := Person{"Arthur Dent", 42}
-	z := Person{"Zaphod Beeblebrox", 9001}
-	fmt.Println(a, z)
-}
-```
-
-### Error
-
-与 `fmt.Stringer` 类似，`error` 类型是一个内建接口：
-
-```go
-type error interface {
-    Error() string
-}
-```
-
-```go
-type MyError struct {
-	When time.Time
-	What string
-}
-
-func (e *MyError) Error() string {
-	return fmt.Sprintf("at %v, %s", e.When, e.What)
-}
-
-func run() error {
-	return &MyError{ time.Now(), "it didn't work" }
-}
-
-func main() {
-	if err := run(); err != nil {
-		fmt.Println(err)
-	}
-}
-```
-
 
 ## 错误控制 Error Control
 
@@ -696,9 +638,9 @@ func main() {
 
 ```go
 func main() {
-	for i := 0; i < 10; i++ {
-		defer fmt.Print(i, " ")
-	}
+  for i := 0; i < 10; i++ {
+    defer fmt.Print(i, " ")
+  }
 }
 // 9 8 7 6 5 4 3 2 1 0
 ```
