@@ -102,9 +102,9 @@ var i, j = 1, 2
 
 // 变量也可以分组声明
 var (
-	ToBe   bool       = false
-	MaxInt uint64     = 1<<64 - 1
-	z      complex128 = cmplx.Sqrt(-5 + 12i)
+  ToBe   bool       = false
+  MaxInt uint64     = 1<<64 - 1
+  z      complex128 = cmplx.Sqrt(-5 + 12i)
 )
 ```
 
@@ -199,6 +199,8 @@ const (
   c
 )
 ```
+
+指针
 
 ## 条件控制 Flow Control
 
@@ -298,4 +300,30 @@ default:
   fmt.Println("Good evening.")
 }
 ```
+
+## 错误控制 Error Control
+
+`defer` 语句会将函数推迟到外层函数返回之后执行。
+
+推迟调用的函数参数会立即求值，但直到外层函数返回前，该函数都不会被调用。
+
+```go
+func main() {
+  defer fmt.Println("Done")
+  fmt.Println("Working...")
+}
+```
+
+推迟的函数调用会被压入一个栈中，当外层函数返回时，推迟函数的执行顺序与出现顺序相反。
+
+```go
+func main() {
+	for i := 0; i < 10; i++ {
+		defer fmt.Print(i, " ")
+	}
+}
+// 9 8 7 6 5 4 3 2 1 0
+```
+
+TODO: Lambda Defer
 
