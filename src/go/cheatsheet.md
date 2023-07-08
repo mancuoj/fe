@@ -99,6 +99,13 @@ var s string
 
 var i, j int = 1, 2
 var i, j = 1, 2
+
+// 变量也可以分组声明
+var (
+	ToBe   bool       = false
+	MaxInt uint64     = 1<<64 - 1
+	z      complex128 = cmplx.Sqrt(-5 + 12i)
+)
 ```
 
 **函数内**可以使用短声明变量，因为函数外的每个语句都需要以关键字开始。
@@ -112,3 +119,31 @@ func main() {
 
 ## 基本类型 Basic Types
 
+- `bool`
+- `string`
+- `int, int8, int16, int32, int64`
+- `uint, uint8, uint16, uint32, uint64, uintptr`
+- `byte` uint 的别名
+- `rune` int32 的别名，表示一个 Unicode 码点
+- `float32 float64`
+- `complex32 complex64`
+
+`int`, `uint` 和 `uintptr` 在 32 位系统上通常为 32 位宽，在 64 位系统上则为 64 位宽。
+
+需要一个整数值时就使用 `int` 类型，除非有特殊的理由使用固定大小或无符号的整数类型。
+
+```go
+isTrue   := true
+isFalse  := false
+
+s1 := "Hello" + "World"
+s2 := `A "raw" string literal
+can include line breaks.`
+
+num := 3              // int
+num := 3.1            // float64
+num := 3 + 4i         // complex128
+num := byte('a')      // byte (alias: uint8)
+var u uint = 7        // uint (unsigned)
+var p float32 = 22.7  // 32-bit float
+```
