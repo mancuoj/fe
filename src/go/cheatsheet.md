@@ -87,6 +87,19 @@ func sum(numbers ...int) (total int) {
 }
 ```
 
+函数是一等公民，可以作为参数或返回值，所以闭包也是可以用的。
+
+```go
+func adder() func(int) int {
+  sum := 0
+  return func(x int) int {
+    sum += x
+    return sum
+  }
+}
+```
+
+
 ## 变量 Variables
 
 用 `var` 可以在包或函数级别声明一个变量列表，与参数列表相似，需要声明变量的类型。
