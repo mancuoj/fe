@@ -618,6 +618,66 @@ func main() {
 }
 ```
 
+### Stringer
+
+实现 `fmt.Stringer` 接口：
+
+```go
+type Stringer interface {
+    String() string
+}
+```
+
+可以用 `String()` 方法来自定义打印输出的格式。
+
+```go
+type Person struct {
+	Name string
+	Age  int
+}
+
+func (p Person) String() string {
+	return fmt.Sprintf("%v (%v years)", p.Name, p.Age)
+}
+
+func main() {
+	a := Person{"Arthur Dent", 42}
+	z := Person{"Zaphod Beeblebrox", 9001}
+	fmt.Println(a, z)
+}
+```
+
+### Error
+
+与 `fmt.Stringer` 类似，`error` 类型是一个内建接口：
+
+```go
+type error interface {
+    Error() string
+}
+```
+
+```go
+type MyError struct {
+	When time.Time
+	What string
+}
+
+func (e *MyError) Error() string {
+	return fmt.Sprintf("at %v, %s", e.When, e.What)
+}
+
+func run() error {
+	return &MyError{ time.Now(), "it didn't work" }
+}
+
+func main() {
+	if err := run(); err != nil {
+		fmt.Println(err)
+	}
+}
+```
+
 
 ## 错误控制 Error Control
 
@@ -643,8 +703,7 @@ func main() {
 // 9 8 7 6 5 4 3 2 1 0
 ```
 
-TODO: Lambda Defer
-
+## 并发
 
 ## 嵌入 Embed
 
