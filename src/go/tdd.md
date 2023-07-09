@@ -15,6 +15,7 @@ This is as opposed to software being developed first and test cases created late
 5. Refactor as needed, using tests after each refactor to ensure that functionality is preserved.
 6. Repeat.
 
+## 示例
 
 :::code-group
 ```go [adder_test.go]
@@ -53,6 +54,47 @@ func Add(x, y int) int {
   return x + y
 }
 ```
+
+```go [其他测试]
+func TestArea(t *testing.T) {
+  CheckArea := func(t testing.TB, shape Shape, want float64) {
+    t.Helper()
+    got := shape.Area()
+    if got != want {
+      t.Errorf("got %.2f want %.2f", got, want)
+    }
+  }
+
+  t.Run("rectangles", func(t *testing.T) {
+    rec := Rectangle{12.0, 6.0}
+    CheckArea(t, rec, 72.0)
+  })
+
+  t.Run("circles", func(t *testing.T) {
+    cir := Circle{10}
+    CheckArea(t, cir, 314.1592653589793)
+  })
+}
+```
+
+```go [表驱动测试]
+func TestArea(t *testing.T) {
+	areaTests := []struct {
+		shape Shape
+		want  float64
+	}{
+		{Rectangle{12, 6}, 72.0},
+		{Circle{10}, 314.1592653589793},
+	}
+
+	for _, tt := range areaTests {
+		got := tt.shape.Area()
+		if got != tt.want {
+			t.Errorf("got %g want %g", got, tt.want)
+		}
+	}
+}
+```
 :::
 
 ## go test
@@ -71,3 +113,4 @@ More information: <https://golang.org/cmd/go/#hdr-Testing_flags>.
 | `go test -cover`                     | test the package with coverage analysis                                            |
 
  
+
