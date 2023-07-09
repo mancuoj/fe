@@ -54,8 +54,27 @@ func Add(x, y int) int {
   return x + y
 }
 ```
+:::
 
-```go [其他测试]
+## go test
+
+Tests Go packages (files have to end with `_test.go`).
+
+More information: <https://golang.org/cmd/go/#hdr-Testing_flags>.
+
+| Syntax                               | Description                                                                        |
+| ------------------------------------ | ---------------------------------------------------------------------------------- |
+| `go test`                            | test the package found in the current directory                                    |
+| `go test -v`                         | verbosely test the package in the current directory                                |
+| `go test -v ./...`                   | test the packages in the current directory and all subdirectories (note the `...`) |
+| `go test -v -bench .`                | test the package in the current directory and run all benchmarks                   |
+| `go test -v -bench . -benchtime 50s` | test the package in the current directory and run all benchmarks for 50 seconds    |
+| `go test -cover`                     | test the package with coverage analysis                                            |
+
+
+## 更多测试
+
+```go
 func TestArea(t *testing.T) {
   CheckArea := func(t testing.TB, shape Shape, want float64) {
     t.Helper()
@@ -77,40 +96,23 @@ func TestArea(t *testing.T) {
 }
 ```
 
-```go [表驱动测试]
-func TestArea(t *testing.T) {
-	areaTests := []struct {
-		shape Shape
-		want  float64
-	}{
-		{Rectangle{12, 6}, 72.0},
-		{Circle{10}, 314.1592653589793},
-	}
+## 表驱动测试
 
-	for _, tt := range areaTests {
-		got := tt.shape.Area()
-		if got != tt.want {
-			t.Errorf("got %g want %g", got, tt.want)
-		}
-	}
+```go
+func TestArea(t *testing.T) {
+  areaTests := []struct {
+    shape Shape
+    want  float64
+  }{
+    {Rectangle{12, 6}, 72.0},
+    {Circle{10}, 314.1592653589793},
+  }
+
+  for _, tt := range areaTests {
+    got := tt.shape.Area()
+    if got != tt.want {
+      t.Errorf("got %g want %g", got, tt.want)
+    }
+  }
 }
 ```
-:::
-
-## go test
-
-Tests Go packages (files have to end with `_test.go`).
-
-More information: <https://golang.org/cmd/go/#hdr-Testing_flags>.
-
-| Syntax                               | Description                                                                        |
-| ------------------------------------ | ---------------------------------------------------------------------------------- |
-| `go test`                            | test the package found in the current directory                                    |
-| `go test -v`                         | verbosely test the package in the current directory                                |
-| `go test -v ./...`                   | test the packages in the current directory and all subdirectories (note the `...`) |
-| `go test -v -bench .`                | test the package in the current directory and run all benchmarks                   |
-| `go test -v -bench . -benchtime 50s` | test the package in the current directory and run all benchmarks for 50 seconds    |
-| `go test -cover`                     | test the package with coverage analysis                                            |
-
- 
-
