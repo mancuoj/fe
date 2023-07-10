@@ -1,19 +1,29 @@
 # 关于 Linux 的一切
 
-## Modern alternatives command-line tools
+## Shell Cheatsheet
 
-- zsh + oh-my-zsh + zsh-plugins
-- fzf: fuzzy finder
-- bat: replace `cat`
-- exa: replace `ls`
-- gdu/dust: replace `du`
-- duf: replace `df`
-- bottom/btop/gtop/htop/glances/gotop: replace `top`
-- neofetch/onefetch: system info tool
-- tldr/tealdeer: cheatsheets for console commands
+> 总有要写脚本 .sh 的一天
+
+
+## 现代命令行工具
+
+| 工具                          | 说明（替代）      |
+| ----------------------------- | ----------------- |
+| zsh + oh-my-zsh + zsh-plugins | bash              |
+| fzf                           | fuzzy finder      |
+| neofetch                      | system info tool  |
+| tealdeer(tldr)                | cheatsheets       |
+| bat                           | cat               |
+| exa                           | ls                |
+| slides                        | presentation tool |
+| gdu                           | du                |
+| duf                           | df                |
+| bottom(btm)                   | top               |
+
+:::details 其他未安装
+- bottom(btm): replace `top`
 - gping: replace `ping`
 - curlie/httpie/xh: replace `curl`
-- slides: presentation tool
 - grex: simplify the often complicated and tedious task of creating regular expressions
 - zoxide: replace `cd`
 - procs: replace `ps`
@@ -28,3 +38,5 @@
 - lazydocker: the lazier way to manage everything docker
 - frogmouth/glow: markdown viewer
 - ...
+:::
+
