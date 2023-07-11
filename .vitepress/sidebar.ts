@@ -27,7 +27,7 @@ export const sidebar = [
         text: 'Learn',
         // collapsed: true,
         items: [
-          { text: '文档速通', link: '/angular/learn/docs/' },
+          { text: '启动', link: '/angular/learn/docs/' },
           { text: 'Cheatsheet', link: '/angular/learn/docs/cheatsheet' },
           { text: 'First App', link: '/angular/learn/docs/first-app' },
           { text: 'Tour of Heroes', link: '/angular/learn/docs/tour-of-heroes' },
@@ -44,13 +44,13 @@ export const sidebar = [
       {
         text: 'Learn',
         items: [
-          { text: '文档速通', link: '/react/learn/docs/' },
+          { text: '启动', link: '/react/learn/docs/' },
         ],
       },
       {
         text: 'Next',
         items: [
-          { text: '文档速通', link: '/react/next/' },
+          { text: '启动', link: '/react/next/' },
         ],
       },
     ],
@@ -84,7 +84,7 @@ export const xSidebar = [
   },
   {
     text: 'Python',
-    collapsed: true,
+    // collapsed: true,
     items: [
       { text: '启动', link: '/py/' },
       { text: 'Rye', link: '/py/rye' },
@@ -93,14 +93,14 @@ export const xSidebar = [
       {
         text: 'FastAPI',
         items: [
-          { text: '文档速通', link: '/py/fastapi/' },
+          { text: '启动', link: '/py/fastapi/' },
           { text: 'FARM', link: '/py/fastapi/farm' },
         ],
       },
       {
         text: 'Flask',
         items: [
-          { text: '文档速通', link: '/py/flask/' },
+          { text: '启动', link: '/py/flask/' },
         ],
       },
     ],

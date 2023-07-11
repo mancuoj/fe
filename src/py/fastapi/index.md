@@ -2,7 +2,7 @@
 outline: deep
 ---
 
-# [FastAPI 文档速通](https://fastapi.tiangolo.com/zh/tutorial/)
+# [FastAPI](https://fastapi.tiangolo.com/zh/tutorial/)
 
 ## 开始
 
