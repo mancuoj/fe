@@ -1,0 +1,1 @@
+type ttt = Promise<number>
