@@ -762,7 +762,14 @@ func main() {
 }
 ```
 
-## 嵌入 Embed
+## [Stringer](https://pkg.go.dev/fmt#Stringer)
 
+```go
+type Stringer interface {
+	String() string
+}
+```
 
-## 泛型 Generic
+类型可以通过实现 `String()` 方法来自定义其输出格式。
+
+当使用 fmt 包的打印函数或 `%s` 时，会自动调用类型的 `String()` 方法来获取要打印的内容。
