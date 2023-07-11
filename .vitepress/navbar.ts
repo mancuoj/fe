@@ -20,7 +20,6 @@ export const navbar = [
         text: '掘金小册',
         items: [
           { text: 'TS 类型体操通关秘籍', link: '/juejin/tsch/', activeMatch: '/juejin/tsch/' },
-          { text: 'TS 全面进阶指南', link: '/juejin/ts/', activeMatch: '/juejin/ts/' },
         ],
       },
     ],
