@@ -25,3 +25,9 @@
 :::details 点击查看代码
 <<< @/z/type-challenges/00004-easy-pick.ts
 :::
+
+## Readonly <Badge text="easy" type="tip"/>
+
+:::details 点击查看代码
+<<< @/z/type-challenges/00007-easy-readonly.ts
+:::

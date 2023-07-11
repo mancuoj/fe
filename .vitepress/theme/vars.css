@@ -2,12 +2,12 @@
  * Width
  * -------------------------------------------------------------------------- */
 :root {
-  --vp-layout-max-width: 1600px;
-  --vp-sidebar-width: 240px;
+  --vp-layout-max-width: 1500px;
+  --vp-sidebar-width: 233px;
 }
 
 .VPDoc.has-aside .content-container {
-  max-width: 96% !important;
+  max-width: 100% !important;
 }
 
 .vp-doc .container {
