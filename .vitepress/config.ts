@@ -10,7 +10,7 @@ export default defineConfig({
   cleanUrls: true,
   srcDir: 'src',
   head: [
-    ['link', { rel: 'icon', href: '/chick.svg' }],
+    ['link', { rel: 'icon', href: '/FluentEmojiCallMeHand.svg' }],
   ],
   markdown: {
     theme: {
